@@ -2,16 +2,16 @@
 
 [![Build Status](https://travis-ci.org/moderndive/moderndive_book.svg?branch=master)](https://travis-ci.org//Hendrik147/HR_Analytics_in_R_book) Note: travis-ci currently deploys the developmental version of the book into the `gh-pages` branch of this repo, which is hosted via Netlify at [hranalyticslive.netlify.com](https://hranalyicslive.netlify.com).
 
-Welcome to the GitHub repository page for **HR Analytics in R: Self-training book to apply open source tools for common HR business tasks** available at [ModernDive.com](https://moderndive.com/). 
+Welcome to the GitHub repository page for **HR Analytics in R: Common HR business tasks using the power of R** available at [ModernDive.com](https://moderndive.com/). 
 
 
 ## Why did I choose such a title for my book?
 
-This is a self-training book to assist you in your journey to HR Analytics. Most importantly it will be your go-to resource when you’re learning, practicing, and implementing stuff in real life.
+This is a self-training book to assist you in your journey to HR Analytics. Most importantly it will be your go-to resource when you’re learning, practicing, and implementing stuff in real life. It will leverage on the power of the open source R language.
 
-## What are the objectives of this book?
+## What are the long term objectives of this book?
 
-Demonstrate to an audience of HR professionals the power of open source tools based on classical HR business scenarios and depending on time and attendees’ abilities try out some use cases. Companies should promote in-house open source software much more to build their long-term and sustainable HR Analytics capabilities, instead of outsourcing tout-court to big HR Analytics global consultancy firms.
+Demonstrate to an audience of HR professionals the power of open source tools based on common HR business scenarios. Companies should promote in-house open source software much more to build their long-term and sustainable HR Analytics capabilities, instead of outsourcing tout-court to big HR Analytics global consultancy firms. The R ecosystem is open-source and enterprise-ready professional software.
 
 ## What is the target audience?
 
