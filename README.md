@@ -1,8 +1,8 @@
-# HR Analytics in R: Common HR business tasks using the power of R <img src="images/hex_blue_text.png" align="right" width=125 />
+# HR Analytics in R: Common HR business tasks with the power of R <img src="images/hex_blue_text.png" align="right" width=125 />
 
 [![Build Status](https://travis-ci.org//Hendrik147/HR_Analytics_in_R_book.svg?branch=master)](https://travis-ci.org//Hendrik147/HR_Analytics_in_R_book) Note: travis-ci currently deploys the developmental version of the book into the `gh-pages` branch of this repo, which is hosted via Netlify at [hranalyticslive.netlify.com](https://hranalyicslive.netlify.com).
 
-Welcome to the GitHub repository page for **HR Analytics in R: Common HR business tasks using the power of R** available at [HRAnalaytics.live](https://hranalytics.live/bookdown/). 
+Welcome to the GitHub repository page for **HR Analytics in R: Common HR business tasks with the power of R** available at [HRAnalaytics.live](https://hranalytics.live/bookdown/). 
 
 
 ## Why such a title for my book?
