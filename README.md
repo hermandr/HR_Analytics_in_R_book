@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org//Hendrik147/HR_Analytics_in_R_book.svg?branch=master)](https://travis-ci.org//Hendrik147/HR_Analytics_in_R_book) Note: travis-ci currently deploys the developmental version of the book into the `gh-pages` branch of this repo, which is hosted via Netlify at [hranalyticslive.netlify.com](https://hranalyicslive.netlify.com).
 
-Welcome to the GitHub repository page for **HR Analytics in R: Common HR business tasks using the power of R** available at [HRAnalaytics.live](https://hranalytics.live/book/). 
+Welcome to the GitHub repository page for **HR Analytics in R: Common HR business tasks using the power of R** available at [HRAnalaytics.live](https://hranalytics.live/bookdown/). 
 
 
 ## Why such a title for my book?
@@ -22,7 +22,7 @@ Analytically minded HR professionals who have already experience in calculations
 "HR Analytics in R" is built using RStudio's [`bookdown`](https://www.rstudio.com/resources/webinars/introducing-bookdown/) package; for more information on how to use `bookdown` see [bookdown.org](https://bookdown.org/).
 
 * The `bookdown` source code for the development version of "HR Analytics in R" is above, the output of which can be previewed at [hranalyticslive.netlify.com](https://hranalyticslive.netlify.com) which is based on the outputted HTML files in the `docs/` folder.
-* The `bookdown` source code for all [previously released versions](https://moderndive.com/index.html#about-book) of ModernDive, including the latest version available at [ModernDive.com](https://moderndive.com/), is accessible on the [Releases](https://github.com/Hendrik147/HR_Analytics_in_R_book/releases) page.
+* The `bookdown` source code for all [previously released versions](https://hranalytics.live/bookdown/index.html#about-book) of "HR Analytics in R", including the latest version available at [hranalytics.live](https://https://hranalytics.live/bookdown/), is accessible on the [Releases](https://github.com/Hendrik147/HR_Analytics_in_R_book/releases) page.
 * For information on all changes between versions and our planned changes for the next version, please see [NEWS.md](https://github.com//Hendrik147/HR_Analytics_in_R_book/blob/master/NEWS.md).
 
 
