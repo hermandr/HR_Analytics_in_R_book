@@ -5,7 +5,7 @@
 Welcome to the GitHub repository page for **HR Analytics in R: Common HR business tasks done with the power of R** available at [HRAnalaytics.live](https://hranalytics.live/bookdown/). 
 
 
-## Why such a title for my book?
+## Why such a title for this book?
 
 This is a self-training book to assist you in your journey to HR Analytics. Most importantly it will be your go-to resource when you’re learning, practicing, and implementing stuff in real life. It will leverage the power of open source R language.
 
