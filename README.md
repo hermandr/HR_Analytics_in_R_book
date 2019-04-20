@@ -1,17 +1,17 @@
-# HR Analytics in R <img src="images/hex_blue_text.png" align="right" width=125 />
+# HR Analytics in R: Common HR business tasks using the power of R <img src="images/hex_blue_text.png" align="right" width=125 />
 
-[![Build Status](https://travis-ci.org/moderndive/moderndive_book.svg?branch=master)](https://travis-ci.org//Hendrik147/HR_Analytics_in_R_book) Note: travis-ci currently deploys the developmental version of the book into the `gh-pages` branch of this repo, which is hosted via Netlify at [hranalyticslive.netlify.com](https://hranalyicslive.netlify.com).
+[![Build Status](https://travis-ci.org//Hendrik147/HR_Analytics_in_R_book.svg?branch=master)](https://travis-ci.org//Hendrik147/HR_Analytics_in_R_book) Note: travis-ci currently deploys the developmental version of the book into the `gh-pages` branch of this repo, which is hosted via Netlify at [hranalyticslive.netlify.com](https://hranalyicslive.netlify.com).
 
-Welcome to the GitHub repository page for **HR Analytics in R: Common HR business tasks using the power of R** available at [ModernDive.com](https://moderndive.com/). 
+Welcome to the GitHub repository page for **HR Analytics in R: Common HR business tasks using the power of R** available at [HRAnalaytics.live](https://hranalytics.live/book/). 
 
 
-## Why did I choose such a title for my book?
+## Why such a title for my book?
 
-This is a self-training book to assist you in your journey to HR Analytics. Most importantly it will be your go-to resource when you’re learning, practicing, and implementing stuff in real life. It will leverage on the power of the open source R language.
+This is a self-training book to assist you in your journey to HR Analytics. Most importantly it will be your go-to resource when you’re learning, practicing, and implementing stuff in real life. It will leverage the power of open source R language.
 
 ## What are the long term objectives of this book?
 
-Demonstrate to an audience of HR professionals the power of open source tools based on common HR business scenarios. Companies should promote in-house open source software much more to build their long-term and sustainable HR Analytics capabilities, instead of outsourcing tout-court to big HR Analytics global consultancy firms. The R ecosystem is open-source and enterprise-ready professional software.
+Demonstrate to an audience of HR professionals the power of open source tools based on common HR business scenarios. Companies should promote in-house open source software much more to build sustainable HR Analytics capabilities, instead of outsourcing tout-court to big HR Analytics global consultancy firms. The R ecosystem is open-source and enterprise-ready professional system, one can rely upon.
 
 ## What is the target audience?
 
