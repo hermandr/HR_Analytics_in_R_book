@@ -22,8 +22,8 @@ deploy:
   local_dir: docs
   skip_cleanup: true
   keep-history: true
-  github_token: $MODERNDIVE_GITHUB_PAT
-  repo: moderndive/moderndive_book
+  github_token: $TRAVISCI
+  repo: Hendrik147/HR_Analytics_in_R_book
   # For testing purposes only
 #  target_branch: deploy-from-travis
   # Switch back to gh-pages after getting the build to work
