@@ -4,27 +4,27 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Confidence Intervals | Statistical Inference via Data Science site</title>
-  <meta name="description" content="An open-source and fully-reproducible electronic textbook for teaching statistical inference using tidyverse data science tools." />
+  <title>Chapter 9 Confidence Intervals | HR Analytics in R</title>
+  <meta name="description" content="An open-source and fully-reproducible electronic self-training book to assist you in your journey to HR Analytic." />
   <meta name="generator" content="bookdown  and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Confidence Intervals | Statistical Inference via Data Science site" />
+  <meta property="og:title" content="Chapter 9 Confidence Intervals | HR Analytics in R" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://moderndive.com/" />
-  <meta property="og:image" content="https://moderndive.com/images/logos/book_cover.png" />
-  <meta property="og:description" content="An open-source and fully-reproducible electronic textbook for teaching statistical inference using tidyverse data science tools." />
-  <meta name="github-repo" content="moderndive/moderndive_book" />
+  <meta property="og:url" content="https://book.hranalytics.live/" />
+  <meta property="og:image" content="https://book.hranalytics.live/images/logos/book_cover.png" />
+  <meta property="og:description" content="An open-source and fully-reproducible electronic self-training book to assist you in your journey to HR Analytic." />
+  <meta name="github-repo" content="Hendrik147/HR_Analytics_in_R_book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Confidence Intervals | Statistical Inference via Data Science site" />
+  <meta name="twitter:title" content="Chapter 9 Confidence Intervals | HR Analytics in R" />
   
-  <meta name="twitter:description" content="An open-source and fully-reproducible electronic textbook for teaching statistical inference using tidyverse data science tools." />
-  <meta name="twitter:image" content="https://moderndive.com/images/logos/book_cover.png" />
+  <meta name="twitter:description" content="An open-source and fully-reproducible electronic self-training book to assist you in your journey to HR Analytic." />
+  <meta name="twitter:image" content="https://book.hranalytics.live/images/logos/book_cover.png" />
 
-<meta name="author" content="Chester Ismay and Albert Y. Kim" />
+<meta name="author" content="Hendrik Feddersen" />
 
 
-<meta name="date" content="2019-04-24" />
+<meta name="date" content="2019-04-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -131,7 +131,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#sec:connect-contribute"><i class="fa fa-check"></i><b>1.3</b> Connect and contribute</a></li>
 <li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#sec:about-authors"><i class="fa fa-check"></i><b>1.5</b> About the authors</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#sec:about-authors"><i class="fa fa-check"></i><b>1.5</b> About the author</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-getting-started.html"><a href="2-getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started with Data in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="2-getting-started.html"><a href="2-getting-started.html#r-rstudio"><i class="fa fa-check"></i><b>2.1</b> What are R and RStudio?</a><ul>
@@ -537,7 +537,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Inference via Data Science site</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">HR Analytics in R</a>
           </h1>
         </div>
 
@@ -594,14 +594,14 @@ FIGURE 9.1: Collecting a sample of 50 pennies.
 </p>
 </div>
 <p>An image of these pennies is below.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-256"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-255"></span>
 <img src="images/sampling/pennies/pennies_trim.jpg" alt="50 US pennies" width="100%" />
 <p class="caption">
 FIGURE 9.2: 50 US pennies
 </p>
 </div>
 <p>Each of the pennies was numbered as 1-50 starting in the top left and ending in the bottom right progressing row by row. This is shown with the “ID” values on top of and near the middle of each penny for clarity. The year of mint is also shown on top of and to the right side of the penny as well.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-257"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-256"></span>
 <img src="images/sampling/pennies/labelled/01.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/02.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/03.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/04.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/05.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/06.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/07.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/08.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/09.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/10.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/11.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/12.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/13.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/14.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/15.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/16.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/17.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/18.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/19.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/20.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/21.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/22.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/23.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/24.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/25.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/26.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/27.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/28.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/29.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/30.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/31.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/32.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/33.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/34.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/35.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/36.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/37.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/38.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/39.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/40.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/41.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/42.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/43.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/44.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/45.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/46.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/47.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/48.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/49.jpg" alt="50 US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/50.jpg" alt="50 US pennies labelled" width="9%" />
 <p class="caption">
 FIGURE 9.3: 50 US pennies labelled
@@ -634,7 +634,7 @@ FIGURE 9.3: 50 US pennies labelled
 <p>First, let’s visualize the values in this sample as a histogram:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(pennies_sample_<span class="dv">2</span>, <span class="kw">aes</span>(<span class="dt">x =</span> year)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">10</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-259-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-258-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We see a skewed distribution here that has many values in the 1990s through 2010s with only a few older than 1970. If <code>pennies_sample_2</code> is a representative sample from the population, we’d expect the age of all US pennies collected in 2019 to have a similar shape, a similar spread, and similar measures of central tendency like the mean.</p>
 <p>So where does the mean value fall for this sample? This point will be known as our <strong>point estimate</strong> and provides us with a single number that could serve as the guess to what the true population mean year might be. Recall how to find this using the <code>dplyr</code> package:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x_bar &lt;-<span class="st"> </span>pennies_sample_<span class="dv">2</span> <span class="op">%&gt;%</span><span class="st"> </span>
@@ -675,7 +675,7 @@ FIGURE 9.3: 50 US pennies labelled
 10    32  1976
 # … with 40 more rows</code></pre>
 <p>Now we can view what the actual pennies sampled would look like corresponding to this resample:</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-262"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-261"></span>
 <img src="images/sampling/pennies/labelled/32.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/37.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/22.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/06.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/24.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/39.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/16.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/37.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/17.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/32.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/28.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/45.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/48.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/44.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/16.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/29.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/17.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/14.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/26.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/42.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/15.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/31.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/30.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/44.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/07.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/47.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/02.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/25.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/21.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/09.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/10.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/12.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/38.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/49.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/25.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/36.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/25.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/23.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/21.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/16.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/10.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/38.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/29.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/46.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/41.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/45.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/40.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/29.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/28.jpg" alt="50 resampled US pennies labelled" width="9%" /><img src="images/sampling/pennies/labelled/10.jpg" alt="50 resampled US pennies labelled" width="9%" />
 <p class="caption">
 FIGURE 9.4: 50 resampled US pennies labelled
@@ -1155,7 +1155,7 @@ stat
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(virtual_resample_means, <span class="kw">aes</span>(<span class="dt">x =</span> stat)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">boundary =</span> <span class="dv">1990</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">breaks =</span> <span class="kw">seq</span>(<span class="dv">1990</span>, <span class="dv">2000</span>, <span class="dv">2</span>))</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-274-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-273-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>Let’s next compare the two distributions of the tactile resampling done by friends and the virtual resampling done by the computer:</p>
 <div class="figure" style="text-align: center"><span id="fig:orig-and-resample-means"></span>
 <img src="hendrikfeddersen_files/figure-html/orig-and-resample-means-1.png" alt="Comparing distributions of means from resamples`" width="\textwidth" />
@@ -1213,7 +1213,7 @@ FIGURE 9.9: Bootstrap resampling distribution based on 1000 resamples.
 <!--
 This can be done with `infer` using the `get_ci()` function. (You can also use the `conf_int()` or `get_confidence_interval()` functions here as they are aliases that work the exact same way.)
 -->
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-278-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-277-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>Using the percentile method, our range of plausible values for the mean age of US pennies in circulation in 2011 is 1991.339 years to 1999.401 years. You’ll see in later sections how to compute these values.</p>
 <p>You can see that 95% of the data stored in the <code>stat</code> variable in <code>virtual_resample_means</code> falls between the two endpoints with 2.5% to the left outside of the shading and 2.5% to the right outside of the shading. The cut-off points that provide our range are shown with the green lines.</p>
 </div>
@@ -1240,7 +1240,7 @@ standard_error_ci <- bootstrap_distribution %>%
 standard_error_ci
 ```
 -->
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-280-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-279-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We see that both methods produce nearly identical confidence intervals with the percentile method being <span class="math inline">\([1991.34, 1999.4]\)</span> and the standard error method being <span class="math inline">\([1991.28, 1999.6]\)</span>. This is to be expected since the resampling distribution is roughly bell-shaped. Now that you’ve seen how these methods work, let’s dig into the formalities of the process and the code needed to calculate them.</p>
 <hr />
 </div>
@@ -1412,7 +1412,7 @@ pennies_sample_<span class="dv">2</span> <span class="op">%&gt;%</span><span cla
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bootstrap_distribution <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">visualize</span>()
 <span class="co"># or</span>
 <span class="kw">visualize</span>(bootstrap_distribution)</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-299-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-298-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>The shape of this resulting distribution may look familiar to you. It resembles the well-known normal (bell-shaped) curve.</p>
 <p>The following diagram recaps the <code>infer</code> pipeline for creating a bootstrap distribution.</p>
 <p><img src="images/flowcharts/infer/ci_diagram.png" width="\textwidth" style="display: block; margin: auto;" /></p>
@@ -1442,19 +1442,19 @@ percentile_ci</code></pre></div>
 <p>Now we see where the values obtained in Section <a href="9-confidence-intervals.html#confidence-intervals">9</a> come from. Using the percentile method, our range of plausible values for the mean year of US pennies in circulation in 2019 is 1991.159 to 1999.46. We can further use the <code>visualize()</code> function and the <code>shade_confidence_interval()</code> function, or alias <code>shade_ci()</code>, to view this. We use the <code>endpoints</code> argument to be those stored with name <code>percentile_ci</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visualize</span>(bootstrap_distribution) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">shade_ci</span>(<span class="dt">endpoints =</span> percentile_ci)</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-304-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-303-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>You can see that 95% of the data stored in the <code>stat</code> variable in <code>bootstrap_distribution</code> falls between the two endpoints with 2.5% to the left outside of the shading and 2.5% to the right outside of the shading. The cut-off points that provide our range are shown with the darker lines.</p>
 <p>Note that you can change the colors here as you wish using the <code>color</code> and <code>fill</code> arguments.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visualize</span>(bootstrap_distribution) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">shade_ci</span>(<span class="dt">endpoints =</span> percentile_ci,
            <span class="dt">color =</span> <span class="st">&quot;brown&quot;</span>,
            <span class="dt">fill =</span> <span class="st">&quot;khaki&quot;</span>)</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-306-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-305-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visualize</span>(bootstrap_distribution) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">shade_ci</span>(<span class="dt">endpoints =</span> percentile_ci,
            <span class="dt">color =</span> <span class="st">&quot;hotpink&quot;</span>,
            <span class="dt">fill =</span> <span class="ot">NULL</span>)</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-308-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-307-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 </div>
 <div id="the-standard-error-method-with-infer" class="section level3">
 <h3><span class="header-section-number">9.4.5</span> The standard error method with infer</h3>
@@ -1471,7 +1471,7 @@ standard_error_ci</code></pre></div>
 1 1991.25 1999.63</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visualize</span>(bootstrap_distribution) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">shade_ci</span>(<span class="dt">endpoints =</span> standard_error_ci)</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-311-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-310-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>As noted in Section <a href="9-confidence-intervals.html#confidence-intervals">9</a> both methods produce similar confidence intervals.</p>
 <table>
 <thead>
@@ -1535,7 +1535,7 @@ p_hat</code></pre></div>
 <span class="st">  </span><span class="kw">calculate</span>(<span class="dt">stat =</span> <span class="st">&quot;prop&quot;</span>)</code></pre></div>
 <p>Let’s <code>visualize()</code> what the resulting bootstrap distribution looks like as a histogram. We’ve adjusted the number of bins here as well to better see the resulting shape.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visualize</span>(bootstrap_props, <span class="dt">bins =</span> <span class="dv">20</span>)</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-319-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-318-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We see that the resulting distribution is symmetric and bell-shaped so it doesn’t much matter which confidence interval method we choose. Let’s use the standard error method to create a 95% confidence interval.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">standard_error_ci &lt;-<span class="st"> </span>bootstrap_props <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">get_ci</span>(<span class="dt">type =</span> <span class="st">&quot;se&quot;</span>, <span class="dt">level =</span> <span class="fl">0.95</span>, <span class="dt">point_estimate =</span> p_hat)
@@ -1546,7 +1546,7 @@ standard_error_ci</code></pre></div>
 1 0.282244 0.557756</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visualize</span>(bootstrap_props, <span class="dt">bins =</span> <span class="dv">25</span>) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">shade_ci</span>(<span class="dt">endpoints =</span> standard_error_ci)</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-322-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-321-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We are “95% confident” that the true proportion of red balls in the bowl is between 0.282 and 0.558.</p>
 </div>
 </div>
@@ -1816,7 +1816,7 @@ confidence_level
 </tr>
 </tbody>
 </table>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-328-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-327-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We see that the sample proportion of reds varies in the <code>point_estimate</code> column with varying <code>lower</code> and <code>upper</code> bounds as well depending on the variability of the bootstrap distribution. The width of the confidence intervals appears to increase from left to right going from 80% confidence levels to 95% and then to 99%. Let’s now compute the confidence interval (CI) width for each of these intervals and then get the median and mean length.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">percentile_cis_by_level <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">width =</span> upper <span class="op">-</span><span class="st"> </span>lower) <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1844,7 +1844,7 @@ balls_samples_<span class="dv">100</span> &lt;-<span class="st"> </span>bowl <sp
 <span class="st">  </span><span class="kw">rep_sample_n</span>(<span class="dt">size =</span> <span class="dv">100</span>, <span class="dt">reps =</span> <span class="dv">1000</span>, <span class="dt">replace =</span> <span class="ot">FALSE</span>)</code></pre></div>
 <!-- Albert: What about these confidence intervals for different sample sizes in the moderndive package? -->
 <p>As we did when investigating the role of confidence level, confidence intervals for each of the different 1000 samples of each of these three sample sizes has been saved into the <code>percentile_cis_by_n</code> data frame. Let’s investigate width visually first and then look at the median and mean length of these intervals.</p>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-332-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-331-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">percentile_cis_by_n <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">width =</span> upper <span class="op">-</span><span class="st"> </span>lower) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">group_by</span>(sample_size) <span class="op">%&gt;%</span><span class="st"> </span>
@@ -1982,7 +1982,7 @@ obs_diff</code></pre></div>
 could be a good exercise for those that don't quite see the power of {infer}. -->
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bootstrap_distribution <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">visualize</span>(<span class="dt">bins =</span> <span class="dv">20</span>)</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-344-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-343-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>This distribution is roughly symmetric and bell-shaped but isn’t quite there. Let’s use the percentile-based method to compute a 95% confidence interval for the true difference in the proportion of those that yawn with and without a seed presented. The arguments are explicitly listed here but remember they are the defaults and simply <code>get_ci()</code> can be used.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bootstrap_distribution <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">get_ci</span>(<span class="dt">type =</span> <span class="st">&quot;percentile&quot;</span>, <span class="dt">level =</span> <span class="fl">0.95</span>)</code></pre></div>
@@ -2015,8 +2015,8 @@ could be a good exercise for those that don't quite see the power of {infer}. --
 <span class="st">  </span><span class="kw">summarize</span>(<span class="dt">stat =</span> <span class="kw">mean</span>(color <span class="op">==</span><span class="st"> &quot;red&quot;</span>))</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(sampling_distribution, <span class="kw">aes</span>(<span class="dt">x =</span> stat)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">10</span>, <span class="dt">fill =</span> <span class="st">&quot;salmon&quot;</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-349"></span>
-<img src="hendrikfeddersen_files/figure-html/unnamed-chunk-349-1.png" alt="Sampling distribution for proportion red for n=200 samples of balls" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-348"></span>
+<img src="hendrikfeddersen_files/figure-html/unnamed-chunk-348-1.png" alt="Sampling distribution for proportion red for n=200 samples of balls" width="\textwidth" />
 <p class="caption">
 FIGURE 9.12: Sampling distribution for proportion red for n=200 samples of balls
 </p>
@@ -2108,11 +2108,11 @@ bootstrap_distribution_n_<span class="dv">200</span></code></pre></div>
 <li><code>visualize</code> distribution of <code>stat</code>istics</li>
 </ol>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">visualize</span>(bootstrap_distribution_n_<span class="dv">200</span>, <span class="dt">bins =</span> <span class="dv">10</span>, <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>)</code></pre></div>
-<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-359-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-358-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p><em>Side-by-side</em></p>
 <p>Now that we have both the sampling distribution and the bootstrap distribution, let’s put them on the same scales and examine their variability both visually and also by computing relevant standard deviations.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-360"></span>
-<img src="hendrikfeddersen_files/figure-html/unnamed-chunk-360-1.png" alt="Comparing sampling and bootstrap distributions" width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-359"></span>
+<img src="hendrikfeddersen_files/figure-html/unnamed-chunk-359-1.png" alt="Comparing sampling and bootstrap distributions" width="\textwidth" />
 <p class="caption">
 FIGURE 9.13: Comparing sampling and bootstrap distributions
 </p>
@@ -2196,7 +2196,7 @@ FIGURE 9.13: Comparing sampling and bootstrap distributions
 conf_ints</code></pre></div>
 <table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-367">TABLE 9.5: </span>33 confidence intervals from 33 tactile samples of size n=50
+<span id="tab:unnamed-chunk-366">TABLE 9.5: </span>33 confidence intervals from 33 tactile samples of size n=50
 </caption>
 <thead>
 <tr>
