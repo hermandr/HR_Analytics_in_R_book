@@ -17,8 +17,8 @@ lof: yes
 always_allow_html: yes
 github-repo: Hendrik147/HR_Analytics_in_R_book
 graphics: yes
-description: "An open-source and fully-reproducible electronic self-training book to assist you in your journey to HR Analytic."
-cover-image: "images/logos/book_cover.png"
+description: "An open-source and fully-reproducible electronic self-training book to assist you in your journey to HR Analytics."
+cover-image: "images/hranalytics.jpg"
 url: 'https\://book.hranalytics.live/'
 apple-touch-icon: "images/logos/favicons/apple-touch-icon.png"
 favicon: "images/logos/favicons/favicon.ico"
@@ -32,11 +32,11 @@ favicon: "images/logos/favicons/favicon.ico"
 
 # Current version information: Date here should match the date in the YAML above.
 # Remove .9000 tag and set date to release date when releasing
-version <- "0.1.0.9000"
+version <- "0.5.0"
 date <- format(Sys.time(), '%B %d, %Y')
 
 # Latest release information:
-latest_release_version <- "0.1.0"
+latest_release_version <- "0.5.0"
 latest_release_date <- "February 24, 2019"
 
 # Set output options
@@ -185,16 +185,9 @@ image_link <- function(path,
 
 ***
 
-<!--
-```{block, type='announcement', purl=FALSE}
-**This is a previous version (v`r version`) of ModernDive and may be out of date. For the current version of ModernDive, please go to [ModernDive.com](https://moderndive.com/).**
-```
--->
-
 ```{block, type='learncheck', purl=FALSE}
-**Please note that you are currently looking at the "development version" of "HR Analytics in R", which is a work in progress currently being edited and thus subject to frequent change. For the latest "released version" of "HR Analytics in R, which changes much less frequently, please visit [book.hranalytics.live](https://book.hranalytics.live/).**
+**Please note that you are currently looking at the "development version" of "HR Analytics in R", which is a work in progress currently being edited and thus subject to frequent change.**
 ```
-
 
 
 **Help! I'm new to R and RStudio and I need to learn about them! However, I'm completely new to coding! What do I do?** 
@@ -214,11 +207,10 @@ image_link <- function(path,
 
 If you're asking yourself this question, then you've come to the right place! Start with our [Introduction for Students](#sec:intro-for-students).
 
-* *Are you an instructor hoping to use this book in your courses? Then click [here](#sec:intro-instructors) for more information on how to teach with this book.*
-* *Are you looking to connect with and contribute to ModernDive? Then click [here](#sec:connect-contribute) for information on how.*
+* *Are you looking to connect with and contribute to "HR Analytics in R"? Then click [here](#sec:connect-contribute) for information on how.*
 * *Are you curious about the publishing of this book? Then click [here](#sec:about-book) for more information on the open-source technology, in particular R Markdown and the bookdown package.*
 
-This is version `r version` of "HR Analytics in R" published on `r date`. For previous versions of ModernDive, see Section \@ref(sec:about-book). While a PDF version of this book can be found [here](hrnalyticsinr.pdf){target="_blank"}, this is very much a work in progress with many things that still need to be fixed. We appreciate your patience. 
+This is version `r version` of "HR Analytics in R" published on `r date`. While a PDF version of this book can be found [here](hrnalyticsinr.pdf){target="_blank"}, this is very much a work in progress with many things that still need to be fixed. We appreciate your patience. 
 
 
 
@@ -228,7 +220,7 @@ This is version `r version` of "HR Analytics in R" published on `r date`. For pr
 
 ## Introduction for students {#sec:intro-for-students}
 
-This book assumes no prerequisites: no algebra, no calculus, and no prior programming/coding experience. This is intended to be a gentle introduction to the practice of analyzing data and answering questions using data the way data scientists, statisticians, data journalists, and other researchers would. 
+This book assumes no prerequisites: no algebra, no calculus, and no prior programming/coding experience. This is intended to be a gentle introduction to the practice of analyzing data and answering questions using data the way data scientists, statisticians and other researchers would. 
 
 In Figure \@ref(fig:moderndive-figure) we present a flowchart of what you'll cover in this book. You'll first get started with data in Chapter \@ref(getting-started), where you'll learn about the difference between R and RStudio, start coding in R, understand what R packages are, and explore your first dataset: all domestic departure flights from a New York City airport in 2013. Then
 
@@ -364,7 +356,7 @@ Here are some principles and beliefs we kept in mind while writing this text. If
     + We believe that [data visualization is a gateway drug for statistics](http://escholarship.org/uc/item/84v3774z) and that the Grammar of Graphics as implemented in the `ggplot2` package is the best way to impart such lessons. However, we often hear: "You can't teach `ggplot2` for data visualization in intro stats!" We, like [David Robinson](http://varianceexplained.org/r/teach_ggplot2_to_beginners/), are much more optimistic.
     + `dplyr` has made data wrangling much more [accessible](http://chance.amstat.org/2015/04/setting-the-stage/) to novices, and hence much more interesting data-sets can be explored. 
 1. **Use simulation/resampling to introduce statistical inference, not probability/mathematical formulas**
-    + Instead of using formulas, large-sample approximations, and probability tables, we teach statistical concepts using resampling-based inference.
+    + Instead of using formulas, large-sample approximations, and probability tables, statistical concepts using resampling-based inference.
     + This allows for a de-emphasis of traditional probability topics, freeing up room in the syllabus for other topics.
 1. **Don't fence off students from the computation pool, throw them in!**
     + Computing skills are essential to working with data in the 21st century. Given this fact, we feel that to shield students from computing is to ultimately do them a disservice.
@@ -381,25 +373,19 @@ Here are some principles and beliefs we kept in mind while writing this text. If
 
 ## Connect and contribute {#sec:connect-contribute}
 
-If you would like to connect with "HR Analytics.live", check out the following links:
+If you would like to connect with "HR Analytics in R", check out the following links:
 
 * If you would like to receive periodic updates about "HR Analytics in R", please sign up for my [mailing list](https://hranalytics.live/signup/). Initially you will receive receive also notififications about my normal blog posts, until I manage to separate the tags.
-
-If you would like to receive periodic updates about ModernDive (roughly every 3 months), please sign up for our [mailing list](http://eepurl.com/cBkItf).
 * Contact me at [info@hranalytics.live](mailto:info@hranalytics.live) .
 * I am on Twitter at [h_feddersen](https://twitter.com/h_feddersen).
 
 
-If you would like to contribute to "HR Analytics.live", there are many ways! Let's all work together to make this book as great as possible for as many students and instructors as possible!
+If you would like to contribute to "HR Analytics.live", there are many ways! Let's all work together to make this book as great as possible for as many students as possible!
 
-* Please let us know if you find any errors, typos, or areas from improvement on our [GitHub issues](https://github.com/moderndive/moderndive_book/issues) page.
-* If you are familiar with GitHub and would like to contribute more, please see Section \@ref(sec:about-book) below.
+* Please let me know if you find any errors, typos, or areas from improvement on my [GitHub issues](https://github.com/Hendrik147/HR_Analytics_in_R_book/issues) page.
+* If you are familiar with GitHub and would like to contribute even more, please see Section \@ref(sec:about-book) below.
 
-For example, we thank
-
-* [Dr Andrew Heiss](https://twitter.com/andrewheiss) for contributing Subsection 2.2.3 on "Errors, warnings, and messages".
-
-The author would like to thank [Moderndive](https://github.com/moderndive/moderndive_book) for their inspirational presentation at a recent R user conference and for their generous examples on how to set up a bookdown book.
+The author would like to thank [Moderndive](https://github.com/moderndive/moderndive_book) for their inspirational presentation at a recent R user conference and for their generous example on how to set up a bookdown book and for the initial introductory pages on how to start using R.
 
 
 
@@ -409,14 +395,10 @@ The author would like to thank [Moderndive](https://github.com/moderndive/modern
 
 ## About this book {#sec:about-book}
 
-This book was written using RStudio's [bookdown](https://bookdown.org/) package by Yihui Xie [@R-bookdown]. This package simplifies the publishing of books by having all content written in [R Markdown](http://rmarkdown.rstudio.com/html_document_format.html). The bookdown/R Markdown source code for all versions of ModernDive is available on GitHub:
+This book was written using RStudio's [bookdown](https://bookdown.org/) package by Yihui Xie [@R-bookdown]. This package simplifies the publishing of books by having all content written in [R Markdown](http://rmarkdown.rstudio.com/html_document_format.html). The bookdown/R Markdown source code for the latest version of "HR Analytics in R" is available on GitHub:
 
-* **Latest published version** The most up-to-date release:
-    + Version `r latest_release_version` released on `r latest_release_date` ([source code](https://github.com/moderndive/moderndive_book/releases/tag/v`r latest_release_version`)).
-    + Available at [HR Analytics.live](https://book.hranalytics.live/)
-* **Development version** The working copy of the next version which is currently being edited:
-    + Preview of development version is available at [https://moderndive.netlify.com/](https://moderndive.netlify.com/)
-    + Source code: Available on ModernDive's [GitHub repository page](https://github.com/moderndive/moderndive_book)
+* **Latest published version, still in development** The most up-to-date version, which is still in development is available at [https://hranalyticslive.netlify.com/](https://hranalyticslive.netlify.com/)
+    + Source code: Available at Hendrik's [GitHub repository page](https://github.com/Hendrik147/HR_Analytics_in_R_book)
 
 ***
 
@@ -427,7 +409,7 @@ This book was written using RStudio's [bookdown](https://bookdown.org/) package 
 Who am I!
 
 Hendrik Feddersen     
-:---------------------------------------------:
+:-------------------------:
 `r include_image(path = "images/Photo HF Snappy.jpg", html_opts = "height=200px", latex_opts = "width=40%")`
 
 <!-- <img src="images/Photo HF Snappy.jpg" alt="Drawing" style="height: 200px;"/>-->
