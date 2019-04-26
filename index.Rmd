@@ -1,6 +1,6 @@
 --- 
 title: "HR Analytics in R"
-subtitle: "Common HR business tasks done with the power of R"
+subtitle: "Common tasks achieved with the power of R"
 author: "Hendrik Feddersen"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 site: bookdown::bookdown_site
@@ -17,7 +17,7 @@ lof: yes
 always_allow_html: yes
 github-repo: Hendrik147/HR_Analytics_in_R_book
 graphics: yes
-description: "An open-source and fully-reproducible electronic self-training book to assist you in your journey to HR Analytics."
+description: "An open-source self-training book to assist you in your journey to HR Analytics"
 cover-image: "images/hranalytics.jpg"
 url: 'https\://book.hranalytics.live/'
 apple-touch-icon: "images/logos/favicons/apple-touch-icon.png"
