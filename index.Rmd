@@ -178,16 +178,16 @@ image_link <- function(path,
 ```
 
 
+```{block, type='learncheck', purl=FALSE}
+**Please note that you are currently looking at the latest version of "HR Analytics in R". However, since work is still in progress it is subject to frequent change.**
+```
+
 
 
 # Introduction {#intro}
 
 
 ***
-
-```{block, type='learncheck', purl=FALSE}
-**Please note that you are currently looking at the latest version of "HR Analytics in R". However, work is still in progress and thus subject to frequent change.**
-```
 
 
 **Help! I'm new to R and RStudio and I need to learn about them! However, I'm completely new to coding! What do I do?** 
