@@ -5,27 +5,27 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 3 Data Visualization | Statistical Inference via Data Science</title>
-  <meta name="description" content="An open-source and fully-reproducible electronic textbook for teaching statistical inference using tidyverse data science tools.">
+  <title>Chapter 3 Data Visualization | HR Analytics in R</title>
+  <meta name="description" content="An open-source self-training book to assist you in your journey to sustainable HR Analytics">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 3 Data Visualization | Statistical Inference via Data Science" />
+  <meta property="og:title" content="Chapter 3 Data Visualization | HR Analytics in R" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://moderndive.com/" />
-  <meta property="og:image" content="https://moderndive.com/images/logos/book_cover.png" />
-  <meta property="og:description" content="An open-source and fully-reproducible electronic textbook for teaching statistical inference using tidyverse data science tools." />
-  <meta name="github-repo" content="moderndive/moderndive_book" />
+  <meta property="og:url" content="https://book.hranalytics.live/" />
+  <meta property="og:image" content="https://book.hranalytics.live/images/hranalytics.jpg" />
+  <meta property="og:description" content="An open-source self-training book to assist you in your journey to sustainable HR Analytics" />
+  <meta name="github-repo" content="Hendrik147/HR_Analytics_in_R_book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Data Visualization | Statistical Inference via Data Science" />
+  <meta name="twitter:title" content="Chapter 3 Data Visualization | HR Analytics in R" />
   
-  <meta name="twitter:description" content="An open-source and fully-reproducible electronic textbook for teaching statistical inference using tidyverse data science tools." />
-  <meta name="twitter:image" content="https://moderndive.com/images/logos/book_cover.png" />
+  <meta name="twitter:description" content="An open-source self-training book to assist you in your journey to sustainable HR Analytics" />
+  <meta name="twitter:image" content="https://book.hranalytics.live/images/hranalytics.jpg" />
 
-<meta name="author" content="Chester Ismay and Albert Y. Kim">
+<meta name="author" content="Hendrik Feddersen">
 
 
-<meta name="date" content="2019-03-31">
+<meta name="date" content="2019-04-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,21 +48,14 @@
 
 
 
-<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
-<link href="libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
-<script src="libs/dygraphs-1.1.1/dygraph-combined.js"></script>
-<script src="libs/dygraphs-1.1.1/shapes.js"></script>
-<script src="libs/moment-2.8.4/moment.js"></script>
-<script src="libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
-<script src="libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
-<script src="libs/dygraphs-binding-1.1.1.6/dygraphs.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-89938436-1', 'auto');
+  ga('create', 'UA-90691356-1', 'auto');
   ga('send', 'pageview');
 
 </script>
@@ -155,10 +148,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#sec:intro-instructors"><i class="fa fa-check"></i><b>1.2</b> Introduction for instructors</a><ul>
 <li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.2.1</b> Who is this book for?</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#datacamp"><i class="fa fa-check"></i><b>1.3</b> DataCamp</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sec:connect-contribute"><i class="fa fa-check"></i><b>1.4</b> Connect and contribute</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#sec:about-book"><i class="fa fa-check"></i><b>1.5</b> About this book</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#sec:about-authors"><i class="fa fa-check"></i><b>1.6</b> About the authors</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#sec:connect-contribute"><i class="fa fa-check"></i><b>1.3</b> Connect and contribute</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#sec:about-authors"><i class="fa fa-check"></i><b>1.5</b> About the author</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#colophon"><i class="fa fa-check"></i><b>1.5.1</b> Colophon</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-getting-started.html"><a href="2-getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started with Data in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="2-getting-started.html"><a href="2-getting-started.html#r-rstudio"><i class="fa fa-check"></i><b>2.1</b> What are R and RStudio?</a><ul>
@@ -320,164 +314,164 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4.2" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#whats-to-come-5"><i class="fa fa-check"></i><b>7.4.2</b> What’s to come?</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>III Statistical inference via infer</b></span></li>
-<li class="chapter" data-level="8" data-path="8-sampling.html"><a href="8-sampling.html"><i class="fa fa-check"></i><b>8</b> Sampling</a><ul>
-<li class="chapter" data-level="" data-path="8-sampling.html"><a href="8-sampling.html#needed-packages-5"><i class="fa fa-check"></i>Needed packages</a></li>
-<li class="chapter" data-level="8.1" data-path="8-sampling.html"><a href="8-sampling.html#sampling-activity"><i class="fa fa-check"></i><b>8.1</b> Sampling activity</a><ul>
-<li class="chapter" data-level="8.1.1" data-path="8-sampling.html"><a href="8-sampling.html#what-proportion-of-this-bowls-balls-are-red"><i class="fa fa-check"></i><b>8.1.1</b> What proportion of this bowl’s balls are red?</a></li>
-<li class="chapter" data-level="8.1.2" data-path="8-sampling.html"><a href="8-sampling.html#using-the-shovel-once"><i class="fa fa-check"></i><b>8.1.2</b> Using the shovel once</a></li>
-<li class="chapter" data-level="8.1.3" data-path="8-sampling.html"><a href="8-sampling.html#student-shovels"><i class="fa fa-check"></i><b>8.1.3</b> Using the shovel 33 times</a></li>
-<li class="chapter" data-level="8.1.4" data-path="8-sampling.html"><a href="8-sampling.html#what-are-we-doing-here"><i class="fa fa-check"></i><b>8.1.4</b> What are we doing here?</a></li>
+<li class="part"><span><b>III Statistical inference via infer</b></span><ul>
+<li class="chapter" data-level="" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#needed-packages-5"><i class="fa fa-check"></i>Needed packages</a></li>
+<li class="chapter" data-level="7.5" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#sampling-activity"><i class="fa fa-check"></i><b>7.5</b> Sampling activity</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#what-proportion-of-this-bowls-balls-are-red"><i class="fa fa-check"></i><b>7.5.1</b> What proportion of this bowl’s balls are red?</a></li>
+<li class="chapter" data-level="7.5.2" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#using-the-shovel-once"><i class="fa fa-check"></i><b>7.5.2</b> Using the shovel once</a></li>
+<li class="chapter" data-level="7.5.3" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#student-shovels"><i class="fa fa-check"></i><b>7.5.3</b> Using the shovel 33 times</a></li>
+<li class="chapter" data-level="7.5.4" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#what-are-we-doing-here"><i class="fa fa-check"></i><b>7.5.4</b> What are we doing here?</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="8-sampling.html"><a href="8-sampling.html#sampling-simulation"><i class="fa fa-check"></i><b>8.2</b> Computer simulation of sampling</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="8-sampling.html"><a href="8-sampling.html#using-the-virtual-shovel-once"><i class="fa fa-check"></i><b>8.2.1</b> Using the virtual shovel once</a></li>
-<li class="chapter" data-level="8.2.2" data-path="8-sampling.html"><a href="8-sampling.html#using-the-virtual-shovel-33-times"><i class="fa fa-check"></i><b>8.2.2</b> Using the virtual shovel 33 times</a></li>
-<li class="chapter" data-level="8.2.3" data-path="8-sampling.html"><a href="8-sampling.html#shovel-1000-times"><i class="fa fa-check"></i><b>8.2.3</b> Using the virtual shovel 1000 times</a></li>
-<li class="chapter" data-level="8.2.4" data-path="8-sampling.html"><a href="8-sampling.html#different-shovels"><i class="fa fa-check"></i><b>8.2.4</b> Using different shovels</a></li>
+<li class="chapter" data-level="7.6" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#sampling-simulation"><i class="fa fa-check"></i><b>7.6</b> Computer simulation of sampling</a><ul>
+<li class="chapter" data-level="7.6.1" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#using-the-virtual-shovel-once"><i class="fa fa-check"></i><b>7.6.1</b> Using the virtual shovel once</a></li>
+<li class="chapter" data-level="7.6.2" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#using-the-virtual-shovel-33-times"><i class="fa fa-check"></i><b>7.6.2</b> Using the virtual shovel 33 times</a></li>
+<li class="chapter" data-level="7.6.3" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#shovel-1000-times"><i class="fa fa-check"></i><b>7.6.3</b> Using the virtual shovel 1000 times</a></li>
+<li class="chapter" data-level="7.6.4" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#different-shovels"><i class="fa fa-check"></i><b>7.6.4</b> Using different shovels</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="8-sampling.html"><a href="8-sampling.html#sampling-framework"><i class="fa fa-check"></i><b>8.3</b> Sampling framework</a><ul>
-<li class="chapter" data-level="8.3.1" data-path="8-sampling.html"><a href="8-sampling.html#terminology-and-notation"><i class="fa fa-check"></i><b>8.3.1</b> Terminology &amp; notation</a></li>
-<li class="chapter" data-level="8.3.2" data-path="8-sampling.html"><a href="8-sampling.html#statistical-definitions"><i class="fa fa-check"></i><b>8.3.2</b> Statistical definitions</a></li>
-<li class="chapter" data-level="8.3.3" data-path="8-sampling.html"><a href="8-sampling.html#the-moral-of-the-story"><i class="fa fa-check"></i><b>8.3.3</b> The moral of the story</a></li>
+<li class="chapter" data-level="7.7" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#sampling-framework"><i class="fa fa-check"></i><b>7.7</b> Sampling framework</a><ul>
+<li class="chapter" data-level="7.7.1" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#terminology-and-notation"><i class="fa fa-check"></i><b>7.7.1</b> Terminology &amp; notation</a></li>
+<li class="chapter" data-level="7.7.2" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#statistical-definitions"><i class="fa fa-check"></i><b>7.7.2</b> Statistical definitions</a></li>
+<li class="chapter" data-level="7.7.3" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#the-moral-of-the-story"><i class="fa fa-check"></i><b>7.7.3</b> The moral of the story</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="8-sampling.html"><a href="8-sampling.html#sampling-case-study"><i class="fa fa-check"></i><b>8.4</b> Case study: Polls</a></li>
-<li class="chapter" data-level="8.5" data-path="8-sampling.html"><a href="8-sampling.html#sampling-conclusion"><i class="fa fa-check"></i><b>8.5</b> Conclusion</a><ul>
-<li class="chapter" data-level="8.5.1" data-path="8-sampling.html"><a href="8-sampling.html#sampling-conclusion-central-limit-theorem"><i class="fa fa-check"></i><b>8.5.1</b> Central Limit Theorem</a></li>
-<li class="chapter" data-level="8.5.2" data-path="8-sampling.html"><a href="8-sampling.html#sampling-conclusion-table"><i class="fa fa-check"></i><b>8.5.2</b> Summary table</a></li>
-<li class="chapter" data-level="8.5.3" data-path="8-sampling.html"><a href="8-sampling.html#additional-resources-5"><i class="fa fa-check"></i><b>8.5.3</b> Additional resources</a></li>
-<li class="chapter" data-level="8.5.4" data-path="8-sampling.html"><a href="8-sampling.html#whats-to-come-6"><i class="fa fa-check"></i><b>8.5.4</b> What’s to come?</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html"><i class="fa fa-check"></i><b>9</b> Confidence Intervals</a><ul>
-<li class="chapter" data-level="" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#needed-packages-6"><i class="fa fa-check"></i>Needed packages</a></li>
-<li class="chapter" data-level="9.1" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#resampling-activity"><i class="fa fa-check"></i><b>9.1</b> Resampling activity</a><ul>
-<li class="chapter" data-level="9.1.1" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#what-is-the-average-year-of-circulated-us-pennies-in-2019"><i class="fa fa-check"></i><b>9.1.1</b> What is the average year of circulated US pennies in 2019?</a></li>
-<li class="chapter" data-level="9.1.2" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#using-resampling-once"><i class="fa fa-check"></i><b>9.1.2</b> Using resampling once</a></li>
-<li class="chapter" data-level="9.1.3" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#student-resamples"><i class="fa fa-check"></i><b>9.1.3</b> Using resampling 33 times</a></li>
-<li class="chapter" data-level="9.1.4" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#whats-the-plan"><i class="fa fa-check"></i><b>9.1.4</b> What’s the plan?</a></li>
-</ul></li>
-<li class="chapter" data-level="9.2" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#resampling-simulation"><i class="fa fa-check"></i><b>9.2</b> Computer simulation of resampling</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#using-the-virtual-resample-once"><i class="fa fa-check"></i><b>9.2.1</b> Using the virtual resample once</a></li>
-<li class="chapter" data-level="9.2.2" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#using-the-virtual-resample-33-times"><i class="fa fa-check"></i><b>9.2.2</b> Using the virtual resample 33 times</a></li>
-<li class="chapter" data-level="9.2.3" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#using-the-virtual-resample-1000-times"><i class="fa fa-check"></i><b>9.2.3</b> Using the virtual resample 1000 times</a></li>
-</ul></li>
-<li class="chapter" data-level="9.3" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#ci-build-up"><i class="fa fa-check"></i><b>9.3</b> Confidence interval build-up</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#percentile-method"><i class="fa fa-check"></i><b>9.3.1</b> The percentile method</a></li>
-<li class="chapter" data-level="9.3.2" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#the-standard-error-method"><i class="fa fa-check"></i><b>9.3.2</b> The standard error method</a></li>
-</ul></li>
-<li class="chapter" data-level="9.4" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#bootstrap-process"><i class="fa fa-check"></i><b>9.4</b> The bootstrapping framework</a><ul>
-<li class="chapter" data-level="9.4.1" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#the-original-workflow-needed-for-this"><i class="fa fa-check"></i><b>9.4.1</b> The original workflow needed for this</a></li>
-<li class="chapter" data-level="9.4.2" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#the-infer-package-for-statistical-inference"><i class="fa fa-check"></i><b>9.4.2</b> The infer package for statistical inference</a></li>
-<li class="chapter" data-level="9.4.3" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#infer-ci"><i class="fa fa-check"></i><b>9.4.3</b> Building confidence intervals with the infer package</a></li>
-<li class="chapter" data-level="9.4.4" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#percentile-method-infer"><i class="fa fa-check"></i><b>9.4.4</b> The percentile method with infer</a></li>
-<li class="chapter" data-level="9.4.5" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#the-standard-error-method-with-infer"><i class="fa fa-check"></i><b>9.4.5</b> The standard error method with infer</a></li>
-</ul></li>
-<li class="chapter" data-level="9.5" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#one-prop-ci"><i class="fa fa-check"></i><b>9.5</b> Case study: Revisiting the red ball example</a><ul>
-<li class="chapter" data-level="9.5.1" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#observed-statistic"><i class="fa fa-check"></i><b>9.5.1</b> Observed statistic</a></li>
-<li class="chapter" data-level="9.5.2" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#one-prop-boot"><i class="fa fa-check"></i><b>9.5.2</b> Bootstrap distribution for one proportion</a></li>
-</ul></li>
-<li class="chapter" data-level="9.6" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#interpreting-the-confidence-interval"><i class="fa fa-check"></i><b>9.6</b> Interpreting the confidence interval</a><ul>
-<li class="chapter" data-level="" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#the-width-of-confidence-intervals"><i class="fa fa-check"></i>The width of confidence intervals</a></li>
-</ul></li>
-<li class="chapter" data-level="9.7" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#case-study-two-prop-ci"><i class="fa fa-check"></i><b>9.7</b> Case study: Comparing two proportions</a><ul>
-<li class="chapter" data-level="9.7.1" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#compute-the-point-estimate"><i class="fa fa-check"></i><b>9.7.1</b> Compute the point estimate</a></li>
-<li class="chapter" data-level="9.7.2" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#bootstrap-distribution"><i class="fa fa-check"></i><b>9.7.2</b> Bootstrap distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="9.8" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#ci-conclusion"><i class="fa fa-check"></i><b>9.8</b> Conclusion</a><ul>
-<li class="chapter" data-level="9.8.1" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#comparing-bootstrap-and-sampling-distributions"><i class="fa fa-check"></i><b>9.8.1</b> Comparing bootstrap and sampling distributions</a></li>
-<li class="chapter" data-level="9.8.2" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#theory-ci"><i class="fa fa-check"></i><b>9.8.2</b> Theory-based confidence intervals</a></li>
-<li class="chapter" data-level="9.8.3" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#ci-conclusion-table"><i class="fa fa-check"></i><b>9.8.3</b> Summary table</a></li>
-<li class="chapter" data-level="9.8.4" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#additional-resources-6"><i class="fa fa-check"></i><b>9.8.4</b> Additional resources</a></li>
-<li class="chapter" data-level="9.8.5" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html#whats-to-come-7"><i class="fa fa-check"></i><b>9.8.5</b> What’s to come?</a></li>
+<li class="chapter" data-level="7.8" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#sampling-case-study"><i class="fa fa-check"></i><b>7.8</b> Case study: Polls</a></li>
+<li class="chapter" data-level="7.9" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#sampling-conclusion"><i class="fa fa-check"></i><b>7.9</b> Conclusion</a><ul>
+<li class="chapter" data-level="7.9.1" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#sampling-conclusion-sampling-vs-assignment"><i class="fa fa-check"></i><b>7.9.1</b> Random sampling vs random assignment</a></li>
+<li class="chapter" data-level="7.9.2" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#sampling-conclusion-central-limit-theorem"><i class="fa fa-check"></i><b>7.9.2</b> Central Limit Theorem</a></li>
+<li class="chapter" data-level="7.9.3" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#sampling-conclusion-table"><i class="fa fa-check"></i><b>7.9.3</b> Summary table</a></li>
+<li class="chapter" data-level="7.9.4" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#additional-resources-5"><i class="fa fa-check"></i><b>7.9.4</b> Additional resources</a></li>
+<li class="chapter" data-level="7.9.5" data-path="7-multiple-regression.html"><a href="7-multiple-regression.html#whats-to-come-6"><i class="fa fa-check"></i><b>7.9.5</b> What’s to come?</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html"><i class="fa fa-check"></i><b>10</b> Hypothesis Testing</a><ul>
-<li class="chapter" data-level="" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#needed-packages-7"><i class="fa fa-check"></i>Needed packages</a></li>
-<li class="chapter" data-level="10.1" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#ht-activity"><i class="fa fa-check"></i><b>10.1</b> Hypothesis testing activity</a><ul>
-<li class="chapter" data-level="10.1.1" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#question-of-interest"><i class="fa fa-check"></i><b>10.1.1</b> Question of interest</a></li>
-<li class="chapter" data-level="10.1.2" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#what-did-we-actually-observe"><i class="fa fa-check"></i><b>10.1.2</b> What did we actually observe?</a></li>
-<li class="chapter" data-level="10.1.3" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#using-permuting-once"><i class="fa fa-check"></i><b>10.1.3</b> Using permuting once</a></li>
-<li class="chapter" data-level="10.1.4" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#using-permuting-33-times"><i class="fa fa-check"></i><b>10.1.4</b> Using permuting 33 times</a></li>
+<li class="chapter" data-level="8" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html"><i class="fa fa-check"></i><b>8</b> Confidence Intervals</a><ul>
+<li class="chapter" data-level="" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#needed-packages-6"><i class="fa fa-check"></i>Needed packages</a></li>
+<li class="chapter" data-level="8.1" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#resampling-activity"><i class="fa fa-check"></i><b>8.1</b> Resampling activity</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#what-is-the-average-year-of-circulated-us-pennies-in-2019"><i class="fa fa-check"></i><b>8.1.1</b> What is the average year of circulated US pennies in 2019?</a></li>
+<li class="chapter" data-level="8.1.2" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#using-resampling-once"><i class="fa fa-check"></i><b>8.1.2</b> Using resampling once</a></li>
+<li class="chapter" data-level="8.1.3" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#student-resamples"><i class="fa fa-check"></i><b>8.1.3</b> Using resampling 33 times</a></li>
+<li class="chapter" data-level="8.1.4" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#whats-the-plan"><i class="fa fa-check"></i><b>8.1.4</b> What’s the plan?</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#ht-infer"><i class="fa fa-check"></i><b>10.2</b> Hypothesis testing with infer</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#revisiting-the-infer-verb-framework"><i class="fa fa-check"></i><b>10.2.1</b> Revisiting the infer verb framework</a></li>
-<li class="chapter" data-level="10.2.2" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#the-infer-pipeline-for-the-activity"><i class="fa fa-check"></i><b>10.2.2</b> The <code>infer</code> pipeline for the activity</a></li>
-<li class="chapter" data-level="10.2.3" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#only-one-test"><i class="fa fa-check"></i><b>10.2.3</b> The “There Is Only One Test” framework</a></li>
+<li class="chapter" data-level="8.2" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#resampling-simulation"><i class="fa fa-check"></i><b>8.2</b> Computer simulation of resampling</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#using-the-virtual-resample-once"><i class="fa fa-check"></i><b>8.2.1</b> Using the virtual resample once</a></li>
+<li class="chapter" data-level="8.2.2" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#using-the-virtual-resample-33-times"><i class="fa fa-check"></i><b>8.2.2</b> Using the virtual resample 33 times</a></li>
+<li class="chapter" data-level="8.2.3" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#using-the-virtual-resample-1000-times"><i class="fa fa-check"></i><b>8.2.3</b> Using the virtual resample 1000 times</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#p-value"><i class="fa fa-check"></i><b>10.3</b> The p-value</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#corresponding-confidence-interval"><i class="fa fa-check"></i><b>10.3.1</b> Corresponding confidence interval</a></li>
-<li class="chapter" data-level="10.3.2" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#summary-5"><i class="fa fa-check"></i><b>10.3.2</b> Summary</a></li>
+<li class="chapter" data-level="8.3" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#ci-build-up"><i class="fa fa-check"></i><b>8.3</b> Confidence interval build-up</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#percentile-method"><i class="fa fa-check"></i><b>8.3.1</b> The percentile method</a></li>
+<li class="chapter" data-level="8.3.2" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#the-standard-error-method"><i class="fa fa-check"></i><b>8.3.2</b> The standard error method</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#ht-interpretation"><i class="fa fa-check"></i><b>10.4</b> Interpretation of hypothesis testing results</a><ul>
-<li class="chapter" data-level="10.4.1" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#trial"><i class="fa fa-check"></i><b>10.4.1</b> Criminal trial analogy</a></li>
-<li class="chapter" data-level="10.4.2" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#types-of-errors-in-hypothesis-testing"><i class="fa fa-check"></i><b>10.4.2</b> Types of errors in hypothesis testing</a></li>
-<li class="chapter" data-level="10.4.3" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#statistical-significance"><i class="fa fa-check"></i><b>10.4.3</b> Statistical significance</a></li>
+<li class="chapter" data-level="8.4" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#bootstrap-process"><i class="fa fa-check"></i><b>8.4</b> The bootstrapping framework</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#the-original-workflow-needed-for-this"><i class="fa fa-check"></i><b>8.4.1</b> The original workflow needed for this</a></li>
+<li class="chapter" data-level="8.4.2" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#the-infer-package-for-statistical-inference"><i class="fa fa-check"></i><b>8.4.2</b> The infer package for statistical inference</a></li>
+<li class="chapter" data-level="8.4.3" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#infer-ci"><i class="fa fa-check"></i><b>8.4.3</b> Building confidence intervals with the infer package</a></li>
+<li class="chapter" data-level="8.4.4" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#percentile-method-infer"><i class="fa fa-check"></i><b>8.4.4</b> The percentile method with infer</a></li>
+<li class="chapter" data-level="8.4.5" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#the-standard-error-method-with-infer"><i class="fa fa-check"></i><b>8.4.5</b> The standard error method with infer</a></li>
 </ul></li>
-<li class="chapter" data-level="10.5" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#ht-case-study"><i class="fa fa-check"></i><b>10.5</b> Case study: comparing two means</a><ul>
-<li class="chapter" data-level="10.5.1" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#randomizationpermutation"><i class="fa fa-check"></i><b>10.5.1</b> Randomization/permutation</a></li>
-<li class="chapter" data-level="10.5.2" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#comparing-action-and-romance-movies"><i class="fa fa-check"></i><b>10.5.2</b> Comparing action and romance movies</a></li>
-<li class="chapter" data-level="10.5.3" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#sampling-rightarrow-randomization"><i class="fa fa-check"></i><b>10.5.3</b> Sampling <span class="math inline">\(\rightarrow\)</span> randomization</a></li>
-<li class="chapter" data-level="10.5.4" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#data"><i class="fa fa-check"></i><b>10.5.4</b> Data</a></li>
-<li class="chapter" data-level="10.5.5" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#model-of-h_0"><i class="fa fa-check"></i><b>10.5.5</b> Model of <span class="math inline">\(H_0\)</span></a></li>
-<li class="chapter" data-level="10.5.6" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#test-statistic-delta"><i class="fa fa-check"></i><b>10.5.6</b> Test statistic <span class="math inline">\(\delta\)</span></a></li>
-<li class="chapter" data-level="10.5.7" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#observed-effect-delta"><i class="fa fa-check"></i><b>10.5.7</b> Observed effect <span class="math inline">\(\delta^*\)</span></a></li>
-<li class="chapter" data-level="10.5.8" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#simulated-data"><i class="fa fa-check"></i><b>10.5.8</b> Simulated data</a></li>
-<li class="chapter" data-level="10.5.9" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#distribution-of-delta-under-h_0"><i class="fa fa-check"></i><b>10.5.9</b> Distribution of <span class="math inline">\(\delta\)</span> under <span class="math inline">\(H_0\)</span></a></li>
-<li class="chapter" data-level="10.5.10" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#the-p-value"><i class="fa fa-check"></i><b>10.5.10</b> The p-value</a></li>
-<li class="chapter" data-level="10.5.11" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#corresponding-confidence-interval-1"><i class="fa fa-check"></i><b>10.5.11</b> Corresponding confidence interval</a></li>
+<li class="chapter" data-level="8.5" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#one-prop-ci"><i class="fa fa-check"></i><b>8.5</b> Case study: Revisiting the red ball example</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#observed-statistic"><i class="fa fa-check"></i><b>8.5.1</b> Observed statistic</a></li>
+<li class="chapter" data-level="8.5.2" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#one-prop-boot"><i class="fa fa-check"></i><b>8.5.2</b> Bootstrap distribution for one proportion</a></li>
 </ul></li>
-<li class="chapter" data-level="10.6" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#conclusion-6"><i class="fa fa-check"></i><b>10.6</b> Conclusion</a><ul>
-<li class="chapter" data-level="10.6.1" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#when-inference-is-not-needed"><i class="fa fa-check"></i><b>10.6.1</b> When inference is not needed</a></li>
-<li class="chapter" data-level="10.6.2" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#problems-with-p-values"><i class="fa fa-check"></i><b>10.6.2</b> Problems with p-values</a></li>
-<li class="chapter" data-level="10.6.3" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#comparing-confidence-intervals-and-hypothesis-tests"><i class="fa fa-check"></i><b>10.6.3</b> Comparing confidence intervals and hypothesis tests</a></li>
-<li class="chapter" data-level="10.6.4" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#ht-conclusion-table"><i class="fa fa-check"></i><b>10.6.4</b> Summary table</a></li>
-<li class="chapter" data-level="10.6.5" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#theory-hypo"><i class="fa fa-check"></i><b>10.6.5</b> Building theory-based methods using computation</a></li>
-<li class="chapter" data-level="10.6.6" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#additional-resources-7"><i class="fa fa-check"></i><b>10.6.6</b> Additional resources</a></li>
-<li class="chapter" data-level="10.6.7" data-path="10-hypothesis-testing.html"><a href="10-hypothesis-testing.html#whats-to-come-8"><i class="fa fa-check"></i><b>10.6.7</b> What’s to come</a></li>
+<li class="chapter" data-level="8.6" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#interpreting-the-confidence-interval"><i class="fa fa-check"></i><b>8.6</b> Interpreting the confidence interval</a><ul>
+<li class="chapter" data-level="" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#the-width-of-confidence-intervals"><i class="fa fa-check"></i>The width of confidence intervals</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#case-study-two-prop-ci"><i class="fa fa-check"></i><b>8.7</b> Case study: Comparing two proportions</a><ul>
+<li class="chapter" data-level="8.7.1" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#compute-the-point-estimate"><i class="fa fa-check"></i><b>8.7.1</b> Compute the point estimate</a></li>
+<li class="chapter" data-level="8.7.2" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#bootstrap-distribution"><i class="fa fa-check"></i><b>8.7.2</b> Bootstrap distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#ci-conclusion"><i class="fa fa-check"></i><b>8.8</b> Conclusion</a><ul>
+<li class="chapter" data-level="8.8.1" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#comparing-bootstrap-and-sampling-distributions"><i class="fa fa-check"></i><b>8.8.1</b> Comparing bootstrap and sampling distributions</a></li>
+<li class="chapter" data-level="8.8.2" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#theory-ci"><i class="fa fa-check"></i><b>8.8.2</b> Theory-based confidence intervals</a></li>
+<li class="chapter" data-level="8.8.3" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#ci-conclusion-table"><i class="fa fa-check"></i><b>8.8.3</b> Summary table</a></li>
+<li class="chapter" data-level="8.8.4" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#additional-resources-6"><i class="fa fa-check"></i><b>8.8.4</b> Additional resources</a></li>
+<li class="chapter" data-level="8.8.5" data-path="8-confidence-intervals.html"><a href="8-confidence-intervals.html#whats-to-come-7"><i class="fa fa-check"></i><b>8.8.5</b> What’s to come?</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html"><i class="fa fa-check"></i><b>11</b> Inference for Regression</a><ul>
-<li class="chapter" data-level="" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#needed-packages-8"><i class="fa fa-check"></i>Needed packages</a></li>
-<li class="chapter" data-level="11.1" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#simulation-based-inference-for-regression"><i class="fa fa-check"></i><b>11.1</b> Simulation-based Inference for Regression</a><ul>
-<li class="chapter" data-level="11.1.1" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#data-1"><i class="fa fa-check"></i><b>11.1.1</b> Data</a></li>
-<li class="chapter" data-level="11.1.2" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#test-statistic-delta-1"><i class="fa fa-check"></i><b>11.1.2</b> Test statistic <span class="math inline">\(\delta\)</span></a></li>
-<li class="chapter" data-level="11.1.3" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#observed-effect-delta-1"><i class="fa fa-check"></i><b>11.1.3</b> Observed effect <span class="math inline">\(\delta^*\)</span></a></li>
-<li class="chapter" data-level="11.1.4" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#model-of-h_0-1"><i class="fa fa-check"></i><b>11.1.4</b> Model of <span class="math inline">\(H_0\)</span></a></li>
-<li class="chapter" data-level="11.1.5" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#simulated-data-1"><i class="fa fa-check"></i><b>11.1.5</b> Simulated data</a></li>
-<li class="chapter" data-level="11.1.6" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#distribution-of-delta-under-h_0-1"><i class="fa fa-check"></i><b>11.1.6</b> Distribution of <span class="math inline">\(\delta\)</span> under <span class="math inline">\(H_0\)</span></a></li>
-<li class="chapter" data-level="11.1.7" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#the-p-value-1"><i class="fa fa-check"></i><b>11.1.7</b> The p-value</a></li>
+<li class="chapter" data-level="9" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html"><i class="fa fa-check"></i><b>9</b> Hypothesis Testing</a><ul>
+<li class="chapter" data-level="" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#needed-packages-7"><i class="fa fa-check"></i>Needed packages</a></li>
+<li class="chapter" data-level="9.1" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#ht-activity"><i class="fa fa-check"></i><b>9.1</b> Hypothesis testing activity</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#question-of-interest"><i class="fa fa-check"></i><b>9.1.1</b> Question of interest</a></li>
+<li class="chapter" data-level="9.1.2" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#what-did-we-actually-observe"><i class="fa fa-check"></i><b>9.1.2</b> What did we actually observe?</a></li>
+<li class="chapter" data-level="9.1.3" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#using-permuting-once"><i class="fa fa-check"></i><b>9.1.3</b> Using permuting once</a></li>
+<li class="chapter" data-level="9.1.4" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#using-permuting-33-times"><i class="fa fa-check"></i><b>9.1.4</b> Using permuting 33 times</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#bootstrapping-for-the-regression-slope"><i class="fa fa-check"></i><b>11.2</b> Bootstrapping for the regression slope</a></li>
-<li class="chapter" data-level="11.3" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#inference-for-multiple-regression"><i class="fa fa-check"></i><b>11.3</b> Inference for multiple regression</a><ul>
-<li class="chapter" data-level="11.3.1" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#refresher-professor-evaluations-data"><i class="fa fa-check"></i><b>11.3.1</b> Refresher: Professor evaluations data</a></li>
-<li class="chapter" data-level="11.3.2" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#refresher-visualizations"><i class="fa fa-check"></i><b>11.3.2</b> Refresher: Visualizations</a></li>
-<li class="chapter" data-level="11.3.3" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#refresher-regression-tables"><i class="fa fa-check"></i><b>11.3.3</b> Refresher: Regression tables</a></li>
-<li class="chapter" data-level="11.3.4" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#script-of-r-code"><i class="fa fa-check"></i><b>11.3.4</b> Script of R code</a></li>
+<li class="chapter" data-level="9.2" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#ht-infer"><i class="fa fa-check"></i><b>9.2</b> Hypothesis testing with infer</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#revisiting-the-infer-verb-framework"><i class="fa fa-check"></i><b>9.2.1</b> Revisiting the infer verb framework</a></li>
+<li class="chapter" data-level="9.2.2" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#the-infer-pipeline-for-the-activity"><i class="fa fa-check"></i><b>9.2.2</b> The <code>infer</code> pipeline for the activity</a></li>
+<li class="chapter" data-level="9.2.3" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#only-one-test"><i class="fa fa-check"></i><b>9.2.3</b> The “There Is Only One Test” framework</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#residual-analysis"><i class="fa fa-check"></i><b>11.4</b> Residual analysis</a><ul>
-<li class="chapter" data-level="11.4.1" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#model1residuals"><i class="fa fa-check"></i><b>11.4.1</b> Residual analysis</a></li>
-<li class="chapter" data-level="11.4.2" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#model2residuals"><i class="fa fa-check"></i><b>11.4.2</b> Residual analysis</a></li>
-<li class="chapter" data-level="11.4.3" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#model3residuals"><i class="fa fa-check"></i><b>11.4.3</b> Residual analysis</a></li>
-<li class="chapter" data-level="11.4.4" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#model4residuals"><i class="fa fa-check"></i><b>11.4.4</b> Residual analysis</a></li>
+<li class="chapter" data-level="9.3" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#p-value"><i class="fa fa-check"></i><b>9.3</b> The p-value</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#corresponding-confidence-interval"><i class="fa fa-check"></i><b>9.3.1</b> Corresponding confidence interval</a></li>
+<li class="chapter" data-level="9.3.2" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#summary-5"><i class="fa fa-check"></i><b>9.3.2</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#ht-interpretation"><i class="fa fa-check"></i><b>9.4</b> Interpretation of hypothesis testing results</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#trial"><i class="fa fa-check"></i><b>9.4.1</b> Criminal trial analogy</a></li>
+<li class="chapter" data-level="9.4.2" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#types-of-errors-in-hypothesis-testing"><i class="fa fa-check"></i><b>9.4.2</b> Types of errors in hypothesis testing</a></li>
+<li class="chapter" data-level="9.4.3" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#statistical-significance"><i class="fa fa-check"></i><b>9.4.3</b> Statistical significance</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#ht-case-study"><i class="fa fa-check"></i><b>9.5</b> Case study: comparing two means</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#randomizationpermutation"><i class="fa fa-check"></i><b>9.5.1</b> Randomization/permutation</a></li>
+<li class="chapter" data-level="9.5.2" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#comparing-action-and-romance-movies"><i class="fa fa-check"></i><b>9.5.2</b> Comparing action and romance movies</a></li>
+<li class="chapter" data-level="9.5.3" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#sampling-rightarrow-randomization"><i class="fa fa-check"></i><b>9.5.3</b> Sampling <span class="math inline">\(\rightarrow\)</span> randomization</a></li>
+<li class="chapter" data-level="9.5.4" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#data"><i class="fa fa-check"></i><b>9.5.4</b> Data</a></li>
+<li class="chapter" data-level="9.5.5" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#model-of-h_0"><i class="fa fa-check"></i><b>9.5.5</b> Model of <span class="math inline">\(H_0\)</span></a></li>
+<li class="chapter" data-level="9.5.6" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#test-statistic-delta"><i class="fa fa-check"></i><b>9.5.6</b> Test statistic <span class="math inline">\(\delta\)</span></a></li>
+<li class="chapter" data-level="9.5.7" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#observed-effect-delta"><i class="fa fa-check"></i><b>9.5.7</b> Observed effect <span class="math inline">\(\delta^*\)</span></a></li>
+<li class="chapter" data-level="9.5.8" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#simulated-data"><i class="fa fa-check"></i><b>9.5.8</b> Simulated data</a></li>
+<li class="chapter" data-level="9.5.9" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#distribution-of-delta-under-h_0"><i class="fa fa-check"></i><b>9.5.9</b> Distribution of <span class="math inline">\(\delta\)</span> under <span class="math inline">\(H_0\)</span></a></li>
+<li class="chapter" data-level="9.5.10" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#the-p-value"><i class="fa fa-check"></i><b>9.5.10</b> The p-value</a></li>
+<li class="chapter" data-level="9.5.11" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#corresponding-confidence-interval-1"><i class="fa fa-check"></i><b>9.5.11</b> Corresponding confidence interval</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#conclusion-6"><i class="fa fa-check"></i><b>9.6</b> Conclusion</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#when-inference-is-not-needed"><i class="fa fa-check"></i><b>9.6.1</b> When inference is not needed</a></li>
+<li class="chapter" data-level="9.6.2" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#problems-with-p-values"><i class="fa fa-check"></i><b>9.6.2</b> Problems with p-values</a></li>
+<li class="chapter" data-level="9.6.3" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#comparing-confidence-intervals-and-hypothesis-tests"><i class="fa fa-check"></i><b>9.6.3</b> Comparing confidence intervals and hypothesis tests</a></li>
+<li class="chapter" data-level="9.6.4" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#ht-conclusion-table"><i class="fa fa-check"></i><b>9.6.4</b> Summary table</a></li>
+<li class="chapter" data-level="9.6.5" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#theory-hypo"><i class="fa fa-check"></i><b>9.6.5</b> Building theory-based methods using computation</a></li>
+<li class="chapter" data-level="9.6.6" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#additional-resources-7"><i class="fa fa-check"></i><b>9.6.6</b> Additional resources</a></li>
+<li class="chapter" data-level="9.6.7" data-path="9-hypothesis-testing.html"><a href="9-hypothesis-testing.html#whats-to-come-8"><i class="fa fa-check"></i><b>9.6.7</b> What’s to come</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>IV Conclusion</b></span></li>
-<li class="chapter" data-level="12" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html"><i class="fa fa-check"></i><b>12</b> Thinking with Data</a><ul>
-<li class="chapter" data-level="" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#needed-packages-9"><i class="fa fa-check"></i>Needed packages</a></li>
-<li class="chapter" data-level="12.1" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#seattle-house-prices"><i class="fa fa-check"></i><b>12.1</b> Case study: Seattle house prices</a><ul>
-<li class="chapter" data-level="12.1.1" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#house-prices-EDA-I"><i class="fa fa-check"></i><b>12.1.1</b> Exploratory data analysis (EDA)</a></li>
-<li class="chapter" data-level="12.1.2" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#log10-transformations"><i class="fa fa-check"></i><b>12.1.2</b> log10 transformations</a></li>
-<li class="chapter" data-level="12.1.3" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#eda-part-ii"><i class="fa fa-check"></i><b>12.1.3</b> EDA Part II</a></li>
-<li class="chapter" data-level="12.1.4" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#house-prices-regression"><i class="fa fa-check"></i><b>12.1.4</b> Regression modeling</a></li>
-<li class="chapter" data-level="12.1.5" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#house-prices-making-predictions"><i class="fa fa-check"></i><b>12.1.5</b> Making predictions</a></li>
+<li class="chapter" data-level="10" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html"><i class="fa fa-check"></i><b>10</b> Inference for Regression</a><ul>
+<li class="chapter" data-level="" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#needed-packages-8"><i class="fa fa-check"></i>Needed packages</a></li>
+<li class="chapter" data-level="10.1" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#simulation-based-inference-for-regression"><i class="fa fa-check"></i><b>10.1</b> Simulation-based Inference for Regression</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#data-1"><i class="fa fa-check"></i><b>10.1.1</b> Data</a></li>
+<li class="chapter" data-level="10.1.2" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#test-statistic-delta-1"><i class="fa fa-check"></i><b>10.1.2</b> Test statistic <span class="math inline">\(\delta\)</span></a></li>
+<li class="chapter" data-level="10.1.3" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#observed-effect-delta-1"><i class="fa fa-check"></i><b>10.1.3</b> Observed effect <span class="math inline">\(\delta^*\)</span></a></li>
+<li class="chapter" data-level="10.1.4" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#model-of-h_0-1"><i class="fa fa-check"></i><b>10.1.4</b> Model of <span class="math inline">\(H_0\)</span></a></li>
+<li class="chapter" data-level="10.1.5" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#simulated-data-1"><i class="fa fa-check"></i><b>10.1.5</b> Simulated data</a></li>
+<li class="chapter" data-level="10.1.6" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#distribution-of-delta-under-h_0-1"><i class="fa fa-check"></i><b>10.1.6</b> Distribution of <span class="math inline">\(\delta\)</span> under <span class="math inline">\(H_0\)</span></a></li>
+<li class="chapter" data-level="10.1.7" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#the-p-value-1"><i class="fa fa-check"></i><b>10.1.7</b> The p-value</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#data-journalism"><i class="fa fa-check"></i><b>12.2</b> Case study: Effective data storytelling</a><ul>
-<li class="chapter" data-level="12.2.1" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#bechdel-test-for-hollywood-gender-representation"><i class="fa fa-check"></i><b>12.2.1</b> Bechdel test for Hollywood gender representation</a></li>
-<li class="chapter" data-level="12.2.2" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#us-births-in-1999"><i class="fa fa-check"></i><b>12.2.2</b> US Births in 1999</a></li>
-<li class="chapter" data-level="12.2.3" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#other-examples"><i class="fa fa-check"></i><b>12.2.3</b> Other examples</a></li>
-<li class="chapter" data-level="12.2.4" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#script-of-r-code-1"><i class="fa fa-check"></i><b>12.2.4</b> Script of R code</a></li>
+<li class="chapter" data-level="10.2" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#bootstrapping-for-the-regression-slope"><i class="fa fa-check"></i><b>10.2</b> Bootstrapping for the regression slope</a></li>
+<li class="chapter" data-level="10.3" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#inference-for-multiple-regression"><i class="fa fa-check"></i><b>10.3</b> Inference for multiple regression</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#refresher-professor-evaluations-data"><i class="fa fa-check"></i><b>10.3.1</b> Refresher: Professor evaluations data</a></li>
+<li class="chapter" data-level="10.3.2" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#refresher-visualizations"><i class="fa fa-check"></i><b>10.3.2</b> Refresher: Visualizations</a></li>
+<li class="chapter" data-level="10.3.3" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#refresher-regression-tables"><i class="fa fa-check"></i><b>10.3.3</b> Refresher: Regression tables</a></li>
+<li class="chapter" data-level="10.3.4" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#script-of-r-code"><i class="fa fa-check"></i><b>10.3.4</b> Script of R code</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#concluding-remarks"><i class="fa fa-check"></i>Concluding remarks</a></li>
+<li class="chapter" data-level="10.4" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#residual-analysis"><i class="fa fa-check"></i><b>10.4</b> Residual analysis</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#model1residuals"><i class="fa fa-check"></i><b>10.4.1</b> Residual analysis</a></li>
+<li class="chapter" data-level="10.4.2" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#model2residuals"><i class="fa fa-check"></i><b>10.4.2</b> Residual analysis</a></li>
+<li class="chapter" data-level="10.4.3" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#model3residuals"><i class="fa fa-check"></i><b>10.4.3</b> Residual analysis</a></li>
+<li class="chapter" data-level="10.4.4" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#model4residuals"><i class="fa fa-check"></i><b>10.4.4</b> Residual analysis</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Conclusion</b></span><ul>
+<li class="chapter" data-level="" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#needed-packages-9"><i class="fa fa-check"></i>Needed packages</a></li>
+<li class="chapter" data-level="10.5" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#seattle-house-prices"><i class="fa fa-check"></i><b>10.5</b> Case study: Seattle house prices</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#house-prices-EDA-I"><i class="fa fa-check"></i><b>10.5.1</b> Exploratory data analysis (EDA)</a></li>
+<li class="chapter" data-level="10.5.2" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#log10-transformations"><i class="fa fa-check"></i><b>10.5.2</b> log10 transformations</a></li>
+<li class="chapter" data-level="10.5.3" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#eda-part-ii"><i class="fa fa-check"></i><b>10.5.3</b> EDA Part II</a></li>
+<li class="chapter" data-level="10.5.4" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#house-prices-regression"><i class="fa fa-check"></i><b>10.5.4</b> Regression modeling</a></li>
+<li class="chapter" data-level="10.5.5" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#house-prices-inference-for-regression"><i class="fa fa-check"></i><b>10.5.5</b> Inference for regression</a></li>
+<li class="chapter" data-level="10.5.6" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#house-prices-making-predictions"><i class="fa fa-check"></i><b>10.5.6</b> Making predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#data-journalism"><i class="fa fa-check"></i><b>10.6</b> Case study: Effective data storytelling</a><ul>
+<li class="chapter" data-level="10.6.1" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#bechdel-test-for-hollywood-gender-representation"><i class="fa fa-check"></i><b>10.6.1</b> Bechdel test for Hollywood gender representation</a></li>
+<li class="chapter" data-level="10.6.2" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#us-births-in-1999"><i class="fa fa-check"></i><b>10.6.2</b> US Births in 1999</a></li>
+<li class="chapter" data-level="10.6.3" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#other-examples"><i class="fa fa-check"></i><b>10.6.3</b> Other examples</a></li>
+<li class="chapter" data-level="10.6.4" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#script-of-r-code-1"><i class="fa fa-check"></i><b>10.6.4</b> Script of R code</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="10-inference-for-regression.html"><a href="10-inference-for-regression.html#concluding-remarks"><i class="fa fa-check"></i>Concluding remarks</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-appendixA.html"><a href="A-appendixA.html"><i class="fa fa-check"></i><b>A</b> Statistical Background</a><ul>
@@ -564,7 +558,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Inference via Data Science</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">HR Analytics in R</a>
           </h1>
         </div>
 
@@ -573,7 +567,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <html>
-<img src='https://moderndive.com/wide_format.png' alt="ModernDive">
+<img src='https://hranalyticslive.netlify.com/images/hranalytics.jpg' alt="HRAnalytics">
 </html>
 <div id="viz" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Data Visualization</h1>
@@ -607,8 +601,135 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="gapminder" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Gapminder data</h3>
-<p>In February 2006, a statistician named Hans Rosling gave a TED talk titled <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">“The best stats you’ve ever seen”</a> where he presented global economic, health, and development data from the website <a href="http://www.gapminder.org/tools/#_locale_id=en;&amp;chart-type=bubbles">gapminder.org</a>. For example, for the 142 countries included from 2007, let’s consider only the first 6 countries when listed alphabetically in Table <a href="#tab:gapminder-2007"><strong>??</strong></a>.</p>
-
+<p>In February 2006, a statistician named Hans Rosling gave a TED talk titled <a href="https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen">“The best stats you’ve ever seen”</a> where he presented global economic, health, and development data from the website <a href="http://www.gapminder.org/tools/#_locale_id=en;&amp;chart-type=bubbles">gapminder.org</a>. For example, for the 142 countries included from 2007, let’s consider only the first 6 countries when listed alphabetically in Table <a href="3-viz.html#tab:gapminder-2007">3.1</a>.</p>
+<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:gapminder-2007">TABLE 3.1: </span>Gapminder 2007 Data: First 6 of 142 countries
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Country
+</th>
+<th style="text-align:left;">
+Continent
+</th>
+<th style="text-align:right;">
+Life Expectancy
+</th>
+<th style="text-align:right;">
+Population
+</th>
+<th style="text-align:right;">
+GDP per Capita
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Afghanistan
+</td>
+<td style="text-align:left;">
+Asia
+</td>
+<td style="text-align:right;">
+43.8
+</td>
+<td style="text-align:right;">
+31889923
+</td>
+<td style="text-align:right;">
+975
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Albania
+</td>
+<td style="text-align:left;">
+Europe
+</td>
+<td style="text-align:right;">
+76.4
+</td>
+<td style="text-align:right;">
+3600523
+</td>
+<td style="text-align:right;">
+5937
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Algeria
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:right;">
+72.3
+</td>
+<td style="text-align:right;">
+33333216
+</td>
+<td style="text-align:right;">
+6223
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Angola
+</td>
+<td style="text-align:left;">
+Africa
+</td>
+<td style="text-align:right;">
+42.7
+</td>
+<td style="text-align:right;">
+12420476
+</td>
+<td style="text-align:right;">
+4797
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Argentina
+</td>
+<td style="text-align:left;">
+Americas
+</td>
+<td style="text-align:right;">
+75.3
+</td>
+<td style="text-align:right;">
+40301927
+</td>
+<td style="text-align:right;">
+12779
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Australia
+</td>
+<td style="text-align:left;">
+Oceania
+</td>
+<td style="text-align:right;">
+81.2
+</td>
+<td style="text-align:right;">
+20434176
+</td>
+<td style="text-align:right;">
+34435
+</td>
+</tr>
+</tbody>
+</table>
 <p>Each row in this table corresponds to a country in 2007. For each row, we have 5 columns:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Country</strong>: Name of country.</li>
@@ -622,7 +743,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 Note that R will deal with large numbers using scientific notation.  So in the legend for "Population", 1.25e+09 is 1.25 $\times$ 10^9^ = 1,250,000,000 = 1.25 billion. 
 -->
 <div class="figure" style="text-align: center"><span id="fig:gapminder"></span>
-<img src="ismaykim_files/figure-html/gapminder-1.png" alt="Life Expectancy over GDP per Capita in 2007" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/gapminder-1.png" alt="Life Expectancy over GDP per Capita in 2007" width="\textwidth" />
 <p class="caption">
 FIGURE 3.1: Life Expectancy over GDP per Capita in 2007
 </p>
@@ -635,8 +756,71 @@ FIGURE 3.1: Life Expectancy over GDP per Capita in 2007
 <li>The <code>data</code> variable <strong>Continent</strong> gets mapped to the <code>color</code> <code>aes</code>thetic of the points.</li>
 </ol>
 <p>We’ll see shortly that <code>data</code> corresponds to the particular data frame where our data is saved and a “data variable” corresponds to a particular column in the data frame. Furthermore, the type of <code>geom</code>etric object considered in this plot are points. That being said, while in this example we are considering points, graphics are not limited to just points. Other plots involve lines while others involve bars.</p>
-<p>Let’s summarize the three essential components of the Grammar in Table <a href="#tab:summary-table-gapminder"><strong>??</strong></a>.</p>
-
+<p>Let’s summarize the three essential components of the Grammar in Table <a href="3-viz.html#tab:summary-table-gapminder">3.2</a>.</p>
+<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:summary-table-gapminder">TABLE 3.2: </span>Summary of Grammar of Graphics for this plot
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+data variable
+</th>
+<th style="text-align:left;">
+aes
+</th>
+<th style="text-align:left;">
+geom
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+GDP per Capita
+</td>
+<td style="text-align:left;">
+x
+</td>
+<td style="text-align:left;">
+point
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Life Expectancy
+</td>
+<td style="text-align:left;">
+y
+</td>
+<td style="text-align:left;">
+point
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Population
+</td>
+<td style="text-align:left;">
+size
+</td>
+<td style="text-align:left;">
+point
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Continent
+</td>
+<td style="text-align:left;">
+color
+</td>
+<td style="text-align:left;">
+point
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="other-components" class="section level3">
 <h3><span class="header-section-number">3.1.3</span> Other components</h3>
@@ -656,7 +840,7 @@ FIGURE 3.1: Life Expectancy over GDP per Capita in 2007
 </div>
 <div id="ggplot2-package" class="section level3">
 <h3><span class="header-section-number">3.1.4</span> ggplot2 package</h3>
-<p>In this book, we will be using the <code>ggplot2</code> package for data visualization, which is an implementation of the Grammar of Graphics for R <span class="citation">(Wickham et al. <a href="#ref-R-ggplot2">2018</a>)</span>. As we noted earlier, a lot of the previous section was written in a computer code type font. This is because the various components of the Grammar of Graphics are specified in the <code>ggplot()</code> function included in the <code>ggplot2</code> package, which expects at a minimum as arguments (i.e. inputs):</p>
+<p>In this book, we will be using the <code>ggplot2</code> package for data visualization, which is an implementation of the Grammar of Graphics for R <span class="citation">(Wickham et al. <a href="#ref-R-ggplot2">2019</a>)</span>. As we noted earlier, a lot of the previous section was written in a computer code type font. This is because the various components of the Grammar of Graphics are specified in the <code>ggplot()</code> function included in the <code>ggplot2</code> package, which expects at a minimum as arguments (i.e. inputs):</p>
 <ul>
 <li>The data frame where the variables exist: the <code>data</code> argument.</li>
 <li>The mapping of the variables to aesthetic attributes: the <code>mapping</code> argument which specifies the <code>aes</code>thetic attributes involved.</li>
@@ -720,9 +904,9 @@ FIGURE 3.1: Life Expectancy over GDP per Capita in 2007
 <li>We add a layer to the <code>ggplot()</code> function call using the <code>+</code> sign. The layer in question specifies the third component of the grammar: the <code>geom</code>etric object. In this case the geometric object are points, set by specifying <code>geom_point()</code>.</li>
 </ul>
 <p>After running the above code, you’ll notice two outputs: a warning message and the graphic shown in Figure <a href="3-viz.html#fig:noalpha">3.2</a>. Let’s first unpack the warning message:</p>
-<pre><code>Warning: Removed 5 rows containing missing values (geom_point).</code></pre>
+<pre><code>## Warning: Removed 5 rows containing missing values (geom_point).</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:noalpha"></span>
-<img src="ismaykim_files/figure-html/noalpha-1.png" alt="Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/noalpha-1.png" alt="Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013" width="\textwidth" />
 <p class="caption">
 FIGURE 3.2: Arrival Delays vs Departure Delays for Alaska Airlines flights from NYC in 2013
 </p>
@@ -736,7 +920,7 @@ FIGURE 3.2: Arrival Delays vs Departure Delays for Alaska Airlines flights from 
 </ul>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> alaska_flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> dep_delay, <span class="dt">y =</span> arr_delay))</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:nolayers"></span>
-<img src="ismaykim_files/figure-html/nolayers-1.png" alt="Plot with No Layers" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/nolayers-1.png" alt="Plot with No Layers" width="\textwidth" />
 <p class="caption">
 FIGURE 3.3: Plot with No Layers
 </p>
@@ -767,7 +951,7 @@ FIGURE 3.3: Plot with No Layers
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> alaska_flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> dep_delay, <span class="dt">y =</span> arr_delay)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:alpha"></span>
-<img src="ismaykim_files/figure-html/alpha-1.png" alt="Delay scatterplot with alpha=0.2" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/alpha-1.png" alt="Delay scatterplot with alpha=0.2" width="\textwidth" />
 <p class="caption">
 FIGURE 3.4: Delay scatterplot with alpha=0.2
 </p>
@@ -775,23 +959,23 @@ FIGURE 3.4: Delay scatterplot with alpha=0.2
 <p>The key feature to note in Figure <a href="3-viz.html#fig:alpha">3.4</a> is that the transparency of the points is cumulative: areas with a high-degree of overplotting are darker, whereas areas with a lower degree are less dark. Note furthermore that there is no <code>aes()</code> surrounding <code>alpha = 0.2</code>. This is because we are not mapping a variable to an aesthetic attribute, but rather merely changing the default setting of <code>alpha</code>. In fact, you’ll receive an error if you try to change the second line above to read <code>geom_point(aes(alpha = 0.2))</code>.</p>
 <p><strong>Method 2: Jittering the points</strong></p>
 <p>The second way of addressing overplotting is by <em>jittering</em> all the points, in other words give each point a small nudge in a random direction. You can think of “jittering” as shaking the points around a bit on the plot. Let’s illustrate using a simple example first. Say we have a data frame <code>jitter_example</code> with 4 rows of identical value 0 for both <code>x</code> and <code>y</code>:</p>
-<pre><code># A tibble: 4 x 2
-      x     y
-  &lt;dbl&gt; &lt;dbl&gt;
-1     0     0
-2     0     0
-3     0     0
-4     0     0</code></pre>
+<pre><code>## # A tibble: 4 x 2
+##       x     y
+##   &lt;dbl&gt; &lt;dbl&gt;
+## 1     0     0
+## 2     0     0
+## 3     0     0
+## 4     0     0</code></pre>
 <p>We display the resulting scatterplot in Figure <a href="3-viz.html#fig:jitter-example-plot-1">3.5</a>; observe that the 4 points are superimposed on top of each other. While we know there are 4 values being plotted, this fact might not be apparent to others.</p>
 <div class="figure" style="text-align: center"><span id="fig:jitter-example-plot-1"></span>
-<img src="ismaykim_files/figure-html/jitter-example-plot-1-1.png" alt="Regular scatterplot of jitter example data" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/jitter-example-plot-1-1.png" alt="Regular scatterplot of jitter example data" width="\textwidth" />
 <p class="caption">
 FIGURE 3.5: Regular scatterplot of jitter example data
 </p>
 </div>
 <p>In Figure <a href="3-viz.html#fig:jitter-example-plot-2">3.6</a> we instead display a <em>jittered scatterplot</em> where each point is given a random “nudge.” It is now plainly evident that this plot involves four points. Keep in mind that jittering is strictly a visualization tool; even after creating a jittered scatterplot, the original values saved in <code>jitter_example</code> remain unchanged.</p>
 <div class="figure" style="text-align: center"><span id="fig:jitter-example-plot-2"></span>
-<img src="ismaykim_files/figure-html/jitter-example-plot-2-1.png" alt="Jittered scatterplot of jitter example data" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/jitter-example-plot-2-1.png" alt="Jittered scatterplot of jitter example data" width="\textwidth" />
 <p class="caption">
 FIGURE 3.6: Jittered scatterplot of jitter example data
 </p>
@@ -800,7 +984,7 @@ FIGURE 3.6: Jittered scatterplot of jitter example data
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> alaska_flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> dep_delay, <span class="dt">y =</span> arr_delay)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="dv">30</span>, <span class="dt">height =</span> <span class="dv">30</span>)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:jitter"></span>
-<img src="ismaykim_files/figure-html/jitter-1.png" alt="Jittered delay scatterplot" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/jitter-1.png" alt="Jittered delay scatterplot" width="\textwidth" />
 <p class="caption">
 FIGURE 3.7: Jittered delay scatterplot
 </p>
@@ -861,7 +1045,7 @@ FIGURE 3.7: Jittered delay scatterplot
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> early_january_weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> time_hour, <span class="dt">y =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_line</span>()</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:hourlytemp"></span>
-<img src="ismaykim_files/figure-html/hourlytemp-1.png" alt="Hourly Temperature in Newark for January 1-15, 2013" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/hourlytemp-1.png" alt="Hourly Temperature in Newark for January 1-15, 2013" width="\textwidth" />
 <p class="caption">
 FIGURE 3.8: Hourly Temperature in Newark for January 1-15, 2013
 </p>
@@ -908,7 +1092,7 @@ FIGURE 3.8: Hourly Temperature in Newark for January 1-15, 2013
 </ol>
 <p>One way to visualize this <em>distribution</em> of this single variable <code>temp</code> is to plot them on a horizontal line as we do in Figure <a href="3-viz.html#fig:temp-on-line">3.9</a>:</p>
 <div class="figure" style="text-align: center"><span id="fig:temp-on-line"></span>
-<img src="ismaykim_files/figure-html/temp-on-line-1.png" alt="Plot of Hourly Temperature Recordings from NYC in 2013" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/temp-on-line-1.png" alt="Plot of Hourly Temperature Recordings from NYC in 2013" width="\textwidth" />
 <p class="caption">
 FIGURE 3.9: Plot of Hourly Temperature Recordings from NYC in 2013
 </p>
@@ -922,7 +1106,7 @@ FIGURE 3.9: Plot of Hourly Temperature Recordings from NYC in 2013
 </ol>
 <p>Let’s drill-down on an example of a histogram, shown in Figure <a href="3-viz.html#fig:histogramexample">3.10</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:histogramexample"></span>
-<img src="ismaykim_files/figure-html/histogramexample-1.png" alt="Example histogram." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/histogramexample-1.png" alt="Example histogram." width="\textwidth" />
 <p class="caption">
 FIGURE 3.10: Example histogram.
 </p>
@@ -939,10 +1123,10 @@ FIGURE 3.10: Example histogram.
 <p>Let’s now present the <code>ggplot()</code> code to plot your first histogram! Unlike with scatterplots and linegraphs, there is now only one variable being mapped in <code>aes()</code>: the single numerical variable <code>temp</code>. The y-aesthetic of a histogram gets computed for you automatically. Furthermore, the geometric object layer is now a <code>geom_histogram()</code></p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>()</code></pre>
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<pre><code>Warning: Removed 1 rows containing non-finite values (stat_bin).</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>## Warning: Removed 1 rows containing non-finite values (stat_bin).</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:weather-histogram"></span>
-<img src="ismaykim_files/figure-html/weather-histogram-1.png" alt="Histogram of hourly temperatures at three NYC airports." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/weather-histogram-1.png" alt="Histogram of hourly temperatures at three NYC airports." width="\textwidth" />
 <p class="caption">
 FIGURE 3.11: Histogram of hourly temperatures at three NYC airports.
 </p>
@@ -952,7 +1136,7 @@ FIGURE 3.11: Histogram of hourly temperatures at three NYC airports.
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:weather-histogram-2"></span>
-<img src="ismaykim_files/figure-html/weather-histogram-2-1.png" alt="Histogram of hourly temperatures at three NYC airports with white borders." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/weather-histogram-2-1.png" alt="Histogram of hourly temperatures at three NYC airports with white borders." width="\textwidth" />
 <p class="caption">
 FIGURE 3.12: Histogram of hourly temperatures at three NYC airports with white borders.
 </p>
@@ -961,7 +1145,7 @@ FIGURE 3.12: Histogram of hourly temperatures at three NYC airports with white b
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;white&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;steelblue&quot;</span>)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:weather-histogram-3"></span>
-<img src="ismaykim_files/figure-html/weather-histogram-3-1.png" alt="Histogram of hourly temperatures at three NYC airports with white borders." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/weather-histogram-3-1.png" alt="Histogram of hourly temperatures at three NYC airports with white borders." width="\textwidth" />
 <p class="caption">
 FIGURE 3.13: Histogram of hourly temperatures at three NYC airports with white borders.
 </p>
@@ -977,8 +1161,8 @@ FIGURE 3.13: Histogram of hourly temperatures at three NYC airports with white b
 <p>Using the first method, we have the power to specify how many bins we would like to cut the x-axis up in. As mentioned in the previous section, the default number of bins is 30. We can override this default, to say 40 bins, as follows:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">40</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-28-1.png" alt="Histogram with 40 bins." width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
+<img src="hendrikfeddersen_files/figure-html/unnamed-chunk-12-1.png" alt="Histogram with 40 bins." width="\textwidth" />
 <p class="caption">
 FIGURE 3.14: Histogram with 40 bins.
 </p>
@@ -986,8 +1170,8 @@ FIGURE 3.14: Histogram with 40 bins.
 <p>Using the second method, instead of specifying the number of bins, we specify the width of the bins by using the <code>binwidth</code> argument in the <code>geom_histogram()</code> layer. For example, let’s set the width of each bin to be 10°F.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">10</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>)</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-29-1.png" alt="Histogram with binwidth 10." width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
+<img src="hendrikfeddersen_files/figure-html/unnamed-chunk-13-1.png" alt="Histogram with binwidth 10." width="\textwidth" />
 <p class="caption">
 FIGURE 3.15: Histogram with binwidth 10.
 </p>
@@ -1019,7 +1203,7 @@ FIGURE 3.15: Histogram with binwidth 10.
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">5</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>month)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:facethistogram"></span>
-<img src="ismaykim_files/figure-html/facethistogram-1.png" alt="Faceted histogram." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/facethistogram-1.png" alt="Faceted histogram." width="\textwidth" />
 <p class="caption">
 FIGURE 3.16: Faceted histogram.
 </p>
@@ -1029,7 +1213,7 @@ FIGURE 3.16: Faceted histogram.
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">5</span>, <span class="dt">color =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>month, <span class="dt">nrow =</span> <span class="dv">4</span>)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:facethistogram2"></span>
-<img src="ismaykim_files/figure-html/facethistogram2-1.png" alt="Faceted histogram with 4 instead of 3 rows." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/facethistogram2-1.png" alt="Faceted histogram with 4 instead of 3 rows." width="\textwidth" />
 <p class="caption">
 FIGURE 3.17: Faceted histogram with 4 instead of 3 rows.
 </p>
@@ -1053,7 +1237,7 @@ FIGURE 3.17: Faceted histogram with 4 instead of 3 rows.
 <h2><span class="header-section-number">3.7</span> 5NG#4: Boxplots</h2>
 <p>While faceted histograms are one visualization that allows us to compare distributions of a numerical variable split by another variable, another visualization that achieves this same goal are <em>side-by-side boxplots</em>. A boxplot is constructed from the information provided in the <em>five-number summary</em> of a numerical variable (see Appendix <a href="A-appendixA.html#appendixA">A</a>). To keep things simple for now, let’s only consider hourly temperature recordings for the month of November in Figure <a href="3-viz.html#fig:nov1">3.18</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:nov1"></span>
-<img src="ismaykim_files/figure-html/nov1-1.png" alt="November temperatures." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/nov1-1.png" alt="November temperatures." width="\textwidth" />
 <p class="caption">
 FIGURE 3.18: November temperatures.
 </p>
@@ -1068,14 +1252,14 @@ FIGURE 3.18: November temperatures.
 </ol>
 <p>Let’s mark these 5 values with dashed horizontal lines in Figure <a href="3-viz.html#fig:nov2">3.19</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:nov2"></span>
-<img src="ismaykim_files/figure-html/nov2-1.png" alt="November temperatures." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/nov2-1.png" alt="November temperatures." width="\textwidth" />
 <p class="caption">
 FIGURE 3.19: November temperatures.
 </p>
 </div>
 <p>Let’s add the boxplot underneath these points and dashed horizontal lines in Figure <a href="3-viz.html#fig:nov3">3.20</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:nov3"></span>
-<img src="ismaykim_files/figure-html/nov3-1.png" alt="November temperatures." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/nov3-1.png" alt="November temperatures." width="\textwidth" />
 <p class="caption">
 FIGURE 3.20: November temperatures.
 </p>
@@ -1090,7 +1274,7 @@ FIGURE 3.20: November temperatures.
 </ol>
 <p>Lastly, for clarity’s sake let’s remove the points but keep the dashed horizontal lines in Figure <a href="3-viz.html#fig:nov4">3.21</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:nov4"></span>
-<img src="ismaykim_files/figure-html/nov4-1.png" alt="November temperatures." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/nov4-1.png" alt="November temperatures." width="\textwidth" />
 <p class="caption">
 FIGURE 3.21: November temperatures.
 </p>
@@ -1102,7 +1286,7 @@ FIGURE 3.21: November temperatures.
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> month, <span class="dt">y =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:badbox"></span>
-<img src="ismaykim_files/figure-html/badbox-1.png" alt="Invalid boxplot specification" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/badbox-1.png" alt="Invalid boxplot specification" width="\textwidth" />
 <p class="caption">
 FIGURE 3.22: Invalid boxplot specification
 </p>
@@ -1115,7 +1299,7 @@ FIGURE 3.22: Invalid boxplot specification
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> weather, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> <span class="kw">factor</span>(month), <span class="dt">y =</span> temp)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_boxplot</span>()</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:monthtempbox"></span>
-<img src="ismaykim_files/figure-html/monthtempbox-1.png" alt="Month by temp boxplot" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/monthtempbox-1.png" alt="Month by temp boxplot" width="\textwidth" />
 <p class="caption">
 FIGURE 3.23: Month by temp boxplot
 </p>
@@ -1158,20 +1342,20 @@ fruits_counted &lt;-<span class="st"> </span><span class="kw">tibble</span>(
   <span class="dt">number =</span> <span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">2</span>)
 )</code></pre>
 <p>We see both the <code>fruits</code> and <code>fruits_counted</code> data frames represent the same collection of fruit. Whereas <code>fruits</code> just lists the fruit individually…</p>
-<pre><code># A tibble: 5 x 1
-  fruit 
-  &lt;chr&gt; 
-1 apple 
-2 apple 
-3 orange
-4 apple 
-5 orange</code></pre>
+<pre><code>## # A tibble: 5 x 1
+##   fruit 
+##   &lt;chr&gt; 
+## 1 apple 
+## 2 apple 
+## 3 orange
+## 4 apple 
+## 5 orange</code></pre>
 <p>… <code>fruits_counted</code> has a variable <code>count</code> which represents pre-counted values of each fruit.</p>
-<pre><code># A tibble: 2 x 2
-  fruit  number
-  &lt;chr&gt;   &lt;dbl&gt;
-1 apple       3
-2 orange      2</code></pre>
+<pre><code>## # A tibble: 2 x 2
+##   fruit  number
+##   &lt;chr&gt;   &lt;dbl&gt;
+## 1 apple       3
+## 2 orange      2</code></pre>
 <p>Depending on how your categorical data is represented, you’ll need to use add a different <code>geom</code> layer to your <code>ggplot()</code> to create a barplot, as we now explore.</p>
 <div id="barplots-via-geom_bar-or-geom_col" class="section level3">
 <h3><span class="header-section-number">3.8.1</span> Barplots via geom_bar or geom_col</h3>
@@ -1179,7 +1363,7 @@ fruits_counted &lt;-<span class="st"> </span><span class="kw">tibble</span>(
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> fruits, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> fruit)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:geombar"></span>
-<img src="ismaykim_files/figure-html/geombar-1.png" alt="Barplot when counts are not pre-counted" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/geombar-1.png" alt="Barplot when counts are not pre-counted" width="\textwidth" />
 <p class="caption">
 FIGURE 3.24: Barplot when counts are not pre-counted
 </p>
@@ -1188,7 +1372,7 @@ FIGURE 3.24: Barplot when counts are not pre-counted
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> fruits_counted, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> fruit, <span class="dt">y =</span> number)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_col</span>()</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:geomcol"></span>
-<img src="ismaykim_files/figure-html/geomcol-1.png" alt="Barplot when counts are pre-counted" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/geomcol-1.png" alt="Barplot when counts are pre-counted" width="\textwidth" />
 <p class="caption">
 FIGURE 3.25: Barplot when counts are pre-counted
 </p>
@@ -1203,15 +1387,158 @@ FIGURE 3.25: Barplot when counts are pre-counted
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:flightsbar"></span>
-<img src="ismaykim_files/figure-html/flightsbar-1.png" alt="Number of flights departing NYC in 2013 by airline using geom_bar" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/flightsbar-1.png" alt="Number of flights departing NYC in 2013 by airline using geom_bar" width="\textwidth" />
 <p class="caption">
 FIGURE 3.26: Number of flights departing NYC in 2013 by airline using geom_bar
 </p>
 </div>
 <p>Observe in Figure <a href="3-viz.html#fig:flightsbar">3.26</a> that United Air Lines (UA), JetBlue Airways (B6), and ExpressJet Airlines (EV) had the most flights depart New York City in 2013. If you don’t know which airlines correspond to which carrier codes, then run <code>View(airlines)</code> to see a directory of airlines. For example: AA is American Airlines; B6 is JetBlue Airways; DL is Delta Airlines; EV is ExpressJet Airlines; MQ is Envoy Air; while UA is United Airlines.</p>
-<p>Alternatively, say you had a data frame <code>flights_counted</code> where the number of flights for each <code>carrier</code> was pre-counted like in Table <a href="#tab:flights-counted"><strong>??</strong></a>.</p>
-
-
+<p>Alternatively, say you had a data frame <code>flights_counted</code> where the number of flights for each <code>carrier</code> was pre-counted like in Table <a href="3-viz.html#tab:flights-counted">3.3</a>.</p>
+<table class="table" style="font-size: 16px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:flights-counted">TABLE 3.3: </span>Number of flights pre-counted for each carrier.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+carrier
+</th>
+<th style="text-align:right;">
+number
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+9E
+</td>
+<td style="text-align:right;">
+18460
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AA
+</td>
+<td style="text-align:right;">
+32729
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AS
+</td>
+<td style="text-align:right;">
+714
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+B6
+</td>
+<td style="text-align:right;">
+54635
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DL
+</td>
+<td style="text-align:right;">
+48110
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EV
+</td>
+<td style="text-align:right;">
+54173
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+F9
+</td>
+<td style="text-align:right;">
+685
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FL
+</td>
+<td style="text-align:right;">
+3260
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HA
+</td>
+<td style="text-align:right;">
+342
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MQ
+</td>
+<td style="text-align:right;">
+26397
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+OO
+</td>
+<td style="text-align:right;">
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+UA
+</td>
+<td style="text-align:right;">
+58665
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+US
+</td>
+<td style="text-align:right;">
+20536
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+VX
+</td>
+<td style="text-align:right;">
+5162
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+WN
+</td>
+<td style="text-align:right;">
+12275
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+YV
+</td>
+<td style="text-align:right;">
+601
+</td>
+</tr>
+</tbody>
+</table>
 <p>In order to create a barplot visualizing the distribution of the categorical variable <code>carrier</code> in this case, we would use <code>geom_col()</code> instead with <code>x</code> mapped to <code>carrier</code> and <code>y</code> mapped to <code>number</code> as seen below. The resulting barplot would be identical to Figure <a href="3-viz.html#fig:flightsbar">3.26</a>.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights_table, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">y =</span> number)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_col</span>()</code></pre>
@@ -1233,7 +1560,7 @@ FIGURE 3.26: Number of flights departing NYC in 2013 by airline using geom_bar
 <p>Unfortunately, one of the most common plots seen today for categorical data is the pie chart. While they may seem harmless enough, they actually present a problem in that humans are unable to judge angles well. As Naomi Robbins describes in her book “Creating More Effective Graphs” <span class="citation">(Robbins <a href="#ref-robbins2013">2013</a>)</span>, we overestimate angles greater than 90 degrees and we underestimate angles less than 90 degrees. In other words, it is difficult for us to determine relative size of one piece of the pie compared to another.</p>
 <p>Let’s examine the same data used in our previous barplot of the number of flights departing NYC by airline in Figure <a href="3-viz.html#fig:flightsbar">3.26</a>, but this time we will use a pie chart in Figure <a href="3-viz.html#fig:carrierpie">3.27</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:carrierpie"></span>
-<img src="ismaykim_files/figure-html/carrierpie-1.png" alt="The dreaded pie chart" width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/carrierpie-1.png" alt="The dreaded pie chart" width="\textwidth" />
 <p class="caption">
 FIGURE 3.27: The dreaded pie chart
 </p>
@@ -1246,7 +1573,7 @@ FIGURE 3.27: The dreaded pie chart
 </ul>
 <p>While it is quite difficult to answer these questions when looking at the pie chart in Figure <a href="3-viz.html#fig:carrierpie">3.27</a>, we can much more easily answer these questions using the barchart in Figure <a href="3-viz.html#fig:flightsbar">3.26</a>. This is true since barplots present the information in a way such that comparisons between categories can be made with single horizontal lines, whereas pie charts present the information in a way such that comparisons between categories must be made by comparing angles.</p>
 <p>There may be one exception of a pie chart not to avoid courtesy Nathan Yau at <a href="https://flowingdata.com/2008/09/19/pie-i-have-eaten-and-pie-i-have-not-eaten/" title="Pie I Have Eaten and Pie I Have Not Eaten">FlowingData.com</a>, but we will leave this for the reader to decide:</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-36"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-20"></span>
 <img src="images/Pie-I-have-Eaten.jpg" alt="The only good pie chart" width="\textwidth" />
 <p class="caption">
 FIGURE 3.28: The only good pie chart
@@ -1268,12 +1595,12 @@ FIGURE 3.28: The only good pie chart
 <p>Barplots are the go-to way to visualize the frequency of different categories, or levels, of a single categorical variable. Another use of barplots is to visualize the <em>joint</em> distribution of two categorical variables at the same time. Let’s examine the <em>joint</em> distribution of outgoing domestic flights from NYC by <code>carrier</code> and <code>origin</code>, or in other words the number of flights for each <code>carrier</code> and <code>origin</code> combination. For example, the number of WestJet flights from <code>JFK</code>, the number of WestJet flights from <code>LGA</code>, the number of WestJet flights from <code>EWR</code>, the number of American Airlines flights from <code>JFK</code>, and so on. Recall the <code>ggplot()</code> code that created the barplot of <code>carrier</code> frequency in Figure <a href="3-viz.html#fig:flightsbar">3.26</a>:</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre>
-<p><img src="ismaykim_files/figure-html/unnamed-chunk-38-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="hendrikfeddersen_files/figure-html/unnamed-chunk-22-1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
 <p>We can now map the additional variable <code>origin</code> by adding a <code>fill = origin</code> inside the <code>aes()</code> aesthetic mapping; the <code>fill</code> aesthetic of any bar corresponds to the color used to fill the bars.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> origin)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:flights-stacked-bar"></span>
-<img src="ismaykim_files/figure-html/flights-stacked-bar-1.png" alt="Stacked barplot comparing the number of flights by carrier and origin." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/flights-stacked-bar-1.png" alt="Stacked barplot comparing the number of flights by carrier and origin." width="\textwidth" />
 <p class="caption">
 FIGURE 3.29: Stacked barplot comparing the number of flights by carrier and origin.
 </p>
@@ -1286,7 +1613,7 @@ FIGURE 3.29: Stacked barplot comparing the number of flights by carrier and orig
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">color =</span> origin)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>()</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:flights-stacked-bar-color"></span>
-<img src="ismaykim_files/figure-html/flights-stacked-bar-color-1.png" alt="Stacked barplot with color aesthetic used instead of fill." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/flights-stacked-bar-color-1.png" alt="Stacked barplot with color aesthetic used instead of fill." width="\textwidth" />
 <p class="caption">
 FIGURE 3.30: Stacked barplot with color aesthetic used instead of fill.
 </p>
@@ -1304,8 +1631,8 @@ FIGURE 3.30: Stacked barplot with color aesthetic used instead of fill.
 <p>Another alternative to stacked barplots are <em>side-by-side barplots</em>, also known as a <em>dodged barplot</em>. The code to created a side-by-side barplot is identical to the code to create a stacked barplot, but with a <code>position = &quot;dodge&quot;</code> argument added to <code>geom_bar()</code>. In other words, we are overriding the default barplot type, which is a stacked barplot, and specifying it to be a side-by-side barplot.</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> flights, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> carrier, <span class="dt">fill =</span> origin)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>)</code></pre>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-41"></span>
-<img src="ismaykim_files/figure-html/unnamed-chunk-41-1.png" alt="Side-by-side AKA dodged barplot comparing the number of flights by carrier and origin." width="\textwidth" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
+<img src="hendrikfeddersen_files/figure-html/unnamed-chunk-25-1.png" alt="Side-by-side AKA dodged barplot comparing the number of flights by carrier and origin." width="\textwidth" />
 <p class="caption">
 FIGURE 3.31: Side-by-side AKA dodged barplot comparing the number of flights by carrier and origin.
 </p>
@@ -1325,7 +1652,7 @@ FIGURE 3.31: Side-by-side AKA dodged barplot comparing the number of flights by 
 <span class="st">  </span><span class="kw">geom_bar</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>origin, <span class="dt">ncol =</span> <span class="dv">1</span>)</code></pre>
 <div class="figure" style="text-align: center"><span id="fig:facet-bar-vert"></span>
-<img src="ismaykim_files/figure-html/facet-bar-vert-1.png" alt="Faceted barplot comparing the number of flights by carrier and origin." width="\textwidth" />
+<img src="hendrikfeddersen_files/figure-html/facet-bar-vert-1.png" alt="Faceted barplot comparing the number of flights by carrier and origin." width="\textwidth" />
 <p class="caption">
 FIGURE 3.32: Faceted barplot comparing the number of flights by carrier and origin.
 </p>
@@ -1351,8 +1678,115 @@ FIGURE 3.32: Faceted barplot comparing the number of flights by carrier and orig
 <h2><span class="header-section-number">3.9</span> Conclusion</h2>
 <div id="summary-table" class="section level3">
 <h3><span class="header-section-number">3.9.1</span> Summary table</h3>
-<p>Let’s recap all five of the Five Named Graphs (5NG) in Table <a href="#tab:viz-summary-table"><strong>??</strong></a> summarizing their differences. Using these 5NG, you’ll be able to visualize the distributions and relationships of variables contained in a wide array of datasets. This will be even more the case as we start to map more variables to more of each <code>geom</code>etric object’s <code>aes</code>thetic attribute options, further unlocking the awesome power of the <code>ggplot2</code> package.</p>
-
+<p>Let’s recap all five of the Five Named Graphs (5NG) in Table <a href="3-viz.html#tab:viz-summary-table">3.4</a> summarizing their differences. Using these 5NG, you’ll be able to visualize the distributions and relationships of variables contained in a wide array of datasets. This will be even more the case as we start to map more variables to more of each <code>geom</code>etric object’s <code>aes</code>thetic attribute options, further unlocking the awesome power of the <code>ggplot2</code> package.</p>
+<table>
+<caption>
+<span id="tab:viz-summary-table">TABLE 3.4: </span>Summary of 5NG
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+</th>
+<th style="text-align:left;">
+Named graph
+</th>
+<th style="text-align:left;">
+Shows
+</th>
+<th style="text-align:left;">
+Geometric object
+</th>
+<th style="text-align:left;">
+Notes
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Scatterplot
+</td>
+<td style="text-align:left;">
+Relationship between 2 numerical variables
+</td>
+<td style="text-align:left;">
+<code>geom_point()</code>
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Linegraph
+</td>
+<td style="text-align:left;">
+Relationship between 2 numerical variables
+</td>
+<td style="text-align:left;">
+<code>geom_line()</code>
+</td>
+<td style="text-align:left;">
+Used when there is a sequential order to x-variable e.g. time
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Histogram
+</td>
+<td style="text-align:left;">
+Distribution of 1 numerical variable
+</td>
+<td style="text-align:left;">
+<code>geom_histogram()</code>
+</td>
+<td style="text-align:left;">
+Facetted histograms show the distribution of 1 numerical variable split by values of another variable
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Boxplot
+</td>
+<td style="text-align:left;">
+Distribution of 1 numerical variable split by 1 categorical variable
+</td>
+<td style="text-align:left;">
+<code>geom_boxplot()</code>
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Barplot
+</td>
+<td style="text-align:left;">
+Distribution of 1 categorical variable
+</td>
+<td style="text-align:left;">
+<code>geom_bar()</code> when counts are not pre-counted, <code>geom_col()</code> when counts are pre-counted
+</td>
+<td style="text-align:left;">
+Stacked, side-by-side, and faceted barplots show the <em>joint</em> distribution of 2 categorical variables
+</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="argument-specification" class="section level3">
 <h3><span class="header-section-number">3.9.2</span> Argument specification</h3>
@@ -1418,7 +1852,7 @@ In addition, we've created a mind map to help you remember which types of plots 
 <p>Grolemund, Garrett, and Hadley Wickham. 2016. <em>R for Data Science</em>. <a href="http://r4ds.had.co.nz/">http://r4ds.had.co.nz/</a>.</p>
 </div>
 <div id="ref-R-ggplot2">
-<p>Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, and Kara Woo. 2018. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.</p>
+<p>Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, and Hiroaki Yutani. 2019. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>.</p>
 </div>
 <div id="ref-robbins2013">
 <p>Robbins, Naomi. 2013. <em>Creating More Effective Graphs</em>. Chart House.</p>
@@ -1460,14 +1894,14 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/moderndive/moderndive_book/edit/master/03-visualization.Rmd",
+"link": "https://github.com/Hendrik147/HR_Analytics_in_R_book/blob/master/03-visualization.Rmd",
 "text": "Edit"
 },
 "history": {
 "link": null,
 "text": null
 },
-"download": ["ismaykim.pdf"],
+"download": null,
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

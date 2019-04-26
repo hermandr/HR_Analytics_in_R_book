@@ -11,6 +11,7 @@ knitr::opts_chunk$set(
   tidy = FALSE, 
   out.width = '\\textwidth', 
   fig.height = 4,
+  fig.align='center',
   warning = FALSE
   )
 
@@ -20,22 +21,6 @@ options(scipen = 99)#, digits = 3)
 # https://www.youtube.com/watch?v=xjJ7FheCkCU
 set.seed(76)
 ```
-
-
-
----
-
-
-
-```{block, type='announcement', purl=FALSE}
-**In preparation for our first print edition to be published by CRC Press in Fall 2019, we're remodeling this chapter a bit.  Don't expect major changes in content, but rather only minor changes in presentation. Our remodeling will be complete and available online at [ModernDive.com](https://moderndive.com/) by early Summer 2019!**
-```
-
-
-
----
-
-
 
 We saw some of the main concepts of hypothesis testing introduced in Chapters \@ref(sampling) and \@ref(confidence-intervals). We will expand further on these ideas here and also provide a framework for understanding hypothesis tests in general. Instead of presenting you with lots of different formulas and scenarios, we hope to build a way to think about all hypothesis tests.  You can then adapt to different scenarios as needed down the road when you encounter different statistical situations.
 
