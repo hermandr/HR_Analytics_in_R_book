@@ -131,7 +131,7 @@ system("cp -r previous_versions/* docs/previous_versions/")
 
 # For some reason logo needs to be done separately.
 # Loaded in _includes/logo.html
-file.copy("images/logos/wide_format.png", "docs/wide_format.png", overwrite = TRUE)
+file.copy("images/hranalytics.jpg", "docs/hranalytics.jpg", overwrite = TRUE)
 
 # Copy pdf file if needed
 if(file.exists("ismaykim.pdf"))
@@ -186,7 +186,7 @@ image_link <- function(path,
 ***
 
 ```{block, type='learncheck', purl=FALSE}
-**Please note that you are currently looking at the "development version" of "HR Analytics in R", which is a work in progress currently being edited and thus subject to frequent change.**
+**Please note that you are currently looking at the latest version of "HR Analytics in R". However, work is still in progress and thus subject to frequent change.**
 ```
 
 
@@ -380,7 +380,7 @@ If you would like to connect with "HR Analytics in R", check out the following l
 * I am on Twitter at [h_feddersen](https://twitter.com/h_feddersen).
 
 
-If you would like to contribute to "HR Analytics.live", there are many ways! Let's all work together to make this book as great as possible for as many students as possible!
+If you would like to contribute to "HR Analytics in R", there are many ways! Let's all work together to make this book as great as possible for as many students as possible!
 
 * Please let me know if you find any errors, typos, or areas from improvement on my [GitHub issues](https://github.com/Hendrik147/HR_Analytics_in_R_book/issues) page.
 * If you are familiar with GitHub and would like to contribute even more, please see Section \@ref(sec:about-book) below.
@@ -398,7 +398,7 @@ The author would like to thank [Moderndive](https://github.com/moderndive/modern
 This book was written using RStudio's [bookdown](https://bookdown.org/) package by Yihui Xie [@R-bookdown]. This package simplifies the publishing of books by having all content written in [R Markdown](http://rmarkdown.rstudio.com/html_document_format.html). The bookdown/R Markdown source code for the latest version of "HR Analytics in R" is available on GitHub:
 
 * **Latest published version, still in development** The most up-to-date version, which is still in development is available at [https://hranalyticslive.netlify.com/](https://hranalyticslive.netlify.com/)
-    + Source code: Available at Hendrik's [GitHub repository page](https://github.com/Hendrik147/HR_Analytics_in_R_book)
+    + Source code: Available on Hendrik Feddersen's [GitHub repository page](https://github.com/Hendrik147/HR_Analytics_in_R_book)
 
 ***
 
