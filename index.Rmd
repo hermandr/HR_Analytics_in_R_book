@@ -17,7 +17,7 @@ lof: yes
 always_allow_html: yes
 github-repo: Hendrik147/HR_Analytics_in_R_book
 graphics: yes
-description: "An open-source self-training book to assist you in your journey to HR Analytics"
+description: "An open-source self-training book to assist you in your journey to sustainable HR Analytics"
 cover-image: "images/hranalytics.jpg"
 url: 'https\://book.hranalytics.live/'
 apple-touch-icon: "images/logos/favicons/apple-touch-icon.png"
