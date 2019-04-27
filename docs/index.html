@@ -25,7 +25,7 @@
 <meta name="author" content="Hendrik Feddersen">
 
 
-<meta name="date" content="2019-04-26">
+<meta name="date" content="2019-04-27">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -60,6 +60,69 @@
 </script>
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -76,6 +139,8 @@
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#sec:intro-for-students"><i class="fa fa-check"></i><b>1.1</b> Introduction for students</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#workingwithmaterials"><i class="fa fa-check"></i>Working with the materials</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#conventions"><i class="fa fa-check"></i>Conventions</a></li>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#subsec:learning-goals"><i class="fa fa-check"></i><b>1.1.1</b> What you will learn from this book</a></li>
 <li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#subsec:pipeline"><i class="fa fa-check"></i><b>1.1.2</b> Data/science pipeline</a></li>
 <li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#subsec:reproducible"><i class="fa fa-check"></i><b>1.1.3</b> Reproducible research</a></li>
@@ -506,7 +571,7 @@
 <h1 class="title">HR Analytics in R</h1>
 <h2 class="subtitle"><em>Common tasks achieved with the power of R</em></h2>
 <p class="author"><em>Hendrik Feddersen</em></p>
-<p class="date"><em>April 26, 2019</em></p>
+<p class="date"><em>April 27, 2019</em></p>
 </div>
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
@@ -516,7 +581,9 @@
 <strong>Please note that you are currently looking at the latest version of “HR Analytics in R”. However, since work is still in progress it is subject to frequent change.</strong>
 </p>
 </div>
-<p><strong>Help! I’m new to R and RStudio. Nonetheless, I want to do something for my career in HR! Only problem, I’m completely new to coding! What do I do?</strong></p>
+<p>The intention of this book is to encourage more ‘data driven’ decisions in HR. HR Analytics is not anymore a nice-to-have addon but rather the way HR practitioners should conduct HR decision making in the future. Where applicable, human judgement is ‘added’ onto a rigorous analysis of the data done in the first place.</p>
+<p>To achieve this ideal world, I need to equip you with some fundamental knowledge of R and RStudio, which are open-source tools for data scientists. I am well aware that on one side you want to do something for your career in HR, however you are most likely completely new to coding.</p>
+<p><strong>Help! I’m new to R and RStudio. I’m completely new to coding! What shall I do?</strong></p>
 <!-- https://cran.r-project.org/Rlogo.svg -->
 <!-- https://www.rstudio.com/wp-content/uploads/2014/07/RStudio-Logo-Blue-Gradient.png -->
 <center>
@@ -527,17 +594,43 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="images/RStudio-Logo-Blue-Gradient.png" style="height: 150px;"/>
 -->
-<p>If you’re asking yourself this question, then you’ve come to the right place! No better moment to ride the wave of disruptions taking place in HR.</p>
+<p>If you’re asking yourself this question, then you have come to the right place! There is no better moment to ride the wave of disruptions taking place now in HR.</p>
 <ul>
 <li><em>Are you looking to learn about HR Analytics utilising the power of R&quot;? Then start with our <a href="index.html#sec:intro-for-students">Introduction for Students</a>.</em></li>
 <li><em>Are you looking to contribute to “HR Analytics in R”? Then click <a href="index.html#sec:connect-contribute">here</a> for information on how.</em></li>
 <li><em>Are you curious about the publishing of this book? Then click <a href="index.html#sec:about-book">here</a> for more information on the open-source technology, in particular R Markdown and the bookdown package.</em></li>
 </ul>
-<p>This is version 0.5.0 of “HR Analytics in R” published on April 26, 2019. While a PDF version of this book can be found <a href="hrnalyticsinr.pdf" target="_blank">here</a>, this is very much a work in progress with many things that still need to be fixed. I appreciate your patience.</p>
+<p>This is version 0.5.0 of “HR Analytics in R” published on April 27, 2019. While a PDF version of this book can be found <a href="hrnalyticsinr.pdf" target="_blank">here</a>, this is very much a work in progress with many things that still need to be fixed. I appreciate your patience.</p>
 <hr />
 <div id="sec:intro-for-students" class="section level2">
 <h2><span class="header-section-number">1.1</span> Introduction for students</h2>
 <p>This book assumes no prerequisites: no algebra, no calculus, and no prior programming/coding experience. This is intended to be a gentle introduction to the practice of analyzing data and answering questions using data the way data scientists, statisticians and other researchers would.</p>
+<div id="workingwithmaterials" class="section level3 unnumbered">
+<h3>Working with the materials</h3>
+<p>You can work your way through these materials by clicking on the arrows to the left and right of the materials. Alternatively, there is a collapsible contents bar on the left hand side which you can use.</p>
+<p>If you need to find something specific, you can use the search icon. Typing in a word or phrase will filter the contents bar to relevant sections.</p>
+<p>The book by default renders black sans serif on a white background. You can use the A to amend the appearance of the book to make it easier to process, whether that’s a larger font, a serif font, or a different colour scheme.</p>
+</div>
+<div id="conventions" class="section level3 unnumbered">
+<h3>Conventions</h3>
+<p>Throughout this book various conventions will be used.</p>
+<p>In terms of basic formatting:</p>
+<ul>
+<li>This is standard text.</li>
+<li><code>This is code or a symbol</code></li>
+<li><em>This is a Keyboard Key!</em></li>
+<li><strong>This is the first time I mention something important</strong></li>
+</ul>
+<p>This is a book about coding, so expect code blocks. Code blocks will typically look like this:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="st">&quot;this is a code block&quot;</span></code></pre>
+<pre><code>[1] &quot;this is a code block&quot;</code></pre>
+<p>Directly underneath it, normally starting with two hash symbols (##) is the result of the code executing.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">## [1] &#39;this is a code block&#39;`</span></code></pre>
+<p>There will also be callouts throughout the book. Some are for information, some expect you to do things.</p>
+<p>Anything written here should be read carefully before proceeding.</p>
+<p>This is a tip relating to what I’ve just said.</p>
+<p>This is kind of like a tip but is for when you’re getting into trouble and need help.</p>
+<p>This is something I recommend you do as you’re reading.</p>
 <p>In Figure <a href="index.html#fig:moderndive-figure">1.1</a> I present a flowchart of what you’ll cover in this book. You’ll first get started with data in Chapter <a href="2-getting-started.html#getting-started">2</a>, where you’ll learn about the difference between R and RStudio, start coding in R, understand what R packages are, and explore your first dataset: all domestic departure flights from a New York City airport in 2013. Then</p>
 <ol style="list-style-type: decimal">
 <li><strong>Data science</strong>: You’ll assemble your data science toolbox using <code>tidyverse</code> packages. In particular:
@@ -560,14 +653,16 @@
 <li><strong>Data modeling revisited</strong>: Armed with your new understanding of statistical inference, you’ll revisit and review the models you constructed in Ch.<a href="5-regression.html#regression">5</a> &amp; Ch.<a href="6-multiple-regression.html#multiple-regression">6</a>. In particular:
 <ul>
 <li>Ch.<a href="9-inference-for-regression.html#inference-for-regression">9</a>: Interpreting both the statistical and practice significance of the results of the models.</li>
+<li>Ch.<a href="#thinking-with-data"><strong>??</strong></a>: I’ll end the introductory chapters with a discussion on what it means to “think with data” and present an example case study data analysis of house prices in Seattle.</li>
 </ul></li>
+<li><strong>HR Analytics - data driven decision making</strong>: The intention is to provide real tangible examples of the application of data science to HR, to illustrate the data science process in the HR context, and to show that the scope mentioned previously in this article, isn’t just theoretical - it’s real. The last and most important module shall illustrate current best practices of a structured process of thinking and analysis.</li>
 </ol>
-<p>I’ll end with a discussion on what it means to “think with data” in Chapter <a href="#thinking-with-data"><strong>??</strong></a> and present an example case study data analysis of house prices in Seattle.</p>
 <div class="figure" style="text-align: center"><span id="fig:moderndive-figure"></span>
 <img src="images/flowcharts/flowchart/flowchart.002.png" alt="ModernDive Flowchart" width="\textwidth" />
 <p class="caption">
 FIGURE 1.1: ModernDive Flowchart
 </p>
+</div>
 </div>
 <div id="subsec:learning-goals" class="section level3">
 <h3><span class="header-section-number">1.1.1</span> What you will learn from this book</h3>
@@ -698,7 +793,7 @@ Additionally, this book will focus on computational thinking, data thinking, and
 </ul>
 <p>If you would like to contribute to “HR Analytics in R”, there are many ways! Let’s all work together to make this book as great as possible for as many students as possible!</p>
 <ul>
-<li>Please let me know if you find any errors, typos, or areas from improvement on my <a href="https://github.com/Hendrik147/HR_Analytics_in_R_book/issues">GitHub issue page</a> page.</li>
+<li>Please let me know if you find any errors, typos, or areas from improvement on my <a href="https://github.com/Hendrik147/HR_Analytics_in_R_book/issues">GitHub issue page</a> page. I will fix it as soon as possible.</li>
 <li>If you are familiar with GitHub and would like to contribute even more, please see Section <a href="index.html#sec:about-book">1.4</a> below.</li>
 </ul>
 <p>I would like to thank <a href="https://github.com/moderndive/moderndive_book">Moderndive</a> for their inspirational presentation at a recent R user conference and for their generous example on how to set up a bookdown book and for their introductory pages on how to start using R.</p>
@@ -706,12 +801,21 @@ Additionally, this book will focus on computational thinking, data thinking, and
 </div>
 <div id="sec:about-book" class="section level2">
 <h2><span class="header-section-number">1.4</span> About this book</h2>
-<p>This book was written using RStudio’s <a href="https://bookdown.org/">bookdown</a> package by Yihui Xie <span class="citation">(Xie <a href="#ref-R-bookdown">2018</a>)</span>. This package simplifies the publishing of books by having all content written in <a href="http://rmarkdown.rstudio.com/html_document_format.html">R Markdown</a>. The bookdown/R Markdown source code for the latest version of “HR Analytics in R” is available on GitHub:</p>
+<p>This book was written using RStudio’s <a href="https://bookdown.org/">bookdown</a> package by Yihui Xie <span class="citation">(Xie <a href="#ref-R-bookdown">2018</a>)</span>. This package simplifies the publishing of books by having all content written in <a href="http://rmarkdown.rstudio.com/html_document_format.html">R Markdown</a>.</p>
 <ul>
-<li><strong>Latest published version, still in development</strong> The most up-to-date version, which is still in development is available at <a href="https://hranalyticslive.netlify.com/">https://hranalyticslive.netlify.com/</a>
+<li><strong>Latest published version, still in development</strong> The most up-to-date version, which is still in development is available at <a href="https://hranalyticslive.netlify.com/">https://hranalyticslive.netlify.com/</a></li>
+<li><strong>Source code</strong> The bookdown/R Markdown source code for the latest version of “HR Analytics in R” is available on Hendrik Feddersen’s <a href="https://github.com/Hendrik147/HR_Analytics_in_R_book">GitHub repository page</a></li>
+<li><strong>Usage</strong> You can share this material with colleagues or for non-commercial purposes but you can’t resell or incorporate them into stuff you make money from.
 <ul>
-<li>Source code: Available on Hendrik Feddersen’s <a href="https://github.com/Hendrik147/HR_Analytics_in_R_book">GitHub repository page</a></li>
+<li>As a symbol of gratitude, I would expect you at least to sign up for my <a href="https://hranalytics.live/signup/">mailing list</a>.</li>
+<li>If you think my material is awesome and want to use it for commercial purposes, please contact me at <a href="mailto:info@hranalytics.live">info@hranalytics.live</a></li>
 </ul></li>
+<li><p><strong>Licence</strong> This work is licensed under a Creative Commons
+Attribution-NonCommercial 4.0 International License.</p>
+<div class="figure">
+<img src="images/by-nc-sa.png" alt="Creative Commons License" />
+<p class="caption">Creative Commons License</p>
+</div></li>
 </ul>
 <hr />
 </div>
@@ -720,11 +824,15 @@ Additionally, this book will focus on computational thinking, data thinking, and
 <p>Who am I?</p>
 <p><img src="images/Photo%20HF%20Snappy.jpg" height="200" /></p>
 <!-- <img src="images/Photo%20HF%20Snappy.jpg" alt="Drawing" style="height: 200px;"/>-->
-<p>I am Hendrik Feddersen, a long-standing HR practitioner passionate about HR Analytics and living in Amsterdam, Netherlands.
-+ Email: <a href="mailto:info@hranalytics.live">info@hranalytics.live</a>
-+ Webpage: <a href="https://hranalytics.live/" class="uri">https://hranalytics.live/</a>
-+ Twitter: <a href="https://twitter.com/h_feddersen">h_feddersen</a>
-+ GitHub: <a href="https://github.com/Hendrik147" class="uri">https://github.com/Hendrik147</a></p>
+<ul>
+<li><p>I am Hendrik Feddersen, a long-standing HR practitioner passionate about HR Analytics and living in Amsterdam, Netherlands.</p>
+<ul>
+<li>Email: <a href="mailto:info@hranalytics.live">info@hranalytics.live</a></li>
+<li>Webpage: <a href="https://hranalytics.live/" class="uri">https://hranalytics.live/</a></li>
+<li>Twitter: <a href="https://twitter.com/h_feddersen">h_feddersen</a></li>
+<li>GitHub: <a href="https://github.com/Hendrik147" class="uri">https://github.com/Hendrik147</a></li>
+</ul></li>
+</ul>
 <!--
 ### Colophon 
 
