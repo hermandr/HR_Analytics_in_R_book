@@ -1,4 +1,4 @@
-# Absenteeism data {#absenteeism_data}
+# Absenteeism data {#absenteeism_data@MFG}
 
 Employee absenteeism is a significant problem for most organizations. Absenteeism excludes paid leave and occasions where an employer has granted an employee time off. 
 If you’re a manager, supervisor, or team leader, you’ll have likely experienced cases of absenteeism. You should know that staff will be absent from time to time, such as for illness, jury duty, or bereavement. However, when absenteeism is frequent and excessive it begins to become a problem.
@@ -71,15 +71,13 @@ library(tidyverse)
 
 ###Let's read in the data provided
 
-```{r}
-
-"../10 absenteeism/MFGEmployees4.csv" %>% 
-  read_csv() ->
-  MFGEmployees
-
-str(MFGEmployees)
+```{r eval=FALSE}
+MFGEmployees <- read_csv("https://https://hranalytics.netlify.com/data/MFGEmployees4.csv")
 ```
 
+```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+MFGEmployees <- read_csv("data/MFGEmployees4.csv")
+```
 
 The first thing we should do is check on quality of data. Data will rarely be clean or perfect when we receive it. Either questionnable data should be corrected (preferrred) or deleted.
 

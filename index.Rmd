@@ -55,7 +55,7 @@ needed_CRAN_pkgs <- c(
   
   # Explicitly used packages:
   "tidyverse", "rmarkdown", "knitr", "janitor", "skimr",
-  "infer", "moderndive",
+  "infer", "moderndive","HRAnalytics","googleway","rebus",
   
   # Internally used packages:
   "webshot", "mvtnorm", "remotes", "devtools", "dygraphs", "gridExtra",
@@ -89,7 +89,7 @@ knitr::write_bib(
   c(.packages(), "bookdown", "knitr", "rmarkdown", "nycflights13",
     "ggplot2", "webshot", "dygraphs", "dplyr",
     "ggplot2movies", "fivethirtyeight", "tibble", "readr", "tidyr",
-    "janitor", "infer", "skimr", "kableExtra"
+    "janitor", "infer", "skimr", "kableExtra","HRAnalytics","googleway", "rebus"
   ),
   "bib/packages.bib"
 )

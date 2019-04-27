@@ -94,12 +94,16 @@ In this step we check the data for errors, organize the data for model building,
 
 ####Check the data for errors
 
+
+```{r eval=FALSE}
+MYdataset <- read_csv("https://https://hranalytics.netlify.com/data/jobclassinfo2.csv")
+```
+
+```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+MYdataset <- read_csv("data/jobclassinfo2.csv")
+```
+
 ```{r message=FALSE, warning=FALSE}
-
-"../8 job classification/jobclassinfo2.csv" %>% 
-  read_csv() ->
-  MYdataset
-
 str(MYdataset)
 summary(MYdataset)
 ```

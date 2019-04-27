@@ -45,13 +45,14 @@ library(lubridate)
 
 First, let's get some data from our service desk by exporting a CSV. We can then read this CSV (or excel spreadsheet) into R for us to perform analysis.
 
-```{r}
-"../3 service desk request/ServiceRequestExtract2.csv" %>% 
-  read_csv() ->
-  service_requests
-
-service_requests
+```{r eval=FALSE}
+service_requests <- read_csv("https://https://hranalytics.netlify.com/data/ServiceRequestExtract2.csv")
 ```
+
+```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+service_requests <- read_csv("data/ServiceRequestExtract2.csv")
+```
+
 
 Note that we can solve some things as we load the data using `read_csv()` like the column data types and handling different ways people can represent missing or unknown data.
 
@@ -187,12 +188,13 @@ Ticket growth over time and backlog – Trending data showing the increase (or d
 
 Top IT services with the most incidents – Spotlights which services are failing, causing the most Service Desk support. Helpful for spotting problem IT services that need modification.
 
-```{r}
-"../3 service desk request/WA_Fn-UseC_-IT-Help-Desk.csv" %>% 
-  read_csv() ->
-  it_helpdesk
 
-it_helpdesk
+```{r eval=FALSE}
+it_helpdesk <- read_csv("https://https://hranalytics.netlify.com/data/WA_Fn-UseC_-IT-Help-Desk.csv")
+```
+
+```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+it_helpdesk <- read_csv("data/WA_Fn-UseC_-IT-Help-Desk.csv")
 ```
 
 ```{r}

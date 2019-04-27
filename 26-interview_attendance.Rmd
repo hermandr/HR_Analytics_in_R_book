@@ -46,11 +46,15 @@ if(!require(plyr)) install.packages("plyr")
 library(tidyverse)
 ```
 
-```{r}
-"../21 interview attendance/interview.csv" %>% 
-  read_csv() ->
-  interview_attendance
+```{r eval=FALSE}
+interview_attendance <- read_csv("https://hranalyticslive.netlify.com/data/interview.csv")
+```
 
+```{r read_interview_data, echo=FALSE, warning=FALSE, message=FALSE}
+interview_attendance <- read_csv("data/interview.csv")
+```
+
+```{r}
 head(interview_attendance, 5)
 ```
 
@@ -112,7 +116,7 @@ rm(colstoyesno, i, j) #Here we remove the three just created vectors as a claen 
 In the following step we figure out what is the content of each relevant column and identify its unique values. Once we have done that a number is assigned for a later step.
 
 ```{r}
-dir.create("../21 interview attendance/codefiles_interview_attendance", showWarnings = FALSE)
+dir.create("codefiles_interview_attendance", showWarnings = FALSE)
 #detach("package:plyr", unload = TRUE)
 for(i in 1:length(colnames(interview_attendance))){
   vvar <- colnames(interview_attendance)[i]

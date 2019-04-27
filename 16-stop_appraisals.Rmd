@@ -33,13 +33,14 @@ library(tidyverse)
 
 First, let's import some data on self declared time spent on appraisals,
 
-```{r message=FALSE}
-"../2 stop appraisals/Time.spent.on.appraisals.csv" %>% 
-  read_csv() ->
-  Time.spent.on.appraisals
-
-Time.spent.on.appraisals
+```{r eval=FALSE}
+Time.spent.on.appraisal <- read_csv("https://https://hranalytics.netlify.com/data/Time.spent.on.appraisals.csv")
 ```
+
+```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+Time.spent.on.appraisal <- read_csv("data/Time.spent.on.appraisals.csv")
+```
+
 
 ```{r}
 plot(Hours ~ Count.of.Appraisee,        # plot the variables y ~ x

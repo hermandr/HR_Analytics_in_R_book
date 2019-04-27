@@ -1,4 +1,4 @@
-# Absenteeism data {#absenteeism_data}
+# Absenteeism data {#absenteeism_data@work}
 
 The high competitiveness in the market, professional development combined with the development of organizations and the pressure to reach increasingly audacious goals, create increasingly overburdened employees and end up acquiring some disturbance in the state of health related to the type of work activity, including depression considered the evil of the 21st century. Taking employees to absenteeism. Absenteeism is defined as absence to work as expected, represents for the company the loss of productivity and quality of work. 
 
@@ -26,14 +26,13 @@ library(factoextra)
 library(FactoMineR)
 ```
 
-```{r}
-"../10 absenteeism/Absenteeism_at_work.csv" %>% 
-  read_delim(na = "NA", delim = ";", col_types = cols(col = col_character())) ->
-  absenteeism_at_work
-
-absenteeism_at_work
+```{r eval=FALSE}
+absenteeism_at_work <- read_delim(na = "NA", delim = ";", col_types = cols(col = col_character()), "https://https://hranalytics.netlify.com/data/Absenteeism_at_work.csv")
 ```
 
+```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+absenteeism_at_work <- read_delim(na = "NA", delim = ";", col_types = cols(col = col_character()), "data/Absenteeism_at_work.csv")
+```
 
 # Basic statistics and data preparation
 

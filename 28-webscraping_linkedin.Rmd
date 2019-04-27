@@ -1,4 +1,4 @@
-# Webscraping LinkedIn
+# Webscraping LinkedIn {#webscraping-linkedin}
 
 Did you know that the internet is the greatest source of publicly available data. One of the key skills to being able to obtain data from the web is “web-scraping”, where you use a piece of software to run through a website and collect information. 
 

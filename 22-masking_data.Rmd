@@ -20,12 +20,12 @@ library(smoothmest)
 
 Load a data set with first and last names and let us preview the dataset
 
-```{r}
-"../9 masking HR data/2016-Report-White-House-Staff.csv" %>% 
-  read_csv() ->
-  whitehouse
+```{r eval=FALSE}
+whitehouse <- read_csv("https://https://hranalytics.netlify.com/data/2016-Report-White-House-Staff.csv")
+```
 
-whitehouse
+```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+whitehouse <- read_csv("data/2016-Report-White-House-Staff.csv")
 ```
 
 Let us replace original names with fake names

@@ -25,11 +25,14 @@ LOST WORKTIME RATE - The total amount of absent hours for the given type of abse
 
 ```{r}
 library(readr)
-LTI_Analysis <- read_csv("~/Documents/GitHub/HR_Analytics/15 accidents at work/LTI Analysis Data_0.csv")
+```
 
-colnames(LTI_Analysis)
+```{r eval=FALSE}
+LTI_Analysis <- read_delim(na = "NA", delim = ";", col_types = cols(col = col_character()), "https://https://hranalytics.netlify.com/data/LTI Analysis Data.csv")
+```
 
-summary(LTI_Analysis)
+```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+LTI_Analysis <- read_delim(na = "NA", delim = ";", col_types = cols(col = col_character()), "data/LTI Analysis Data.csv")
 ```
 
 Your incident and DART (Days Away, Restrictions and Transfers) rates are OSHA safety metrics that help you understand the effectiveness of your safety and risk management programs: 
