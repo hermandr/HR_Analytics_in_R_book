@@ -1,28 +1,3 @@
-## ----setup_tidy, include=FALSE-------------------------------------------
-chap <- 5
-lc <- 0
-rq <- 0
-# **`r paste0("(LC", chap, ".", (lc <- lc + 1), ")")`**
-# **`r paste0("(RQ", chap, ".", (rq <- rq + 1), ")")`**
-
-knitr::opts_chunk$set(
-  tidy = FALSE, 
-  out.width = '\\textwidth', 
-  fig.height = 4,
-  fig.align='center',
-  warning = FALSE
-)
-
-options(scipen = 99, digits = 3)
-
-# In knitr::kable printing replace all NA's with blanks
-options(knitr.kable.NA = '')
-
-# Set random number generator see value for replicable pseudorandomness. Why 76?
-# https://www.youtube.com/watch?v=xjJ7FheCkCU
-set.seed(76)
-
-
 ## ----warning=FALSE, message=FALSE----------------------------------------
 library(dplyr)
 library(ggplot2)
