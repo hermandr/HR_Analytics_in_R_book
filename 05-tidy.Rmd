@@ -1,6 +1,6 @@
 # Data Importing & "Tidy" Data {#tidy}
 
-```{r setup_tidy, include=FALSE}
+```{r tidy, include=FALSE, purl=FALSE}
 chap <- 5
 lc <- 0
 rq <- 0
@@ -8,8 +8,8 @@ rq <- 0
 # **`r paste0("(RQ", chap, ".", (rq <- rq + 1), ")")`**
 
 knitr::opts_chunk$set(
-  tidy = FALSE, 
-  out.width = '\\textwidth', 
+  tidy = FALSE,
+  out.width = '\\textwidth',
   fig.height = 4,
   fig.align='center',
   warning = FALSE

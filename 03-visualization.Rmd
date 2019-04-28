@@ -1,8 +1,8 @@
-# (PART) Data Science via the tidyverse {-} 
+# (PART) Data Science via the tidyverse {-}
 
 # Data Visualization {#viz}
 
-```{r setup-viz, include=FALSE, purl=FALSE}
+```{r visualization, include=FALSE, purl=FALSE}
 chap <- 3
 lc <- 0
 rq <- 0

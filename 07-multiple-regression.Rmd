@@ -1,6 +1,6 @@
 # Multiple Regression {#multiple-regression}
 
-```{r, include=FALSE, purl=FALSE}
+```{r multiple-regression, include=FALSE, purl=FALSE}
 chap <- 7
 lc <- 0
 rq <- 0

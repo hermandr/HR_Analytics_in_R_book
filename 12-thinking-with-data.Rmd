@@ -1,8 +1,8 @@
-# (PART) Conclusion {-} 
+# (PART) Learnings so far {-}
 
 # Thinking with Data {#thinking-with-data}
 
-```{r setup_thinking_with_data, include=FALSE}
+```{r thinking-with-data, include=FALSE, purl=FALSE}
 chap <- 12
 lc <- 0
 rq <- 0

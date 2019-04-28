@@ -1,6 +1,6 @@
 # Inference for Regression {#inference-for-regression}
 
-```{r setup_inference_regression, include=FALSE}
+```{r inference_regression, include=FALSE, purl=FALSE}
 chap <- 11
 lc <- 0
 rq <- 0

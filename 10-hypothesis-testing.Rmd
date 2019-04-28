@@ -1,6 +1,6 @@
 # Hypothesis Testing {#hypothesis-testing}  
     
-```{r setup_hypo, include=FALSE, purl=FALSE}
+```{r hypothesis-testing, include=FALSE, purl=FALSE}
 chap <- 10
 lc <- 0
 rq <- 0

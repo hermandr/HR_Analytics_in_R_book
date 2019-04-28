@@ -1,3 +1,0 @@
-# HR dashboards {#flexdashboards}
-
-Here we introduce flexdashboards

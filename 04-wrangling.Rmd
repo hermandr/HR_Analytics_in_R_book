@@ -1,6 +1,6 @@
 # Data Wrangling {#wrangling}
 
-```{r setup_wrangling, include=FALSE, purl=FALSE}
+```{r wrangling, include=FALSE, purl=FALSE}
 chap <- 4
 lc <- 0
 rq <- 0

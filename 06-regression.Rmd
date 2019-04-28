@@ -2,7 +2,7 @@
 
 # Basic Regression {#regression}
 
-```{r, include=FALSE, purl=FALSE}
+```{r regression, include=FALSE, purl=FALSE}
 chap <- 6
 lc <- 0
 rq <- 0
