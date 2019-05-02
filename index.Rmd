@@ -1,27 +1,31 @@
 --- 
 title: "HR Analytics in R"
-subtitle: "Common tasks achieved with the power of R"
 author: "Hendrik Feddersen"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-site: bookdown::bookdown_site
-documentclass: krantz
-bibliography: [bib/books.bib, bib/packages.bib, bib/articles.bib]
 biblio-style: apalike
-fontsize: '12pt, krantz2'
-monofont: "Source Code Pro"
-monofontoptions: "Scale=0.7"
-link-citations: yes
+bibliography:
+- bib/books.bib
+- bib/packages.bib
+- bib/articles.bib
 colorlinks: yes
-lot: yes
-lof: yes
-always_allow_html: yes
+cover-image: images/hranalytics.jpg
+apple-touch-icon: images/logos/favicons/apple-touch-icon.png
+description: An open-source self-training book to assist you in your journey to sustainable
+  HR Analytics
+documentclass: krantz
+favicon: images/logos/favicons/favicon.ico
+fontsize: 12pt, krantz2
 github-repo: Hendrik147/HR_Analytics_in_R_book
 graphics: yes
-description: "An open-source self-training book to assist you in your journey to sustainable HR Analytics"
-cover-image: "images/hranalytics.jpg"
-url: 'https\://book.hranalytics.live/'
-apple-touch-icon: "images/logos/favicons/apple-touch-icon.png"
-favicon: "images/logos/favicons/favicon.ico"
+link-citations: yes
+lof: yes
+lot: yes
+monofont: Source Code Pro
+monofontoptions: Scale=0.7
+site: bookdown::bookdown_site
+subtitle: Common tasks achieved with the power of R
+always_allow_html: yes
+url: https\://book.hranalytics.live/
 ---
 
 <!-- For use only in PDF, is skipped in HTML -->
