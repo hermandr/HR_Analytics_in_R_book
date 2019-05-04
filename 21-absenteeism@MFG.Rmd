@@ -97,7 +97,7 @@ library(tidyverse)
 MFGEmployees <- read_csv("https://https://hranalytics.netlify.com/data/MFGEmployees4.csv")
 ```
 
-```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+```{r read_data8, echo=FALSE, warning=FALSE, message=FALSE}
 MFGEmployees <- read_csv("data/MFGEmployees4.csv")
 ```
 

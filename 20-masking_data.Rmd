@@ -46,7 +46,7 @@ Load a data set with first and last names and let us preview the dataset
 whitehouse <- read_csv("https://https://hranalytics.netlify.com/data/2016-Report-White-House-Staff.csv")
 ```
 
-```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+```{r read_data7, echo=FALSE, warning=FALSE, message=FALSE}
 whitehouse <- read_csv("data/2016-Report-White-House-Staff.csv")
 ```
 

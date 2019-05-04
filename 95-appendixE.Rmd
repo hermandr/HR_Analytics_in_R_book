@@ -12,7 +12,7 @@ The dataset can be accessed using:
 
 Here are sample rows from this dataset:
 
-```{r pay_gap, echo=FALSE}
+```{r pay_gap_data, echo=FALSE}
 data <- read.csv("https://glassdoor.box.com/shared/static/beukjzgrsu35fqe59f7502hruribd5tt.csv", stringsAsFactors=FALSE) # N = 1000 total observations
 knitr::kable(head(data), "html")
 ```

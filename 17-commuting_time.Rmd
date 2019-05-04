@@ -131,7 +131,7 @@ Then we can use this function to get data for our 200 employees
 the_200 <- read_csv("https://https://hranalytics.netlify.com/data/200_staff_members.csv")
 ```
 
-```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+```{r read_data_commuting, echo=FALSE, warning=FALSE, message=FALSE}
 the_200 <- read_csv("data/200_staff_members.csv")
 ```
 

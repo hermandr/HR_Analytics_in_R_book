@@ -2,16 +2,15 @@
 title: "HR Analytics in R"
 author: "Hendrik Feddersen"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
+knit: "bookdown::render_book"
 biblio-style: apalike
 bibliography:
 - bib/books.bib
 - bib/packages.bib
 - bib/articles.bib
 colorlinks: yes
-cover-image: images/hranalytics.jpg
 apple-touch-icon: images/logos/favicons/apple-touch-icon.png
-description: An open-source self-training book to assist you in your journey to sustainable
-  HR Analytics
+description: "An open-source self-training book to assist you in your journey to sustainable HR Analytics"
 documentclass: krantz
 favicon: images/logos/favicons/favicon.ico
 fontsize: 12pt, krantz2
@@ -20,12 +19,13 @@ graphics: yes
 link-citations: yes
 lof: yes
 lot: yes
-monofont: Source Code Pro
-monofontoptions: Scale=0.7
+monofont: "Source Code Pro"
+monofontoptions: "Scale=0.7"
 site: bookdown::bookdown_site
 subtitle: Common tasks achieved with the power of R
 always_allow_html: yes
-url: https\://book.hranalytics.live/
+url: 'https\://hranalytics.netlify.com/'
+cover-image: images/logos/book_cover.png
 ---
 
 <!-- For use only in PDF, is skipped in HTML -->

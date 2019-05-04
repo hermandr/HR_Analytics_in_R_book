@@ -59,7 +59,7 @@ First, let's import some data on self declared time spent on appraisals,
 Time.spent.on.appraisal <- read_csv("https://https://hranalytics.netlify.com/data/Time.spent.on.appraisals.csv")
 ```
 
-```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+```{r read_appraisals_data, echo=FALSE, warning=FALSE, message=FALSE}
 Time.spent.on.appraisal <- read_csv("data/Time.spent.on.appraisals.csv")
 ```
 

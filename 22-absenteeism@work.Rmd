@@ -52,7 +52,7 @@ library(FactoMineR)
 absenteeism_at_work <- read_delim(na = "NA", delim = ";", col_types = cols(col = col_character()), "https://https://hranalytics.netlify.com/data/Absenteeism_at_work.csv")
 ```
 
-```{r read_data3, echo=FALSE, warning=FALSE, message=FALSE}
+```{r read_data9, echo=FALSE, warning=FALSE, message=FALSE}
 absenteeism_at_work <- read_delim(na = "NA", delim = ";", col_types = cols(col = col_character()), "data/Absenteeism_at_work.csv")
 ```
 

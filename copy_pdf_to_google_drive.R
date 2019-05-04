@@ -1,7 +1,8 @@
 library(googledrive)
 
 drive_upload(media = "docs/ismaykim.pdf",
-             path = "moderndive_pdf/",
-             name = paste0("moderndive_", Sys.Date(), ".pdf"),
+             path = "HR_Analytics_live_book_in_pdf/",
+             name = paste0("HR_Analytics_live_book_", Sys.Date(), ".pdf"),
              type = NULL,
              verbose = TRUE)
+
