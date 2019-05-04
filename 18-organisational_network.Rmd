@@ -202,11 +202,11 @@ cooc_all_f_graph <- as_tbl_graph(cooc_all_f, directed = FALSE) %>%
 
 cooc_all_f_graph %>%
   activate(nodes) %>% # %N>%
-  as.tibble()
+  as_tibble()
 
 cooc_all_f_graph %>%
   activate(edges) %>% # %E>%
-  as.tibble()
+  as_tibble()
 ```
 
 # Plotting with the package "ggraph" 
@@ -233,7 +233,7 @@ ggraph(layout) +
   labs(title = "A Song of Ice and Fire character network",
        subtitle = "Nodes are colored by group")
 
-ggsave("~/Documents/GitHub/HR_Analytics/7 organisational network/plotshiringroup.pdf", width = 21, height = 29.7, units = "cm")
+ggsave("plotshiringroup.pdf", width = 21, height = 29.7, units = "cm")
 
 cols <- RColorBrewer::brewer.pal(3, "Set1")
 
@@ -248,7 +248,7 @@ ggraph(layout) +
        subtitle = "Nodes are colored by centeredness")
         
 
-ggsave("~/Documents/GitHub/HR_Analytics/7 organisational network/plotshirin.pdf", width = 21, height = 29.7, units = "cm")
+ggsave("plotshirin.pdf", width = 21, height = 29.7, units = "cm")
 ```
 
 # Another visualisation, this time with the package "visNetwork"

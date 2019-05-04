@@ -30,13 +30,13 @@ Source pdf document: http://www.remede.org/documents/IMG/pdf/liste_classement_ec
 
 Let us ensure that all needed libraries are installed
 
-```{r include=FALSE}
+```{r install include=FALSE}
 if(!require(tidyverse)) install.packages("tidyverse")
 if(!require(pdftools)) install.packages("pdftools")
 if(!require(data.table)) install.packages("data.table")
 if(!require(bigstatsr)) install.packages("bigstatsr")
 if(!require(plotly)) install.packages("plotly")
-if(!require(gsubfn)) install.packages("gsubfn")
+#if(!require(gsubfn)) install.packages("gsubfn")
 ```
 
 ```{r}
@@ -45,7 +45,7 @@ library(pdftools)
 library(data.table)
 library(bigstatsr)
 library(plotly)
-library(gsubfn)
+#library(gsubfn)
 ```
 
 First, let's get some data from our service desk by exporting a CSV. We can then read this CSV (or excel spreadsheet) into R for us to perform analysis.
@@ -59,7 +59,7 @@ We will use package pdftools to get the text from the pdf document. to be on the
 
 
 ```{r eval=FALSE}
-pdfdocument <- "https://goo.gl/wUXvjk" #Internet download
+#pdfdocument <- "https://goo.gl/wUXvjk" #Internet download
 #pdfdocument <- "https://hranalyticslive.netlify.com/data/liste_classement_ecn_20170628.pdf"
 ```
 
@@ -76,7 +76,7 @@ head(txt <- pdftools::pdf_text(pdfdocument), n = 1) #Inspection of first page
 pat <- "([0-9]{4} [M\\.|Mme|Mlle]{1}.*?, [né|née]{1}.*?)\\."  #Regular expression 
 
 #The following line needs a replacement as it is dependant on on tcltk package which is not on CRAN anymore
-data <- unlist(gsubfn::strapply(txt, pattern = pat))
+#data <- unlist(gsubfn::strapply(txt, pattern = pat))
 
 head(data)
 

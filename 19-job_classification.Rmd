@@ -588,12 +588,16 @@ https://onedrive.live.com/redir?resid=4EF2CCBEDB98D0F5!6478&authkey=!ALYidIIpaCr
 
 Put the data in a separate dataset and run the following R commands:
 
+```{r eval=FALSE}
+DeployDataset <- read_csv("https://hranalytics.netlify.com/data/Deploydata.csv")
+```
+
+```{r read_data11, echo=FALSE, warning=FALSE, message=FALSE}
+DeployDataset <- read_csv("data/Deploydata.csv")
+```
+
+
 ```{r}
-
-"../8 job classification/Deploydata.csv" %>% 
-  read_csv() ->
-  DeployDataset
-
 DeployDataset
 
 PredictedJobGrade <- predict(MYrf, newdata=DeployDataset)

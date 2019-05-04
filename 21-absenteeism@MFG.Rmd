@@ -89,6 +89,7 @@ if(!require(scatterplot3d)) install.packages("scatterplot3d")
 if(!require(caret)) install.packages("caret")
 
 library(tidyverse)
+library(modelr)
 ```
 
 ###Let's read in the data provided
@@ -420,7 +421,7 @@ lmFit1 <- train(AbsenceRate ~ Age + LengthService, data = training,
                  trControl = fitControl)
 lmFit1
 
-Testingdatasetandpredictions <- testing %>% add_predictions(lmFit1)
+Testingdatasetandpredictions <- testing %>% add_predictions(lmFit1, type = "raw")
 
 Testingdatasetandpredictions$pred[Testingdatasetandpredictions$pred<0] <- 0 #Put a zero to all negative predictions
 
@@ -481,7 +482,7 @@ Absence2016Data<-MFGEmployees
 Absence2016Data$Age<-Absence2016Data$Age+1
 Absence2016Data$LengthService<-Absence2016Data$LengthService+1
 
-Absence2016Data <- Absence2016Data %>% add_predictions(lmFit1)
+Absence2016Data <- Absence2016Data %>% add_predictions(lmFit1, type = "raw")
 Absence2016Data$pred[Absence2016Data$pred<0] <- 0 #Put a zero to all negative predictions
 
 ```

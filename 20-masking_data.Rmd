@@ -123,15 +123,21 @@ whitehouse.bottom <- whitehouse_masked %>%
 Let us explore deeper anonymisation option of generating synthetic data. We will do on the basis of the fertility dataset available from UCI website: 
 https://archive.ics.uci.edu/ml/datasets/Fertility
 
-![UCI logo](_images/UCI_logo.gif)
+![UCI logo](images/UCI_logo.gif)
 
 It needs to be loaded first and let us preview it.
 
-```{r}
-"../9 masking HR data/fertility_Diagnosis.txt" %>% 
-  read_csv(col_names = FALSE) ->
-  fertility
 
+```{r eval=FALSE}
+fertility <- read_csv("https://https://hranalytics.netlify.com/data/fertility_Diagnosis.txt", col_names = FALSE)
+```
+
+```{r read_data10, echo=FALSE, warning=FALSE, message=FALSE}
+fertility <- read_csv("data/fertility_Diagnosis.txt", col_names = FALSE)
+```
+
+
+```{r}
 # Let us assign significant column titles
 colnames(fertility) <- c("Season", "Age", "Child_Disease", "Accident_Trauma", "Surgical_Intervention","High_Fevers", "Alcohol_Consumption","Smoking_Habit","Hours_Sitting","Diagnosis")
 
@@ -268,7 +274,7 @@ library(smoothmest)
 
 The double exponential distribution is also commonly referred to as the Laplace distribution. The following is the plot of the double exponential probability density function.
 
-![plot of double exponential probability density function](_images/dexpdf.gif)
+![plot of double exponential probability density function](images/dexpdf.gif)
 
 ```{r}
 set.seed(42)
@@ -350,6 +356,10 @@ rdoublex(1, 0.54, gs.mean / eps)
 Prepping up data
 
 ```{r}
+# Set Value of Epsilon
+eps <- 0.01
+# GS of counts
+gs.count <- 1
 
 fertility %>%
   count(Smoking_Habit)
@@ -389,12 +399,9 @@ Inconsistent Answers
 eps <- 0.01
 # GS of counts
 gs.count <- 1
-# Number of Participants with Abnormal Diagnosis
-fertility %>%
-  summarise_at(vars(Diagnosis), sum)
 
-#Diagnosis 
-# 12
+# Display Participants with Abnormal Diagnosis
+Number_abnormal <- fertility %>% filter(Diagnosis=="O") %>% summarise(sum_x1 = sum(Diagnosis=="O"))
 
 #Negative Counts: Applying the Laplace mechanism
 # Apply the Laplace mechanism and set.seed(22)
@@ -422,7 +429,7 @@ n <- nrow(fertility)
 ifelse(noisy_answer > n, n, noisy_answer)
 #[1] 100
 
-Normalising
+#Normalising
 # Set Value of Epsilon
 eps <- 0.01
 # GS of Counts

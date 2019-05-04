@@ -145,7 +145,7 @@ for(i in 1:length(colnames(interview_attendance))){
   outdata <- interview_attendance %>% group_by(.dots = vvar) %>% count(.dots = vvar)
   outdata$idt <- LETTERS[seq(from=1, to=nrow(outdata))]
   outdata$id  <- row.names(outdata)
-  outfile <- paste0("../21 interview attendance/codefiles_interview_attendance/", vvar, ".csv")
+  outfile <- paste0("codefiles_interview_attendance/", vvar, ".csv")
   write.csv(outdata, file=outfile, row.names = FALSE)
 }
 rm(outdata, i, outfile, vvar)
@@ -159,7 +159,7 @@ library(plyr)
 
 for(i in 1:length(colstomap)){
   j <- colstomap[i]
-  vfilename <- paste0("../21 interview attendance/codefiles_interview_attendance/", colnames(interview_attendance)[j], ".csv")
+  vfilename <- paste0("codefiles_interview_attendance/", colnames(interview_attendance)[j], ".csv")
   dfcodes <- read_csv(vfilename)
   vfrom <- as.vector(dfcodes[,1])
   vto <- as.vector(dfcodes[,4])

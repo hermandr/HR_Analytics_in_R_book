@@ -56,11 +56,11 @@ library(tidyverse)
 First, let's import some data on self declared time spent on appraisals,
 
 ```{r eval=FALSE}
-Time.spent.on.appraisal <- read_csv("https://https://hranalytics.netlify.com/data/Time.spent.on.appraisals.csv")
+Time.spent.on.appraisals <- read_csv("https://https://hranalytics.netlify.com/data/Time.spent.on.appraisals.csv")
 ```
 
 ```{r read_appraisals_data, echo=FALSE, warning=FALSE, message=FALSE}
-Time.spent.on.appraisal <- read_csv("data/Time.spent.on.appraisals.csv")
+Time.spent.on.appraisals <- read_csv("data/Time.spent.on.appraisals.csv")
 ```
 
 
@@ -138,11 +138,15 @@ Now it would appear, that every manager spends on average 26 hours independently
 
 Let us start all over again with another method for excluding outliers, using the Cook distance.
 
-```{r}
-"../2 stop appraisals/Time.spent.on.appraisals.csv" %>% 
-  read_csv() ->
-  Time.spent.on.appraisals
+```{r eval=FALSE}
+Time.spent.on.appraisals <- read_csv("https://https://hranalytics.netlify.com/data/Time.spent.on.appraisals.csv")
+```
 
+```{r read_appraisals_data2, echo=FALSE, warning=FALSE, message=FALSE}
+Time.spent.on.appraisals <- read_csv("data/Time.spent.on.appraisals.csv")
+```
+
+```{r}
 plot(Hours ~ Count.of.Appraisee,        # plot the variables y ~ x
      xlab="Number of appraisee",        # x−axis label 
      ylab="Hours",                      # y−axis label

@@ -45,6 +45,9 @@ The following example appeared on the Glassdor website in March 2017, with the t
 # Load R libraries.
 library(tidyverse)
 library(tidymodels)
+install.packages("devtools", repos = "http://cran.us.r-project.org")
+library(devtools)
+install_github("Hendrik147/HR_Analytics_in_R_book/HRAnalytics")
 library(HRAnalytics) # Helper package
 
 #Turn off scientific notation. 
