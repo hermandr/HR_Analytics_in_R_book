@@ -141,9 +141,9 @@ grid.arrange(Day, nrow = 1)
   **I have taken only certain variable that I thought would come in to process.**  
   
 ```{r}
-absent <- as.data.frame( absenteeism_at_work_factored %>% select(everything()) %>% filter(`Absenteeism time in hours` > 0))
+absent <- as.data.frame(absenteeism_at_work_factored %>% dplyr::select(everything()) %>% dplyr::filter(`Absenteeism time in hours` > 0))
 
-season1 <- as.data.frame(absent %>% group_by(Seasons) %>% summarise(count= n(), percent = round(count*100/nrow(absent),1)) %>% arrange(desc(count)))
+season1 <- as.data.frame(absent %>% dplyr::group_by(Seasons) %>% dplyr::summarise(count= n(), percent = round(count*100/nrow(absent),1)) %>% arrange(desc(count)))
 
 season1 %>%
 ggplot() + 
@@ -157,7 +157,7 @@ ggplot() +
  **The attribute disciplinary failure is taken into consideration and it was found it had no obvious part on target variable. Basically all disciplinary failures resulted in zero hours absences.**
  
 ```{r}
-disciplinary <- as.data.frame(absent %>% group_by(`Disciplinary failure`) %>% summarise(count= n(), percent = round(count*100/nrow(absent),1))%>% arrange(desc(count)))
+disciplinary <- as.data.frame(absent %>% dplyr::group_by(`Disciplinary failure`) %>% dplyr::summarise(count= n(), percent = round(count*100/nrow(absent),1))%>% arrange(desc(count)))
 
 disciplinary %>%
   ggplot() + 
@@ -181,7 +181,7 @@ disciplinary %>%
 ```{r, fig.width=8.6, fig.height= 8.5}
                                       
 
-Reason <-  as.data.frame(absent %>% group_by(`Reason for absence`) %>% summarise(count= n(), percent = round(count*100/nrow(absent),1))%>% arrange(desc(count)))
+Reason <-  as.data.frame(absent %>% group_by(`Reason for absence`) %>% dplyr::summarise(count= n(), percent = round(count*100/nrow(absent),1))%>% arrange(desc(count)))
 
 Reason %>%
 ggplot() + 
@@ -263,8 +263,8 @@ The second part shows how to identify the most important variables that explain 
 absenteeism_at_work$`Work load Average/day ` <- as.numeric(as.character(absenteeism_at_work$`Work load Average/day ` ))
 
 d1 <- absenteeism_at_work %>%
-  select(-ID) %>%
-  select(-`Absenteeism time in hours`)
+  dplyr::select(-ID) %>%
+  dplyr::select(-`Absenteeism time in hours`)
 
 d1 <- scale(d1)  
 ```

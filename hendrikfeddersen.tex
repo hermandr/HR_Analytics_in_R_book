@@ -226,7 +226,7 @@
 \providecommand{\subtitle}[1]{}
 \subtitle{Common tasks achieved with the power of R}
 \author{Hendrik Feddersen}
-\date{May 04, 2019}
+\date{May 10, 2019}
 
 \begin{document}
 \maketitle
@@ -1284,900 +1284,10 @@ Placeholder
 \hypertarget{absenteeism-data-absenteeism_datamfg}{%
 \chapter{\texorpdfstring{Absenteeism data \{\#\href{mailto:absenteeism_data@MFG}{\nolinkurl{absenteeism\_data@MFG}}\}}{Absenteeism data \{\#absenteeism\_data@MFG\}}}\label{absenteeism-data-absenteeism_datamfg}}
 
-Employee absenteeism is a significant problem for most organizations. Absenteeism excludes paid leave and occasions where an employer has granted an employee time off.
-If you're a manager, supervisor, or team leader, you'll have likely experienced cases of absenteeism. You should know that staff will be absent from time to time, such as for illness, jury duty, or bereavement. However, when absenteeism is frequent and excessive it begins to become a problem.
-
-Absenteeism at the workplace affects both employers and employees alike.
-
-Some consequences for employers include:
-* Reduced productivity levels.
-* High administration costs.
-* Increased labour costs if you hire replacement temporary workers.
-* Understaffing which could lead to poor customer service.
-* Poor morale among colleagues. This will be particularly prevalent if employees constantly have to fill in for absent staff and if they don't see any retributions for absence.
-
-To address this issue, HR professionals are encouraged to develop a business case and to devise and implement plans for managing employee attendance in their organizations. The following topics related to managing employee attendance are presented in this article:
-
-The direct and indirect costs of absenteeism.
-Collecting attendance data for the organization.
-Measuring the cost of absenteeism.
-Calculating rates of absenteeism.
-Strategies aimed at addressing the organization's particular attendance issues.
-Legal issues that may be implicated in designing and implementing absence control strategies.
-
-\#\#1.Define the goal (or HR business problem/issue).
-
-A hypothetical company MFG has decided that it needs to do something about absenteeism.
-To start with, it wants answers to the following questions:
-
-\begin{itemize}
-\tightlist
-\item
-  \textbf{What is its rate of absenteeism?}
-\item
-  \textbf{Does anyone have excessive absenteeism?}
-\item
-  \textbf{Is is the same across the organization?}
-\item
-  \textbf{Does it vary by gender?}
-\item
-  \textbf{Does it vary by length of service or age?} Its guesses are that initially age and length of service may be related to absenteeism rates.
-\item
-  \textbf{Can it predict next year's absenteeism?}
-\item
-  \textbf{If so, how well can it predict?}
-\item
-  \textbf{Can we reduce our absenteeism?}
-\end{itemize}
-
-If they can make future People Management decisions ``driven'' by what the data is telling them, then they will feel they have started the People Analytics journey.
-
-\#\#2.Collect and Manage Data.
-
-Let us suppose this is a skunkworks project. Formal separate resources have not be identified for this initiative.
-Only an initial look at recent data is possible. The HRIS system is able to provide some rudimentary information covering absences only for 2015
-It was able to generate the following information as a CSV file (comma separated values):
-
-\begin{itemize}
-\tightlist
-\item
-  EmployeeNumber
-\item
-  Surname
-\item
-  GivenName
-\item
-  Gender
-\item
-  City
-\item
-  JobTitle
-\item
-  DepartmentName
-\item
-  StoreLocation
-\item
-  Division
-\item
-  Age
-\item
-  LengthService
-\item
-  AbsentHours
-\item
-  BusinessUnit
-\end{itemize}
-
-Ensure all needed libraries are installed
-
-\#\#\#Let's read in the data provided
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{MFGEmployees <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"https://https://hranalytics.netlify.com/data/MFGEmployees4.csv"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-The first thing we should do is check on quality of data. Data will rarely be clean or perfect when we receive it. Either questionnable data should be corrected (preferrred) or deleted.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{summary}\NormalTok{(MFGEmployees)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##  EmployeeNumber   Surname           GivenName            Gender         
-##  Min.   :   1   Length:8336        Length:8336        Length:8336       
-##  1st Qu.:2085   Class :character   Class :character   Class :character  
-##  Median :4168   Mode  :character   Mode  :character   Mode  :character  
-##  Mean   :4168                                                           
-##  3rd Qu.:6252                                                           
-##  Max.   :8336                                                           
-##      City             JobTitle         DepartmentName    
-##  Length:8336        Length:8336        Length:8336       
-##  Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character  
-##                                                          
-##                                                          
-##                                                          
-##  StoreLocation        Division              Age       LengthService 
-##  Length:8336        Length:8336        Min.   : 3.5   Min.   : 0.0  
-##  Class :character   Class :character   1st Qu.:35.3   1st Qu.: 3.6  
-##  Mode  :character   Mode  :character   Median :42.1   Median : 4.6  
-##                                        Mean   :42.0   Mean   : 4.8  
-##                                        3rd Qu.:48.7   3rd Qu.: 5.6  
-##                                        Max.   :77.9   Max.   :43.7  
-##   AbsentHours    BusinessUnit      
-##  Min.   :  0.0   Length:8336       
-##  1st Qu.: 19.1   Class :character  
-##  Median : 56.0   Mode  :character  
-##  Mean   : 61.3                     
-##  3rd Qu.: 94.3                     
-##  Max.   :272.5
-\end{verbatim}
-
-The only thing that stands out initially is that age has some questionable data- some one who is 3 and someone who is 77. The range for purposes of this example should be 18 to 65. Normally you would want to clean the data by getting the correct information and then changing it.
+Placeholder
 
 \hypertarget{for-expediency-we-will-delete-the-problem-records-in-the-dataset.}{%
 \subsection{For expediency we will delete the problem records in the dataset.}\label{for-expediency-we-will-delete-the-problem-records-in-the-dataset.}}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{MFGEmployees<-}
-\StringTok{  }\NormalTok{MFGEmployees }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{filter}\NormalTok{(Age}\OperatorTok{>=}\DecValTok{18} \OperatorTok{&}\StringTok{ }\NormalTok{Age}\OperatorTok{<=}\DecValTok{65}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-Now let's summarize again with cleaned up data
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{summary}\NormalTok{(MFGEmployees)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##  EmployeeNumber   Surname           GivenName            Gender         
-##  Min.   :   1   Length:8165        Length:8165        Length:8165       
-##  1st Qu.:2081   Class :character   Class :character   Class :character  
-##  Median :4166   Mode  :character   Mode  :character   Mode  :character  
-##  Mean   :4165                                                           
-##  3rd Qu.:6245                                                           
-##  Max.   :8336                                                           
-##      City             JobTitle         DepartmentName    
-##  Length:8165        Length:8165        Length:8165       
-##  Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character  
-##                                                          
-##                                                          
-##                                                          
-##  StoreLocation        Division              Age       LengthService 
-##  Length:8165        Length:8165        Min.   :18.2   Min.   : 0.1  
-##  Class :character   Class :character   1st Qu.:35.5   1st Qu.: 3.6  
-##  Mode  :character   Mode  :character   Median :42.1   Median : 4.6  
-##                                        Mean   :42.0   Mean   : 4.8  
-##                                        3rd Qu.:48.5   3rd Qu.: 5.6  
-##                                        Max.   :65.0   Max.   :43.7  
-##   AbsentHours    BusinessUnit      
-##  Min.   :  0.0   Length:8165       
-##  1st Qu.: 20.1   Class :character  
-##  Median : 55.9   Mode  :character  
-##  Mean   : 60.5                     
-##  3rd Qu.: 93.4                     
-##  Max.   :252.2
-\end{verbatim}
-
-\#\#\#Transform the data
-
-Now calculate absenteeism rate by dividing the absent hours by total standard hours for the year (52 weeks/year * 40 hours/week = 2080 hours/year)
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{MFGEmployees <-}\StringTok{ }
-\StringTok{  }\NormalTok{MFGEmployees }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{mutate}\NormalTok{(}\DataTypeTok{AbsenceRate =}\NormalTok{ AbsentHours }\OperatorTok{/}\DecValTok{2080}\OperatorTok{*}\DecValTok{100}\NormalTok{)}
-
-\KeywordTok{str}\NormalTok{(MFGEmployees)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Classes 'spec_tbl_df', 'tbl_df', 'tbl' and 'data.frame': 8165 obs. of  14 variables:
-##  $ EmployeeNumber: num  1 2 3 4 5 6 7 8 9 10 ...
-##  $ Surname       : chr  "Gutierrez" "Hardwick" "Delgado" "Simon" ...
-##  $ GivenName     : chr  "Molly" "Stephen" "Chester" "Irene" ...
-##  $ Gender        : chr  "F" "M" "M" "F" ...
-##  $ City          : chr  "Burnaby" "Courtenay" "Richmond" "Victoria" ...
-##  $ JobTitle      : chr  "Baker" "Baker" "Baker" "Baker" ...
-##  $ DepartmentName: chr  "Bakery" "Bakery" "Bakery" "Bakery" ...
-##  $ StoreLocation : chr  "Burnaby" "Nanaimo" "Richmond" "Victoria" ...
-##  $ Division      : chr  "Stores" "Stores" "Stores" "Stores" ...
-##  $ Age           : num  32 40.3 48.8 44.6 35.7 ...
-##  $ LengthService : num  6.02 5.53 4.39 3.08 3.62 ...
-##  $ AbsentHours   : num  36.6 30.2 83.8 70 0 ...
-##  $ BusinessUnit  : chr  "Stores" "Stores" "Stores" "Stores" ...
-##  $ AbsenceRate   : num  1.76 1.45 4.03 3.37 0 ...
-\end{verbatim}
-
-We can now see our metric AbsenceRate has been calculated and created.
-
-\#\#\#Explore The Data
-
-Part of collecting and managing data is the Exploratory Data Analysis.
-
-Let's start with bar graphs of some of the categorical data
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{MFGEmployees }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{BusinessUnit) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_bar}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x=}\StringTok{"Business Units"}\NormalTok{,}
-       \DataTypeTok{y=}\StringTok{"Count"}\NormalTok{,}
-       \DataTypeTok{title=}\StringTok{"Employee Count By Business Units"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{coord_flip}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-7-1}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{MFGEmployees }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Gender) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_bar}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x=}\StringTok{"Business Units"}\NormalTok{,}
-       \DataTypeTok{y=}\StringTok{"Count"}\NormalTok{,}
-       \DataTypeTok{title=}\StringTok{"Employee Count By Gender"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{coord_flip}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-7-2}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{MFGEmployees }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Division) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_bar}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{labs}\NormalTok{(}\DataTypeTok{x=}\StringTok{"Division"}\NormalTok{,}
-       \DataTypeTok{y=}\StringTok{"Count"}\NormalTok{,}
-       \DataTypeTok{title=}\StringTok{"Employee Count By Division"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{coord_flip}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-7-3}
-
-Let's ask some of our questions answered through this exploratory analysis.
-
-\textbf{First of all, what is our absenteeism rate?}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{MFGEmployees }\OperatorTok{%>%}
-\StringTok{  }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{median =} \KeywordTok{median}\NormalTok{(AbsenceRate), }\DataTypeTok{mean =} \KeywordTok{mean}\NormalTok{(AbsenceRate)) }\CommentTok{#Average absence rate and number of observations}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## # A tibble: 1 x 2
-##   median  mean
-##    <dbl> <dbl>
-## 1   2.69  2.91
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{means <-}\StringTok{ }\KeywordTok{aggregate}\NormalTok{(AbsenceRate }\OperatorTok{~}\StringTok{ }\DecValTok{1}\NormalTok{, MFGEmployees, mean)}
-
-\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{y =}\NormalTok{ AbsenceRate, }\DataTypeTok{x =}\DecValTok{1}\NormalTok{), }\DataTypeTok{data =}\NormalTok{ MFGEmployees) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{coord_flip}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_text}\NormalTok{(}\DataTypeTok{data =} \KeywordTok{round}\NormalTok{(means, }\DataTypeTok{digits =} \DecValTok{3}\NormalTok{), }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{y =}\NormalTok{ AbsenceRate, }\DataTypeTok{x =}\DecValTok{1}\NormalTok{, }\DataTypeTok{label =}\NormalTok{ AbsenceRate),  }\DataTypeTok{check_overlap=}\OtherTok{TRUE}\NormalTok{) }\OperatorTok{+}\StringTok{ }\CommentTok{#Add average absence rate as a text}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-8-1}
-The average absence rate is `r scales::percent(mean(MFGEmployees\$AbsenceRate)'.
-
-\textbf{Does anyone have excessive absenteeism?}
-
-The boxplot shows the average (three digit number), the mean and standard deviation (through lines) of the data. Any observations beyond 3 standard deviations shows up as dots. So at least under that definition of outliers, some people show way more absenteeism than 99\% of employees.
-
-\textbf{Does it vary across the organization?}
-
-When you conduct a piece of quantitative research, you are inevitably attempting to answer a research question or hypothesis that you have set. One method of evaluating this research question is via a process called hypothesis testing, which is sometimes also referred to as significance testing.
-
-In order to undertake hypothesis testing you need to express your research hypothesis as a null and alternative hypothesis. The null hypothesis and alternative hypothesis are statements regarding the differences or effects that occur in the population. You will use your sample to test which statement (i.e., the null hypothesis or alternative hypothesis) is most likely (although technically, you test the evidence against the null hypothesis). So, with respect to our example, the null and alternative hypothesis will reflect statements about absences among the organization.
-
-In the following we will use ANOVA, as statistical test.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{y =}\NormalTok{ AbsenceRate, }\DataTypeTok{x =}\NormalTok{ Gender), }\DataTypeTok{data =}\NormalTok{ MFGEmployees) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{coord_flip}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-9-1}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{AnovaModel}\FloatTok{.1}\NormalTok{ <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(AbsenceRate }\OperatorTok{~}\StringTok{ }\NormalTok{Gender, }\DataTypeTok{data=}\NormalTok{MFGEmployees) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{Anova}\NormalTok{()}
-
-\NormalTok{AnovaModel}\FloatTok{.1} 
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Anova Table (Type II tests)
-## 
-## Response: AbsenceRate
-##           Sum Sq   Df F value              Pr(>F)    
-## Gender       496    1    97.8 <0.0000000000000002 ***
-## Residuals  41379 8163                                
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{#means}
-\NormalTok{MFGEmployees }\OperatorTok{%>%}\StringTok{ }\KeywordTok{group_by}\NormalTok{(Gender) }\OperatorTok{%>%}\StringTok{ }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{avg=}\KeywordTok{mean}\NormalTok{(AbsenceRate))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## # A tibble: 2 x 2
-##   Gender   avg
-##   <chr>  <dbl>
-## 1 F       3.16
-## 2 M       2.66
-\end{verbatim}
-
-The output of the function is a classical ANOVA table with the following data:
-Df = degree of freedom
-Sum Sq = deviance (within groups, and residual)
-Mean Sq = variance (within groups, and residual)
-F value = the value of the Fisher statistic test, so computed (variance within groups) / (variance residual)
-Pr(\textgreater{}F) = p-value
-
-Please note that the value 2.2e-16 actually means 2.2 X 10 \^{} -16. It is just a way R prints numbers that are either too big or too small.
-
-Since the p-Value is much less than 0.05, we reject the null hypothesis and accept the alternative hypothesis, i.e.~the absence levels among are significantly different among genders.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_boxplot}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{y =}\NormalTok{ AbsenceRate, }\DataTypeTok{x =}\NormalTok{ Division), }\DataTypeTok{data =}\NormalTok{ MFGEmployees) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{coord_flip}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-10-1}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{AnovaModel}\FloatTok{.2}\NormalTok{ <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(AbsenceRate }\OperatorTok{~}\StringTok{ }\NormalTok{Division, }\DataTypeTok{data=}\NormalTok{MFGEmployees) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{Anova}\NormalTok{()}
-
-\NormalTok{AnovaModel}\FloatTok{.2}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Anova Table (Type II tests)
-## 
-## Response: AbsenceRate
-##           Sum Sq   Df F value Pr(>F)   
-## Division      91    5    3.56 0.0032 **
-## Residuals  41783 8159                  
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# means}
-\NormalTok{MFGEmployees }\OperatorTok{%>%}\StringTok{ }\KeywordTok{group_by}\NormalTok{(Division) }\OperatorTok{%>%}\StringTok{ }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{avg=}\KeywordTok{mean}\NormalTok{(AbsenceRate))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## # A tibble: 6 x 2
-##   Division               avg
-##   <chr>                <dbl>
-## 1 Executive             2.32
-## 2 FinanceAndAccounting  1.92
-## 3 HumanResources        2.65
-## 4 InfoTech              1.93
-## 5 Legal                 2.47
-## 6 Stores                2.92
-\end{verbatim}
-
-The absence levels among are significantly different among Division.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{AnovaModel}\FloatTok{.3}\NormalTok{ <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(AbsenceRate }\OperatorTok{~}\StringTok{ }\NormalTok{Division}\OperatorTok{*}\NormalTok{Gender, }\DataTypeTok{data=}\NormalTok{MFGEmployees) }\OperatorTok{%>%}\StringTok{ }
-\StringTok{  }\KeywordTok{Anova}\NormalTok{()}
-
-\NormalTok{AnovaModel}\FloatTok{.3}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Anova Table (Type II tests)
-## 
-## Response: AbsenceRate
-##                 Sum Sq   Df F value              Pr(>F)    
-## Division            92    5    3.61              0.0029 ** 
-## Gender             496    1   97.94 <0.0000000000000002 ***
-## Division:Gender      5    5    0.18              0.9708    
-## Residuals        41283 8153                                
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{#means}
-\NormalTok{MFGEmployees }\OperatorTok{%>%}\StringTok{ }\KeywordTok{group_by}\NormalTok{(Division, Gender) }\OperatorTok{%>%}\StringTok{ }\KeywordTok{summarise}\NormalTok{(}\DataTypeTok{avg=}\KeywordTok{mean}\NormalTok{(AbsenceRate))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## # A tibble: 12 x 3
-## # Groups:   Division [6]
-##    Division             Gender   avg
-##    <chr>                <chr>  <dbl>
-##  1 Executive            F       2.98
-##  2 Executive            M       1.78
-##  3 FinanceAndAccounting F       2.17
-##  4 FinanceAndAccounting M       1.63
-##  5 HumanResources       F       3.01
-##  6 HumanResources       M       2.21
-##  7 InfoTech             F       3.30
-##  8 InfoTech             M       1.77
-##  9 Legal                F       3.30
-## 10 Legal                M       2.06
-## 11 Stores               F       3.17
-## 12 Stores               M       2.68
-\end{verbatim}
-
-If varies significantly by the interaction of gender and division.
-
-These are just a handful of the categorical summaries we could do.
-
-\textbf{Does AbsenceRate vary by length of service and age?}
-
-Scatterplots and correlations help answer this.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# basic scatterplot}
-\NormalTok{MFGEmployees }\OperatorTok{%>%}
-\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Age, }\DataTypeTok{y=}\NormalTok{AbsenceRate) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\DataTypeTok{colour =} \StringTok{"blue"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-12-1}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{cor}\NormalTok{(MFGEmployees}\OperatorTok{$}\NormalTok{Age, MFGEmployees}\OperatorTok{$}\NormalTok{AbsenceRate)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 0.825
-\end{verbatim}
-
-There is a strong correlation of Age and Absence Rate
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{MFGEmployees }\OperatorTok{%>%}
-\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{LengthService, }\DataTypeTok{y=}\NormalTok{AbsenceRate) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\DataTypeTok{colour =} \StringTok{"blue"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\DataTypeTok{method=}\StringTok{'lm'}\NormalTok{, }\DataTypeTok{se =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{color=}\StringTok{'red'}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-13-1}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{cor}\NormalTok{(MFGEmployees}\OperatorTok{$}\NormalTok{LengthService, MFGEmployees}\OperatorTok{$}\NormalTok{AbsenceRate)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] -0.0467
-\end{verbatim}
-
-There is not a strong correlation between length of service and Absence Rate.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{MFGEmployees }\OperatorTok{%>%}
-\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}
-\StringTok{  }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{Age, }\DataTypeTok{y=}\NormalTok{LengthService) }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\DataTypeTok{colour =} \StringTok{"blue"}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\DataTypeTok{method=}\StringTok{'lm'}\NormalTok{, }\DataTypeTok{se =} \OtherTok{FALSE}\NormalTok{, }\DataTypeTok{color=}\StringTok{'red'}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-14-1}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{cor}\NormalTok{(MFGEmployees}\OperatorTok{$}\NormalTok{Age, MFGEmployees}\OperatorTok{$}\NormalTok{LengthService)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 0.0562
-\end{verbatim}
-
-There is not much correlation between age and length of service either.
-
-So far, we have done data exploration, now we are going to start building a model and starting to answer more difficult questions.
-
-\#\#3. Build The model
-One of the questions asked in the defining the goal step was `whether it was possible to \textbf{predict} absenteeism?'
-
-Absence Rate is a numeric continuous value. In the `Building a model' step we have to chose which models/statistical algorithms to use. Prediction of a numerics continous values suggests a couple of models that could be brought to bear: Regression trees and linear regression. There are many more but for purposes of this article we will look at these.
-
-\#\#\#3.1 Regression Trees
-Regression Trees will allow for use of both categorical and numeric values as predictors. Let's choose the following data as potential predictors in this analysis:
-
-\begin{itemize}
-\tightlist
-\item
-  Gender
-\item
-  Department Name
-\item
-  Store Location
-\item
-  Division
-\item
-  Age
-\item
-  Length of Service
-\item
-  Business Unit
-\end{itemize}
-
-\textbf{Absence Rate} will be the the `target' or thing to be predicted.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{MYinput <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"Gender"}\NormalTok{, }\StringTok{"DepartmentName"}\NormalTok{, }\StringTok{"StoreLocation"}\NormalTok{, }\StringTok{"Division"}\NormalTok{,}
-             \StringTok{"Age"}\NormalTok{, }\StringTok{"LengthService"}\NormalTok{, }\StringTok{"BusinessUnit"}\NormalTok{)}
-\NormalTok{MYtarget  <-}\StringTok{ "AbsenceRate"}
-
-\KeywordTok{library}\NormalTok{(rpart, }\DataTypeTok{quietly=}\OtherTok{TRUE}\NormalTok{)}
-
-\KeywordTok{set.seed}\NormalTok{(crv}\OperatorTok{$}\NormalTok{seed)}
-\NormalTok{MYrpart <-}\StringTok{ }\KeywordTok{rpart}\NormalTok{(AbsenceRate }\OperatorTok{~}\StringTok{ }\NormalTok{.,}
-                 \DataTypeTok{data=}\NormalTok{MFGEmployees[, }\KeywordTok{c}\NormalTok{(MYinput, MYtarget)],}
-                 \DataTypeTok{method=}\StringTok{"anova"}\NormalTok{,}
-                 \DataTypeTok{parms=}\KeywordTok{list}\NormalTok{(}\DataTypeTok{split=}\StringTok{"information"}\NormalTok{),}
-                 \DataTypeTok{control=}\KeywordTok{rpart.control}\NormalTok{(}\DataTypeTok{minsplit=}\DecValTok{10}\NormalTok{,}
-                                       \DataTypeTok{maxdepth=}\DecValTok{10}\NormalTok{,}
-                                       \DataTypeTok{usesurrogate=}\DecValTok{0}\NormalTok{, }
-                                       \DataTypeTok{maxsurrogate=}\DecValTok{0}\NormalTok{))}
-
-\KeywordTok{fancyRpartPlot}\NormalTok{(MYrpart, }\DataTypeTok{main=}\StringTok{"Decision Tree MFGEmployees and AbsenceRate"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-15-1}
-
-The regression decision tree shows that age is a big factor in determining absence rate with gender playing a small part in one of the age ranges: \textgreater{}43 and \textless{}52 with males having a lower absence rate in this group. Almost all categorical information other than gender doesn't look like to help in the prediction.
-
-Now let's look at linear regression as another model. The restriction in linear regression is that it can only accept non-categorical variables. Categorical variables can sometimes be made numeric through transformation, but that is beyond the scope of this article.
-
-\#\#\#3.2 Linear Regression
-
-In linear regression, then, we will need to restrict it to numeric variables:
-
-\begin{itemize}
-\tightlist
-\item
-  Age
-\item
-  Length of Service
-\end{itemize}
-
-being used to predict absence rate.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{#Linear Regression Model}
-\NormalTok{RegressionCurrentData <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(AbsenceRate}\OperatorTok{~}\NormalTok{Age}\OperatorTok{+}\NormalTok{LengthService, }\DataTypeTok{data=}\NormalTok{MFGEmployees)}
-
-\KeywordTok{summary}\NormalTok{(RegressionCurrentData)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Call:
-## lm(formula = AbsenceRate ~ Age + LengthService, data = MFGEmployees)
-## 
-## Residuals:
-##    Min     1Q Median     3Q    Max 
-## -5.358 -0.847 -0.023  0.852  5.103 
-## 
-## Coefficients:
-##               Estimate Std. Error t value            Pr(>|t|)    
-## (Intercept)   -5.19021    0.06896   -75.3 <0.0000000000000002 ***
-## Age            0.20259    0.00151   134.2 <0.0000000000000002 ***
-## LengthService -0.08531    0.00565   -15.1 <0.0000000000000002 ***
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
-## Residual standard error: 1.26 on 8162 degrees of freedom
-## Multiple R-squared:  0.689,  Adjusted R-squared:  0.689 
-## F-statistic: 9.03e+03 on 2 and 8162 DF,  p-value: <0.0000000000000002
-\end{verbatim}
-
-The summary shows an adjusted R-squared of 0.689 which means approximately 68.9\% of the variance is accounted by age and length of service.
-The variables are both significant at Pr(\textgreater{}\textbar{}t\textbar{}) of 'r summary(RegressionCurrentData)\$coefficients{[}3,4{]}`. These results are using the entirety of the existing data to predict itself.
-
-Graphically it look like this:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{#2D plot of Age and AbsenceRate}
-
-\KeywordTok{ggplot}\NormalTok{() }\OperatorTok{+}\StringTok{ }
-\StringTok{  }\KeywordTok{geom_point}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Age,}\DataTypeTok{y =}\NormalTok{ AbsenceRate),}\DataTypeTok{data=}\NormalTok{MFGEmployees) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{geom_smooth}\NormalTok{(}\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x =}\NormalTok{ Age,}\DataTypeTok{y =}\NormalTok{ AbsenceRate),}\DataTypeTok{data=}\NormalTok{MFGEmployees,}\DataTypeTok{method =} \StringTok{'lm'}\NormalTok{) }\OperatorTok{+}
-\StringTok{  }\KeywordTok{theme_minimal}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-17-1}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{#3D Scatterplot  of Age and Length of Service with Absence Rate - with Coloring and Vertical Lines}
-\CommentTok{# and Regression Plane }
-\KeywordTok{library}\NormalTok{(scatterplot3d) }
-
-\NormalTok{s3d <-}\KeywordTok{scatterplot3d}\NormalTok{(MFGEmployees}\OperatorTok{$}\NormalTok{Age,MFGEmployees}\OperatorTok{$}\NormalTok{LengthService,MFGEmployees}\OperatorTok{$}\NormalTok{AbsenceRate, }\DataTypeTok{pch=}\DecValTok{16}\NormalTok{, }\DataTypeTok{highlight.3d=}\OtherTok{TRUE}\NormalTok{,}
-                    \DataTypeTok{type=}\StringTok{"h"}\NormalTok{, }\DataTypeTok{main=}\StringTok{"Absence Rate By Age And Length of Service"}\NormalTok{)}
-\NormalTok{fit <-}\StringTok{ }\KeywordTok{lm}\NormalTok{(MFGEmployees}\OperatorTok{$}\NormalTok{AbsenceRate }\OperatorTok{~}\StringTok{ }\NormalTok{MFGEmployees}\OperatorTok{$}\NormalTok{Age}\OperatorTok{+}\NormalTok{MFGEmployees}\OperatorTok{$}\NormalTok{LengthService) }
-
-\NormalTok{s3d}\OperatorTok{$}\KeywordTok{plane3d}\NormalTok{(fit)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics[width=\textwidth]{hendrikfeddersen_files/figure-latex/unnamed-chunk-17-2}
-
-\#\#4.Evaluate and evaluate the model
-
-Up till now we have concentrated on producing a couple of models. The effort so far has had one weakness. \textbf{We have used all of our data for 2015 to generate the models.} They can both predict, but the prediction are based on existing data - that are already known. We don't know how well it will predict on data it hasn't seen yet.
-
-To evaluate and critique the models, we need to train the model using part of the data and hold out a portion to test on. We will divide the data into 10 parts- using 9 parts as training data and 1 part as testing data, and alternate which are the 9 and the 1, so that each of the 10 parts gets to be training data 9 times and testing data once.
-
-The R ``caret'' library helps us do that. We will run both a regression tree and linear regression and compare how they do against each other.
-
-First the Linear Regression
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{library}\NormalTok{(caret)}
-
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{998}\NormalTok{)}
-
-\NormalTok{inTraining <-}\StringTok{ }\KeywordTok{createDataPartition}\NormalTok{(MFGEmployees}\OperatorTok{$}\NormalTok{BusinessUnit, }\DataTypeTok{p =} \FloatTok{.75}\NormalTok{, }\DataTypeTok{list =} \OtherTok{FALSE}\NormalTok{)}
-
-\NormalTok{training <-}\StringTok{ }\NormalTok{MFGEmployees[inTraining,]}
-\NormalTok{testing <-}\StringTok{ }\NormalTok{MFGEmployees[ }\OperatorTok{-}\StringTok{ }\NormalTok{inTraining,]}
-
-\NormalTok{fitControl <-}\StringTok{ }\KeywordTok{trainControl}\NormalTok{(}\CommentTok{## 10-fold CV}
-\DataTypeTok{method =} \StringTok{"repeatedcv"}\NormalTok{, }\DataTypeTok{number =} \DecValTok{10}\NormalTok{, }
-\DataTypeTok{repeats =} \DecValTok{10} \CommentTok{## repeated ten times}
-\NormalTok{)}
-
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{825}\NormalTok{)}
-
-\NormalTok{lmFit1 <-}\StringTok{ }\KeywordTok{train}\NormalTok{(AbsenceRate }\OperatorTok{~}\StringTok{ }\NormalTok{Age }\OperatorTok{+}\StringTok{ }\NormalTok{LengthService, }\DataTypeTok{data =}\NormalTok{ training,}
-                 \DataTypeTok{method =} \StringTok{"lm"}\NormalTok{,}
-                 \DataTypeTok{trControl =}\NormalTok{ fitControl)}
-\NormalTok{lmFit1}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Linear Regression 
-## 
-## 6124 samples
-##    2 predictor
-## 
-## No pre-processing
-## Resampling: Cross-Validated (10 fold, repeated 10 times) 
-## Summary of sample sizes: 5512, 5512, 5511, 5512, 5512, 5511, ... 
-## Resampling results:
-## 
-##   RMSE  Rsquared  MAE 
-##   1.27  0.688     1.01
-## 
-## Tuning parameter 'intercept' was held constant at a value of TRUE
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{Testingdatasetandpredictions <-}\StringTok{ }\NormalTok{testing }\OperatorTok{%>%}\StringTok{ }\KeywordTok{add_predictions}\NormalTok{(lmFit1, }\DataTypeTok{type =} \StringTok{"raw"}\NormalTok{)}
-
-\NormalTok{Testingdatasetandpredictions}\OperatorTok{$}\NormalTok{pred[Testingdatasetandpredictions}\OperatorTok{$}\NormalTok{pred}\OperatorTok{<}\DecValTok{0}\NormalTok{] <-}\StringTok{ }\DecValTok{0} \CommentTok{#Put a zero to all negative predictions}
-\end{Highlighting}
-\end{Shaded}
-
-The Rsquared shows a value of 0.688 which means even with sampling different parts of the data on 10 fold cross validation the use of age and length of service seems to be pretty robust so far.
-
-Next the decision tree. The first time with just the numeric variables.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{825}\NormalTok{)}
-
-\NormalTok{rpartFit1 <-}\StringTok{ }\KeywordTok{train}\NormalTok{(AbsenceRate }\OperatorTok{~}\StringTok{ }\NormalTok{Age }\OperatorTok{+}\StringTok{ }\NormalTok{LengthService, }\DataTypeTok{data =}\NormalTok{ training,}
-                 \DataTypeTok{method =} \StringTok{"rpart"}\NormalTok{,}
-                 \DataTypeTok{trControl =}\NormalTok{ fitControl,}
-                 \DataTypeTok{maxdepth =} \DecValTok{5}\NormalTok{)}
-\NormalTok{rpartFit1}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## CART 
-## 
-## 6124 samples
-##    2 predictor
-## 
-## No pre-processing
-## Resampling: Cross-Validated (10 fold, repeated 10 times) 
-## Summary of sample sizes: 5512, 5512, 5511, 5512, 5512, 5511, ... 
-## Resampling results across tuning parameters:
-## 
-##   cp      RMSE  Rsquared  MAE 
-##   0.0597  1.43  0.605     1.13
-##   0.0884  1.55  0.531     1.26
-##   0.4945  1.98  0.475     1.63
-## 
-## RMSE was used to select the optimal model using the smallest value.
-## The final value used for the model was cp = 0.0597.
-\end{verbatim}
-
-You will notice that the decision tree with 10 fold cross validation didn't perform as well with an RSquared of approximately 0.60
-
-The second time with the original categorical and numeric varibles used.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{set.seed}\NormalTok{(}\DecValTok{825}\NormalTok{)}
-
-\NormalTok{rpartFit2 <-}\StringTok{ }\KeywordTok{train}\NormalTok{(AbsenceRate }\OperatorTok{~}\StringTok{ }\NormalTok{Gender }\OperatorTok{+}\StringTok{ }\NormalTok{DepartmentName }\OperatorTok{+}\StringTok{ }\NormalTok{StoreLocation }\OperatorTok{+}\StringTok{ }\NormalTok{Division }\OperatorTok{+}\StringTok{ }\NormalTok{Age }\OperatorTok{+}\StringTok{ }\NormalTok{LengthService }\OperatorTok{+}\StringTok{ }\NormalTok{BusinessUnit, }\DataTypeTok{data =}\NormalTok{ training,}
-                 \DataTypeTok{method =} \StringTok{"rpart"}\NormalTok{,}
-                 \DataTypeTok{trControl =}\NormalTok{ fitControl,}
-                 \DataTypeTok{maxdepth =} \DecValTok{5}\NormalTok{)}
-
-\NormalTok{rpartFit2}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## CART 
-## 
-## 6124 samples
-##    7 predictor
-## 
-## No pre-processing
-## Resampling: Cross-Validated (10 fold, repeated 10 times) 
-## Summary of sample sizes: 5512, 5512, 5511, 5512, 5512, 5511, ... 
-## Resampling results across tuning parameters:
-## 
-##   cp      RMSE  Rsquared  MAE 
-##   0.0597  1.43  0.605     1.13
-##   0.0884  1.55  0.531     1.26
-##   0.4945  1.98  0.475     1.63
-## 
-## RMSE was used to select the optimal model using the smallest value.
-## The final value used for the model was cp = 0.0597.
-\end{verbatim}
-
-Here when you include all originally used vaiables in 10 fold cross validation, the Rsquared changed little and is still around 0.60.
-
-So far, the linear regression is performing better.
-
-\#\#5.Present Results and Document
-
-The presenting of results and documenting is something that R helps in. You may not have realized it, but the R Markdown language has been used to create the full layout of these two blog articles. HTML,PDF and Word formats can be produced.
-
-R Markdown allows the reader to see exactly what you having been doing, so that an independent person can replicate your results, to confirm what you have done. It shows the R code/commands, the statistical results and graphics, all is included in the Absenteeism-Part.Rmd file.
-
-\#\#6.Deploy Model
-
-Once you have evaluated your model(s) and chosen to use them, they need to be deployed so that they can be used. At the simplest level, `deploy' can mean using the `predict' function in R (where applicable) in conjunction with your model.
-
-\textbf{Can it predict next year absenteeism?}
-
-Let's predict the 2016 Absenteeism from the 2015 model.
-
-If we make the simplifying assumption that nobody quits and nobody new comes in, we can take the 2015 data and add 1 to age and 1 to years of service for an approximation of new 2016 data before we get to 2016.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{#Apply model}
-\CommentTok{#Generate 2016 data}
-\NormalTok{Absence2016Data<-MFGEmployees}
-\NormalTok{Absence2016Data}\OperatorTok{$}\NormalTok{Age<-Absence2016Data}\OperatorTok{$}\NormalTok{Age}\OperatorTok{+}\DecValTok{1}
-\NormalTok{Absence2016Data}\OperatorTok{$}\NormalTok{LengthService<-Absence2016Data}\OperatorTok{$}\NormalTok{LengthService}\OperatorTok{+}\DecValTok{1}
-
-\NormalTok{Absence2016Data <-}\StringTok{ }\NormalTok{Absence2016Data }\OperatorTok{%>%}\StringTok{ }\KeywordTok{add_predictions}\NormalTok{(lmFit1, }\DataTypeTok{type =} \StringTok{"raw"}\NormalTok{)}
-\NormalTok{Absence2016Data}\OperatorTok{$}\NormalTok{pred[Absence2016Data}\OperatorTok{$}\NormalTok{pred}\OperatorTok{<}\DecValTok{0}\NormalTok{] <-}\StringTok{ }\DecValTok{0} \CommentTok{#Put a zero to all negative predictions}
-\end{Highlighting}
-\end{Shaded}
-
-To get single estimate for 2016 we ask for mean of absence rate.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{mean}\NormalTok{(Absence2016Data}\OperatorTok{$}\NormalTok{pred)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 3.05
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{mean}\NormalTok{(MFGEmployees}\OperatorTok{$}\NormalTok{AbsenceRate)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 2.91
-\end{verbatim}
-
-The first figure above is the 2016 prediction, the second is the 2015 actual for comparison.
-
-\textbf{If so, how well can it predict?}
-
-As mentioned previously, about `r scales::percent(mean(MFGEmployees\$AbsenceRate)'. of the variation is accounted for in a linear regression model using age and length of service.
-
-\textbf{Can we reduce our absenteeism?}
-
-On the surface, only getting the age reduced and length of service increased will reduce absensteeism with this model.
-
-Obviously, absenteeism is much more complex that just the rudimentary data we have collected. A serious look at this metric and problem would require more and different kinds of data. As mentioned before, the raw data used in this article and analysis is totally contrived to illustrate an example.
 
 \hypertarget{absenteeism-data-absenteeism_datawork}{%
 \chapter{\texorpdfstring{Absenteeism data \{\#\href{mailto:absenteeism_data@work}{\nolinkurl{absenteeism\_data@work}}\}}{Absenteeism data \{\#absenteeism\_data@work\}}}\label{absenteeism-data-absenteeism_datawork}}
@@ -2200,13 +1310,267 @@ Here we introduce attrition.
 \hypertarget{interview-attendance}{%
 \chapter{Interview attendance problem}\label{interview-attendance}}
 
-Placeholder
+The dataset consists of details of nore than 1200 candidates and the interviews they have attended during the course of the period 2014-2016.
+
+The following are the variables columns:
+
+\begin{itemize}
+\tightlist
+\item
+  Date of Interview refers to the day the candidates were scheduled for the interview. The formats vary.
+\item
+  Client that gave the recruitment vendor the requisite mandate
+\item
+  Industry refers to the sector the client belongs to (Candidates can job hunt in vrious industries.)
+\item
+  Location refers to the current location of the candidate.
+\item
+  Position to be closed: Niche refers to rare skill sets, while routine refers to more common skill sets.
+\item
+  Nature of Skillset refers to the skill the client has and specifies the same.
+\item
+  Interview Type: There are three interview types:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Walk in drives - These are unscheduled. Candidates are either contacted or they come to the interview on their own volition,
+  \item
+    Scheduled - Here the candidates profiles are screened by the client and subsequent to this, the vendor fixes an appointment between the client and the candidate.
+  \item
+    The third one is a scheduled walkin. Here the number of candidates is larger and the candidates are informed beforehand of a tentative date to ascertain their availability. The profiles are screened as in a scheduled interview. In a sense it bears features of both a walk-in and a scheduled interview.
+  \end{enumerate}
+\item
+  Name( Cand ID) This is a substitute to keep the candidates identity a secret
+\item
+  Gender
+\item
+  Candidate Current Location
+\item
+  Candidate Job Location
+\item
+  Interview Venue
+\item
+  Candidate Native location
+\item
+  Have you obtained the necessary permission to start at the required time?
+\item
+  I hope there will be no unscheduled meetings.
+\item
+  Can I call you three hours before the interview and follow up on your attendance for the interview?
+\item
+  Can I have an alternative telephone number? I assure you that I will not trouble you too much.
+\item
+  Have you taken a printout of your updated resume? Have you read the JD and understood it?
+\item
+  Are you clear with the venue details and the landmark?
+\item
+  Has the call letter been shared
+\item
+  Expected Attendance: Whether the candidate was expected to attend the interview. Here the alternatives are yes, no or uncertain.
+\item
+  Observed Attendance: Whether the candidate attended the interview. This is binary and will form our dependent variable to be predicted.
+\item
+  Marital Status: Single or married.
+\end{itemize}
+
+Source: \url{https://www.kaggle.com/hugohk/learning-ml-with-caret}
 
 \hypertarget{data-reading-1}{%
 \section{Data reading}\label{data-reading-1}}
 
+Ensure all needed libraries are installed
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{interview_attendance <-}\StringTok{ }\KeywordTok{read_csv}\NormalTok{(}\StringTok{"https://hranalyticslive.netlify.com/data/interview.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{head}\NormalTok{(interview_attendance, }\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 5 x 28
+##   `Date of Interv~ `Client name` Industry Location `Position to be~
+##   <chr>            <chr>         <chr>    <chr>    <chr>           
+## 1 13.02.2015       Hospira       Pharmac~ Chennai  Production- Ste~
+## 2 13.02.2015       Hospira       Pharmac~ Chennai  Production- Ste~
+## 3 13.02.2015       Hospira       Pharmac~ Chennai  Production- Ste~
+## 4 13.02.2015       Hospira       Pharmac~ Chennai  Production- Ste~
+## 5 13.02.2015       Hospira       Pharmac~ Chennai  Production- Ste~
+## # ... with 23 more variables: `Nature of Skillset` <chr>, `Interview
+## #   Type` <chr>, `Name(Cand ID)` <chr>, Gender <chr>, `Candidate Current
+## #   Location` <chr>, `Candidate Job Location` <chr>, `Interview
+## #   Venue` <chr>, `Candidate Native location` <chr>, `Have you obtained
+## #   the necessary permission to start at the required time` <chr>, `Hope
+## #   there will be no unscheduled meetings` <chr>, `Can I Call you three
+## #   hours before the interview and follow up on your attendance for the
+## #   interview` <chr>, `Can I have an alternative number/ desk number. I
+## #   assure you that I will not trouble you too much` <chr>, `Have you
+## #   taken a printout of your updated resume. Have you read the JD and
+## #   understood the same` <chr>, `Are you clear with the venue details and
+## #   the landmark.` <chr>, `Has the call letter been shared` <chr>,
+## #   `Expected Attendance` <chr>, `Observed Attendance` <chr>, `Marital
+## #   Status` <chr>, X24 <lgl>, X25 <lgl>, X26 <lgl>, X27 <lgl>, X28 <lgl>
+\end{verbatim}
+
+\hypertarget{data-cleaning}{%
+\chapter{Data cleaning}\label{data-cleaning}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{interview_attendance <-}\StringTok{ }\NormalTok{interview_attendance[}\OperatorTok{-}\DecValTok{1234}\NormalTok{,] }\CommentTok{#remove the last row that contains only missing values}
+
+\NormalTok{interview_attendance}\OperatorTok{$}\NormalTok{X24   <-}\StringTok{ }\OtherTok{NULL} \CommentTok{#get rid of unnecesary columns on the right side}
+\NormalTok{interview_attendance}\OperatorTok{$}\NormalTok{X25 <-}\StringTok{ }\OtherTok{NULL} \CommentTok{#get rid of unnecesary columns on the right side}
+\NormalTok{interview_attendance}\OperatorTok{$}\NormalTok{X26 <-}\StringTok{ }\OtherTok{NULL} \CommentTok{#get rid of unnecesary columns on the right side}
+\NormalTok{interview_attendance}\OperatorTok{$}\NormalTok{X27 <-}\StringTok{ }\OtherTok{NULL} \CommentTok{#get rid of unnecesary columns on the right side}
+\NormalTok{interview_attendance}\OperatorTok{$}\NormalTok{X28 <-}\StringTok{ }\OtherTok{NULL} \CommentTok{#get rid of unnecesary columns on the right side}
+
+\CommentTok{# Here we create a vector with column titles}
+\NormalTok{mycolnames <-}\KeywordTok{c}\NormalTok{(}\StringTok{'date_of_interview'}\NormalTok{,}\StringTok{'client_name'}\NormalTok{,}\StringTok{'industry'}\NormalTok{,}\StringTok{'location'}\NormalTok{,}\StringTok{'position'}\NormalTok{,}
+               \StringTok{'skillset'}\NormalTok{,}\StringTok{'interview_type'}\NormalTok{,}\StringTok{'name'}\NormalTok{, }\StringTok{'gender'}\NormalTok{,}\StringTok{'current_location'}\NormalTok{,}
+               \StringTok{'cjob_location'}\NormalTok{,}\StringTok{'interview_venue'}\NormalTok{,}\StringTok{'cnative_location'}\NormalTok{,}
+               \StringTok{'permission_obtained'}\NormalTok{,}\StringTok{'unscheduled_meetings'}\NormalTok{,}\StringTok{'call_three_hours_before'}\NormalTok{,}
+               \StringTok{'alternative_number'}\NormalTok{,}\StringTok{'printout_resume_jd'}\NormalTok{,}\StringTok{'clear_with_venue'}\NormalTok{,}
+               \StringTok{'letter_been_shared'}\NormalTok{,}\StringTok{'expected_attendance'}\NormalTok{,}\StringTok{'observed_attendance'}\NormalTok{,}
+               \StringTok{'marital_status'}\NormalTok{)  }
+
+\CommentTok{#Here we assign the previously defined column titles}
+\KeywordTok{colnames}\NormalTok{(interview_attendance) <-}\StringTok{ }\NormalTok{mycolnames }
+
+\KeywordTok{rm}\NormalTok{(mycolnames) }\CommentTok{# Here we remove the mycolnames vector, as it is not required anymore}
+
+\NormalTok{interview_attendance<-}\StringTok{ }\KeywordTok{mutate_all}\NormalTok{(interview_attendance, }\KeywordTok{funs}\NormalTok{(tolower)) }\CommentTok{# Sets all words to lower case}
+
+\CommentTok{# Cancels all empty spaces in the observed attendance column}
+\NormalTok{interview_attendance}\OperatorTok{$}\NormalTok{observed_attendance <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{" "}\NormalTok{, }\StringTok{""}\NormalTok{, interview_attendance}\OperatorTok{$}\NormalTok{observed_attendance)}
+
+\CommentTok{# Cancels all empty spaces in the location column}
+\NormalTok{interview_attendance}\OperatorTok{$}\NormalTok{location <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{" "}\NormalTok{, }\StringTok{""}\NormalTok{, interview_attendance}\OperatorTok{$}\NormalTok{location) }
+
+\CommentTok{# Cancels all empty spaces in the interview type column}
+\NormalTok{interview_attendance}\OperatorTok{$}\NormalTok{interview_type <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{" "}\NormalTok{, }\StringTok{""}\NormalTok{, interview_attendance}\OperatorTok{$}\NormalTok{interview_type)}
+
+\CommentTok{# Corrects a typo in the interview type column}
+\NormalTok{interview_attendance}\OperatorTok{$}\NormalTok{interview_type <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{"sceduledwalkin"}\NormalTok{, }\StringTok{"scheduledwalkin"}\NormalTok{, interview_attendance}\OperatorTok{$}\NormalTok{interview_type)}
+
+\CommentTok{# Cancels all empty spaces in the candidate current location column}
+\NormalTok{interview_attendance}\OperatorTok{$}\NormalTok{current_location <-}\StringTok{ }\KeywordTok{gsub}\NormalTok{(}\StringTok{" "}\NormalTok{, }\StringTok{""}\NormalTok{, interview_attendance}\OperatorTok{$}\NormalTok{current_location)}
+
+
+\CommentTok{#Converts values from character to numbers for Yes/no answers, just to keep things simple.}
+\NormalTok{  colstoyesno <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{14}\OperatorTok{:}\DecValTok{22}\NormalTok{) }\CommentTok{# Here we define which column numbers to look at.}
+\ControlFlowTok{for}\NormalTok{ (i }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(colstoyesno))\{   }\CommentTok{# Here we tell R to examine all variables in the previously defined columns}
+\NormalTok{  j <-}\StringTok{ }\NormalTok{colstoyesno[i]}
+\NormalTok{  interview_attendance[,j][interview_attendance[,j] }\OperatorTok{!=}\StringTok{"yes"}\NormalTok{] <-}\StringTok{ "no"}   
+\NormalTok{  interview_attendance[,j][}\KeywordTok{is.na}\NormalTok{(interview_attendance[,j]) }\OperatorTok{==}\StringTok{ }\OtherTok{TRUE}\NormalTok{] <-}\StringTok{ "no"}
+  \CommentTok{#With the previous two lines all values different to yes, become a no, i.e. "uncertain" and "NA" are set to a "no".}
+\NormalTok{\}}
+\KeywordTok{rm}\NormalTok{(colstoyesno, i, j) }\CommentTok{#Here we remove the three just created vectors as a claen up.}
+\end{Highlighting}
+\end{Shaded}
+
+In the following step we figure out what is the content of each relevant column and identify its unique values. Once we have done that a number is assigned for a later step.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{dir.create}\NormalTok{(}\StringTok{"codefiles_interview_attendance"}\NormalTok{, }\DataTypeTok{showWarnings =} \OtherTok{FALSE}\NormalTok{)}
+\CommentTok{#detach("package:plyr", unload = TRUE)}
+\ControlFlowTok{for}\NormalTok{(i }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(}\KeywordTok{colnames}\NormalTok{(interview_attendance)))\{}
+\NormalTok{  vvar <-}\StringTok{ }\KeywordTok{colnames}\NormalTok{(interview_attendance)[i]}
+\NormalTok{  outdata <-}\StringTok{ }\NormalTok{interview_attendance }\OperatorTok{%>%}\StringTok{ }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{group_by}\NormalTok{(}\DataTypeTok{.dots =}\NormalTok{ vvar) }\OperatorTok{%>%}\StringTok{ }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{count}\NormalTok{(}\DataTypeTok{.dots =}\NormalTok{ vvar)}
+\NormalTok{  outdata}\OperatorTok{$}\NormalTok{idt <-}\StringTok{ }\NormalTok{LETTERS[}\KeywordTok{seq}\NormalTok{(}\DataTypeTok{from=}\DecValTok{1}\NormalTok{, }\DataTypeTok{to=}\KeywordTok{nrow}\NormalTok{(outdata))]}
+\NormalTok{  outdata}\OperatorTok{$}\NormalTok{id  <-}\StringTok{ }\KeywordTok{row.names}\NormalTok{(outdata)}
+\NormalTok{  outfile <-}\StringTok{ }\KeywordTok{paste0}\NormalTok{(}\StringTok{"codefiles_interview_attendance/"}\NormalTok{, vvar, }\StringTok{".csv"}\NormalTok{)}
+  \KeywordTok{write.csv}\NormalTok{(outdata, }\DataTypeTok{file=}\NormalTok{outfile, }\DataTypeTok{row.names =} \OtherTok{FALSE}\NormalTok{)}
+\NormalTok{\}}
+\KeywordTok{rm}\NormalTok{(outdata, i, outfile, vvar)}
+\end{Highlighting}
+\end{Shaded}
+
+This step uses the csv files created in the previous step and replaces the words with a number (except for the variable that we would like to predict) in order to prepare the data for machine learning.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{colstomap <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{2}\OperatorTok{:}\DecValTok{7}\NormalTok{, }\DecValTok{9}\OperatorTok{:}\DecValTok{21}\NormalTok{, }\DecValTok{23}\NormalTok{)}
+\KeywordTok{library}\NormalTok{(plyr)}
+\ControlFlowTok{for}\NormalTok{(i }\ControlFlowTok{in} \DecValTok{1}\OperatorTok{:}\KeywordTok{length}\NormalTok{(colstomap))\{}
+\NormalTok{    j <-}\StringTok{ }\NormalTok{colstomap[i]}
+\NormalTok{    vfilename <-}\StringTok{ }\KeywordTok{paste0}\NormalTok{(}\StringTok{"codefiles_interview_attendance/"}\NormalTok{, }\KeywordTok{colnames}\NormalTok{(interview_attendance)[j], }\StringTok{".csv"}\NormalTok{)}
+\NormalTok{    dfcodes <-}\StringTok{ }\KeywordTok{read.csv}\NormalTok{(vfilename, }\DataTypeTok{stringsAsFactors=}\OtherTok{FALSE}\NormalTok{)}
+\NormalTok{    vfrom <-}\StringTok{ }\KeywordTok{as.vector}\NormalTok{(dfcodes[,}\DecValTok{1}\NormalTok{])}
+\NormalTok{    vto <-}\StringTok{ }\KeywordTok{as.vector}\NormalTok{(dfcodes[,}\DecValTok{4}\NormalTok{])}
+\NormalTok{    interview_attendance[,j] <-}\StringTok{ }\KeywordTok{mapvalues}\NormalTok{(interview_attendance[,j], }\DataTypeTok{from=}\NormalTok{vfrom, }\DataTypeTok{to=}\NormalTok{vto)}
+\NormalTok{    interview_attendance[,j] <-}\StringTok{ }\KeywordTok{as.integer}\NormalTok{(interview_attendance[,j])}
+\NormalTok{\}}
+\KeywordTok{rm}\NormalTok{(colstomap, i, j, vfilename, vfrom, vto, dfcodes)}
+\end{Highlighting}
+\end{Shaded}
+
+Here we pick the data that are needed for the predictor.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{interview_attendanceml <-}\StringTok{ }\NormalTok{interview_attendance }\OperatorTok{%>%}\StringTok{ }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{select}\NormalTok{(}\OperatorTok{-}\NormalTok{date_of_interview, }\OperatorTok{-}\NormalTok{name)}
+\NormalTok{interview_attendanceml <-}\StringTok{ }\NormalTok{interview_attendanceml }\OperatorTok{%>%}\StringTok{ }\NormalTok{dplyr}\OperatorTok{::}\KeywordTok{select}\NormalTok{(client_name}\OperatorTok{:}\NormalTok{expected_attendance, }
+\NormalTok{                                observed_attendance)}
+\KeywordTok{head}\NormalTok{(interview_attendanceml, }\DecValTok{5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Here we start the real machine learning part. The training dataset is created containing 75\% of the observations {[}interview\_attendanceml\_train{]} and the remaining observations are assigned to the test dataset {[}interview\_attendanceml\_test{]}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(caret) }\CommentTok{# Calls the caret library}
+
+\KeywordTok{set.seed}\NormalTok{(}\DecValTok{144}\NormalTok{) }\CommentTok{# Sets a seed for reproducability}
+
+\NormalTok{index <-}\StringTok{ }\KeywordTok{createDataPartition}\NormalTok{(interview_attendanceml}\OperatorTok{$}\NormalTok{observed_attendance, }\DataTypeTok{p=}\FloatTok{0.75}\NormalTok{, }\DataTypeTok{list=}\OtherTok{FALSE}\NormalTok{) }\CommentTok{#Creates an index vector of the length of all the observations}
+
+\NormalTok{interview_attendanceml_train <-}\StringTok{ }\NormalTok{interview_attendanceml[index,] }\CommentTok{# Creates a subset of 75% of data for training dataset}
+\NormalTok{interview_attendanceml_test  <-}\StringTok{ }\NormalTok{interview_attendanceml[}\OperatorTok{-}\NormalTok{index,] }\CommentTok{# Creates a subset of the remaining 25% of data for test dataset}
+
+\KeywordTok{rm}\NormalTok{(index,interview_attendanceml)}
+\end{Highlighting}
+\end{Shaded}
+
 \hypertarget{choosing-a-model}{%
 \section{Choosing a model}\label{choosing-a-model}}
+
+We didn't want to tune anything and just let the code figure it out. Since the output is 1 for a no show and 2 for a show, we decided to use the gbm method (generalized boosting machine) from caret for creating the algorithm.
+
+\hypertarget{training}{%
+\chapter{Training}\label{training}}
+
+We use the train function of the caret library to train the training data set determined in the previous step.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{myml_model <-}\StringTok{ }\KeywordTok{train}\NormalTok{(interview_attendanceml_train[,}\DecValTok{1}\OperatorTok{:}\DecValTok{19}\NormalTok{], interview_attendanceml_train[,}\DecValTok{20}\NormalTok{], }\DataTypeTok{method=}\StringTok{'gbm'}\NormalTok{)}
+
+\KeywordTok{summary}\NormalTok{(myml_model)}
+
+\NormalTok{predictions <-}\StringTok{ }\KeywordTok{predict}\NormalTok{(}\DataTypeTok{object =}\NormalTok{ myml_model, interview_attendanceml_test,}
+                       \DataTypeTok{type =} \StringTok{'raw'}\NormalTok{)}
+
+\KeywordTok{head}\NormalTok{(predictions)}
+
+\KeywordTok{print}\NormalTok{(}\KeywordTok{postResample}\NormalTok{(}\DataTypeTok{pred=}\NormalTok{predictions, }\DataTypeTok{obs=}\KeywordTok{as.factor}\NormalTok{(interview_attendanceml_test[,}\DecValTok{20}\NormalTok{])))}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{ranking-medical_school}{%
 \chapter{Ranking Medical Schools}\label{ranking-medical_school}}

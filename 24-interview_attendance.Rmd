@@ -142,7 +142,7 @@ dir.create("codefiles_interview_attendance", showWarnings = FALSE)
 #detach("package:plyr", unload = TRUE)
 for(i in 1:length(colnames(interview_attendance))){
   vvar <- colnames(interview_attendance)[i]
-  outdata <- interview_attendance %>% group_by(.dots = vvar) %>% count(.dots = vvar)
+  outdata <- interview_attendance %>% dplyr::group_by(.dots = vvar) %>% dplyr::count(.dots = vvar)
   outdata$idt <- LETTERS[seq(from=1, to=nrow(outdata))]
   outdata$id  <- row.names(outdata)
   outfile <- paste0("codefiles_interview_attendance/", vvar, ".csv")
@@ -153,34 +153,33 @@ rm(outdata, i, outfile, vvar)
 
 This step uses the csv files created in the previous step and replaces the words with a number (except for the variable that we would like to predict) in order to prepare the data for machine learning.
 
-```{r}
+```{r eval = FALSE}
 colstomap <- c(2:7, 9:21, 23)
 library(plyr)
-
 for(i in 1:length(colstomap)){
-  j <- colstomap[i]
-  vfilename <- paste0("codefiles_interview_attendance/", colnames(interview_attendance)[j], ".csv")
-  dfcodes <- read_csv(vfilename)
-  vfrom <- as.vector(dfcodes[,1])
-  vto <- as.vector(dfcodes[,4])
-  interview_attendance[,j] <- mapvalues(interview_attendance[,j], from=vfrom, to=vto) #Items in interview_attendance[,j] that match items from will be replaced by items in to, matched by position.
-  interview_attendance[,j] <- as.integer(interview_attendance[,j])
+    j <- colstomap[i]
+    vfilename <- paste0("codefiles_interview_attendance/", colnames(interview_attendance)[j], ".csv")
+    dfcodes <- read.csv(vfilename, stringsAsFactors=FALSE)
+    vfrom <- as.vector(dfcodes[,1])
+    vto <- as.vector(dfcodes[,4])
+    interview_attendance[,j] <- mapvalues(interview_attendance[,j], from=vfrom, to=vto)
+    interview_attendance[,j] <- as.integer(interview_attendance[,j])
 }
 rm(colstomap, i, j, vfilename, vfrom, vto, dfcodes)
 ```
 
 Here we pick the data that are needed for the predictor.
 
-```{r}
-interview_attendanceml <- interview_attendance %>% select(-date_of_interview, -name)
-interview_attendanceml <- interview_attendanceml %>% select(client_name:expected_attendance, 
+```{r eval = FALSE}
+interview_attendanceml <- interview_attendance %>% dplyr::select(-date_of_interview, -name)
+interview_attendanceml <- interview_attendanceml %>% dplyr::select(client_name:expected_attendance, 
                                 observed_attendance)
 head(interview_attendanceml, 5)
 ```
 
 Here we start the real machine learning part. The training dataset is created containing 75% of the observations [interview_attendanceml_train] and the remaining observations are assigned to the test dataset [interview_attendanceml_test].
 
-```{r}
+```{r eval = FALSE}
 
 library(caret) # Calls the caret library
 
@@ -202,7 +201,7 @@ We didn't want to tune anything and just let the code figure it out. Since the o
 
 We use the train function of the caret library to train the training data set determined in the previous step.
 
-```{r}
+```{r eval = FALSE}
 myml_model <- train(interview_attendanceml_train[,1:19], interview_attendanceml_train[,20], method='gbm')
 
 summary(myml_model)
