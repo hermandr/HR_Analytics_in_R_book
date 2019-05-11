@@ -1,6 +1,6 @@
 --- 
 title: "HR Analytics in R"
-author: "Hendrik Feddersen"
+author: "Chester Ismay, Albert Y. Kim and Hendrik Feddersen"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 knit: "bookdown::render_book"
 biblio-style: apalike
@@ -63,8 +63,16 @@ needed_CRAN_pkgs <- c(
   
   # Internally used packages:
   "webshot", "mvtnorm", "remotes", "devtools", "dygraphs", "gridExtra",
-  "kableExtra", "googledrive"
-  ) 
+  "kableExtra", "googledrive",
+  # Other packages used in HR Analytics section:
+  "bigstatsr",
+  "bookdown","choroplethr","choroplethrMaps","data.table","datasets",
+  "dlnm","dplyr","faraway","forcats","GGally","ggthemes","GISTools","gsubfn",
+  "httr","leaflet","lubridate","magrittr","microbenchmark","pander","pdftools",
+  "plotly",
+  "profvis","pryr","purrr","rappdirs","raster","RColorBrewer","readr","rebus",
+  "rmarkdown","rvest","scales","sp","stats","stringr","testthat","tidyr",
+  "tigris","titanic","viridis") 
 
 new_pkgs <- needed_CRAN_pkgs[!(needed_CRAN_pkgs %in% installed.packages())]
 if(length(new_pkgs)) {
@@ -93,13 +101,22 @@ knitr::write_bib(
   c(.packages(), "bookdown", "knitr", "rmarkdown", "nycflights13",
     "ggplot2", "webshot", "dygraphs", "dplyr",
     "ggplot2movies", "fivethirtyeight", "tibble", "readr", "tidyr",
-    "janitor", "infer", "skimr", "kableExtra"
-  ),
+    "janitor", "infer", "skimr", "kableExtra",
+      "bookdown","choroplethr","choroplethrMaps","data.table","datasets",
+  "dlnm","dplyr","faraway","forcats","GGally","ggthemes","GISTools",
+  "httr","leaflet","lubridate","magrittr","microbenchmark","pander",
+  "profvis","plyr","purrr","rappdirs","raster","RColorBrewer","readr",
+  "rmarkdown","scales","sp","stats","stringr","testthat","tidyr","tigris",
+  "titanic","viridis"),
   "bib/packages.bib"
 )
 
 # Add all simulation results here
 dir.create("rds")
+
+# copy all needed files to 
+dir.create("docs/rds")
+file.copy("rds/null_slope_distn.rds", "docs/rds/null_slope_distn.rds", overwrite = TRUE)
 
 # Add all knitr::purl()'ed chapter R scripts here
 dir.create("docs")

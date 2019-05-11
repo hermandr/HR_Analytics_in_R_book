@@ -43,14 +43,6 @@ After lengthy googling on the internet, you find an excellent [tutorial on DataC
 
 Tidy datasets are easy to manipulate, model and visualize, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table. 
 
-Ensure all needed libraries are installed
-
-```{r include=FALSE}
-if(!require(tidyverse)) install.packages("tidyverse")
-if(!require(rvest)) install.packages("rvest")
-if(!require(rebus)) install.packages("rebus")
-```
-
 ```{r}
 library(tidyverse)     # General purpose data wrangling
 library(rvest)         # Parsing of html/xml files

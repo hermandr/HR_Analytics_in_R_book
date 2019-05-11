@@ -30,17 +30,6 @@ Source code: https://privefl.github.io/blog/scraping-some-french-medical-school-
 
 Source pdf document: http://www.remede.org/documents/IMG/pdf/liste_classement_ecn_20170628.pdf
 
-Let us ensure that all needed libraries are installed
-
-```{r include=FALSE}
-if(!require(tidyverse)) install.packages("tidyverse",repos = "http://cran.us.r-project.org")
-if(!require(pdftools)) install.packages("pdftools",repos = "http://cran.us.r-project.org")
-if(!require(data.table)) install.packages("data.table",repos = "http://cran.us.r-project.org")
-if(!require(bigstatsr)) install.packages("bigstatsr",repos = "http://cran.us.r-project.org")
-if(!require(plotly)) install.packages("plotly",repos = "http://cran.us.r-project.org")
-if(!require(gsubfn)) install.packages("gsubfn",repos = "http://cran.us.r-project.org")
-```
-
 ```{r}
 library(tidyverse)
 library(pdftools)

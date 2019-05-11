@@ -57,13 +57,6 @@ Source: https://www.kaggle.com/hugohk/learning-ml-with-caret
 
 ## Data reading
 
-Ensure all needed libraries are installed
-
-```{r include=FALSE}
-if(!require(tidyverse)) install.packages("tidyverse")
-if(!require(plyr)) install.packages("plyr")
-```
-
 ```{r}
 library(tidyverse)
 ```

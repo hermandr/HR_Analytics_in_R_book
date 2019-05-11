@@ -128,7 +128,7 @@ monday_9am = as.POSIXct("2018-12-03 09:00")
 Then we can use this function to get data for our 200 employees
 
 ```{r eval=FALSE}
-the_200 <- read_csv("https://https://hranalytics.netlify.com/data/200_staff_members.csv")
+the_200 <- read_csv("https://hranalytics.netlify.com/data/200_staff_members.csv")
 ```
 
 ```{r read_data_commuting, echo=FALSE, warning=FALSE, message=FALSE}

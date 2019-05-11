@@ -43,7 +43,7 @@ library(smoothmest)
 Load a data set with first and last names and let us preview the dataset
 
 ```{r eval=FALSE}
-whitehouse <- read_csv("https://https://hranalytics.netlify.com/data/2016-Report-White-House-Staff.csv")
+whitehouse <- read_csv("https://hranalytics.netlify.com/data/2016-Report-White-House-Staff.csv")
 ```
 
 ```{r read_data7, echo=FALSE, warning=FALSE, message=FALSE}
@@ -123,7 +123,7 @@ whitehouse.bottom <- whitehouse_masked %>%
 Let us explore deeper anonymisation option of generating synthetic data. We will do on the basis of the fertility dataset available from UCI website: 
 https://archive.ics.uci.edu/ml/datasets/Fertility
 
-![UCI logo](images/UCI_logo.gif)
+![UCI logo](images/UCI_logo.png)
 
 It needs to be loaded first and let us preview it.
 
@@ -274,7 +274,7 @@ library(smoothmest)
 
 The double exponential distribution is also commonly referred to as the Laplace distribution. The following is the plot of the double exponential probability density function.
 
-![plot of double exponential probability density function](images/dexpdf.gif)
+![plot of double exponential probability density function](images/dexpdf.png)
 
 ```{r}
 set.seed(42)

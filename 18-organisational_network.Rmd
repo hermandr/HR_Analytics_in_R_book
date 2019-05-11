@@ -64,7 +64,7 @@ First, let's get the data from the characters from the "Song of Ice and Fire" no
 
 
 ```{r eval=FALSE}
-cooc_all_edges <- read_csv("https://https://hranalytics.netlify.com/data/asoiaf-all-edges.csv")
+cooc_all_edges <- read_csv("https://hranalytics.netlify.com/data/asoiaf-all-edges.csv")
 ```
 
 ```{r read_data_ona, echo=FALSE, warning=FALSE, message=FALSE}

@@ -45,10 +45,6 @@ In the following we will analyse the cost in appraising employees (step 2 of the
 
 We will use only the tidyverse library.
 
-```{r include=FALSE}
-if(!require(tidyverse)) install.packages("tidyverse")
-```
-
 ```{r}
 library(tidyverse)
 ```
@@ -56,7 +52,7 @@ library(tidyverse)
 First, let's import some data on self declared time spent on appraisals,
 
 ```{r eval=FALSE}
-Time.spent.on.appraisals <- read_csv("https://https://hranalytics.netlify.com/data/Time.spent.on.appraisals.csv")
+Time.spent.on.appraisals <- read_csv("https://hranalytics.netlify.com/data/Time.spent.on.appraisals.csv")
 ```
 
 ```{r read_appraisals_data, echo=FALSE, warning=FALSE, message=FALSE}

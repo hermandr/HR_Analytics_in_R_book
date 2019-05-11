@@ -68,7 +68,7 @@ library(lubridate)
 First, let's get some data from our service desk by exporting a CSV. We can then read this CSV (or excel spreadsheet) into R for us to perform analysis.
 
 ```{r eval=FALSE}
-service_requests <- read_csv("https://https://hranalytics.netlify.com/data/ServiceRequestExtract2.csv")
+service_requests <- read_csv("https:///hranalytics.netlify.com/data/ServiceRequestExtract2.csv")
 ```
 
 ```{r read_data_servicedesk, echo=FALSE, warning=FALSE, message=FALSE}
