@@ -1,7 +1,7 @@
-# HR Analytics product with Shiny {#shiny}
+# HR Analytics product with Shiny {#data-science-product}
 
-```{r shiny, include=FALSE, purl=FALSE}
-chap <- 28
+```{r data-science-product, include=FALSE, purl=FALSE}
+chap <- 29
 lc <- 0
 rq <- 0
 # **`r paste0("(LC", chap, ".", (lc <- lc + 1), ")")`**

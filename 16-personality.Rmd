@@ -1,6 +1,6 @@
 # Personality insights {#personality}
 
-```{r personality, include=FALSE, purl=FALSE}
+```{r personality, include=FALSE}
 chap <- 16
 lc <- 0
 rq <- 0

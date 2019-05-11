@@ -1,7 +1,7 @@
 # Interview attendance problem {#interview-attendance}
 
-```{r interview-attendance, include=FALSE, purl=FALSE}
-chap <- 24
+```{r interview-attendance, include=FALSE}
+chap <- 25
 lc <- 0
 rq <- 0
 # **`r paste0("(LC", chap, ".", (lc <- lc + 1), ")")`**

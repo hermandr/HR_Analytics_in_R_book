@@ -1,7 +1,7 @@
-# Ranking Medical Schools {#ranking-medical_school}
+# Ranking Medical Schools {#ranking-medical-school}
 
-```{r ranking-medical, include=FALSE, purl=FALSE}
-chap <- 25
+```{r ranking-medical, include=FALSE}
+chap <- 26
 lc <- 0
 rq <- 0
 # **`r paste0("(LC", chap, ".", (lc <- lc + 1), ")")`**
@@ -12,8 +12,7 @@ knitr::opts_chunk$set(
   out.width = '\\textwidth', 
   fig.height = 4,
   warning = TRUE,
-  error=TRUE,
-  include=T
+  error=TRUE
   )
 
 options(scipen = 99, digits = 3)

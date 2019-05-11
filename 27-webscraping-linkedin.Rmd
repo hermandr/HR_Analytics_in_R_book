@@ -1,7 +1,7 @@
 # Webscraping LinkedIn {#webscraping-linkedin}
 
-```{r webscraping, include=FALSE, purl=FALSE}
-chap <- 26
+```{r webscraping-linkedin, include=FALSE}
+chap <- 27
 lc <- 0
 rq <- 0
 # **`r paste0("(LC", chap, ".", (lc <- lc + 1), ")")`**

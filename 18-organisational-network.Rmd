@@ -1,6 +1,6 @@
-# Module - Organisational network analysis {#orgnisational_network}
+# Module - Organisational network analysis {#orgnisational-network}
 
-```{r organisational-network, include=FALSE, purl=FALSE}
+```{r organisational-network, include=FALSE}
 chap <- 18
 lc <- 0
 rq <- 0

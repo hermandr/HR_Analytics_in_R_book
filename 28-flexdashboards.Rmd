@@ -1,7 +1,7 @@
-# Attrition {#attrition}
+# HR dashboards {#flexdashboards}
 
-```{r attrition, include=FALSE, purl=FALSE}
-chap <- 24
+```{r flexdashboards, include=FALSE}
+chap <- 28
 lc <- 0
 rq <- 0
 # **`r paste0("(LC", chap, ".", (lc <- lc + 1), ")")`**
@@ -22,5 +22,4 @@ set.seed(76)
 ```
 
 
-Here we introduce attrition.
-
+Here we introduce flexdashboards

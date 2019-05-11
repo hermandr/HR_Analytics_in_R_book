@@ -1,6 +1,6 @@
-# Absenteeism MFG {#absenteeism_MFG}
+# Absenteeism MFG {#absenteeism-MFG}
 
-```{r absenteism_MFG, include=FALSE, purl=FALSE}
+```{r absenteism-MFG, include=FALSE}
 chap <- 21
 lc <- 0
 rq <- 0

@@ -1,4 +1,4 @@
-# Accidents at work {#accidents_at_work}
+# Accidents at work {#accidents-work}
 
 ```{r accidents-work, include=FALSE, purl=FALSE}
 chap <- 23

@@ -1,6 +1,6 @@
 # Stop the formal performance management process {#stop-appraisals}
 
-```{r stop-appraisals, include=FALSE, purl=FALSE}
+```{r stop-appraisals, include=FALSE}
 chap <- 14
 lc <- 0
 rq <- 0

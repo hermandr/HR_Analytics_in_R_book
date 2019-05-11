@@ -1,6 +1,6 @@
-# Job classification analysis {#job_classification}
+# Job classification analysis {#job-classification}
 
-```{r job-classification, include=FALSE, purl=FALSE}
+```{r job-classification, include=FALSE}
 chap <- 19
 lc <- 0
 rq <- 0

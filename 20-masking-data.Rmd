@@ -1,6 +1,6 @@
-# Masking HR data {#masking_data}
+# Masking HR data {#masking-data}
 
-```{r masking-data, include=FALSE, purl=FALSE}
+```{r masking-data, include=FALSE}
 chap <- 20
 lc <- 0
 rq <- 0

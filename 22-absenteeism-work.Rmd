@@ -1,6 +1,6 @@
-# Absenteeism at work {#absenteeism_work}
+# Absenteeism at work {#absenteeism-work}
 
-```{r absenteism_work, include=FALSE, purl=FALSE}
+```{r absenteism-work, include=FALSE}
 chap <- 22
 lc <- 0
 rq <- 0

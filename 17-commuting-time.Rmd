@@ -1,6 +1,6 @@
-# Commuting time {#commuting_time}
+# Commuting time {#commuting-time}
 
-```{r commuting-time, include=FALSE, purl=FALSE}
+```{r commuting-time, include=FALSE}
 chap <- 17
 lc <- 0
 rq <- 0

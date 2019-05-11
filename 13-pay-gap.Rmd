@@ -1,8 +1,8 @@
-# (PART) Practical examples on HR Analytics {-}
+# (PART) Practical examples about HR Analytics {-}
 
 # Gender Pay Gap {#pay-gap}
 
-```{r pay_gap, include=FALSE, purl=FALSE}
+```{r pay-gap-analysis, include=FALSE}
 chap <- 13
 lc <- 0
 rq <- 0

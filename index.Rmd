@@ -1,31 +1,27 @@
 --- 
 title: "HR Analytics in R"
+subtitle: "Common tasks achieved with the power of R"
 author: "Chester Ismay, Albert Y. Kim and Hendrik Feddersen"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-knit: "bookdown::render_book"
-biblio-style: apalike
-bibliography:
-- bib/books.bib
-- bib/packages.bib
-- bib/articles.bib
-colorlinks: yes
-apple-touch-icon: images/logos/favicons/apple-touch-icon.png
-description: "An open-source self-training book to assist you in your journey to sustainable HR Analytics"
+site: bookdown::bookdown_site
 documentclass: krantz
-favicon: images/logos/favicons/favicon.ico
+bibliography: [bib/books.bib, bib/packages.bib, bib/articles.bib]
+biblio-style: apalike
 fontsize: 12pt, krantz2
-github-repo: Hendrik147/HR_Analytics_in_R_book
-graphics: yes
+monofont: "Source Code Pro"
+monofontoptions: "Scale=0.7"
+colorlinks: yes
 link-citations: yes
 lof: yes
 lot: yes
-monofont: "Source Code Pro"
-monofontoptions: "Scale=0.7"
-site: bookdown::bookdown_site
-subtitle: Common tasks achieved with the power of R
 always_allow_html: yes
-url: 'https\://hranalytics.netlify.com/'
+github-repo: Hendrik147/HR_Analytics_in_R_book
+graphics: yes
+description: "An open-source self-training book to assist you in your journey to sustainable HR Analytics"
 cover-image: images/logos/book_cover.png
+url: 'https\://hranalytics.netlify.com/'
+apple-touch-icon: images/logos/favicons/apple-touch-icon.png
+favicon: images/logos/favicons/favicon.ico
 ---
 
 <!-- For use only in PDF, is skipped in HTML -->
@@ -69,9 +65,9 @@ needed_CRAN_pkgs <- c(
   "bookdown","choroplethr","choroplethrMaps","data.table","datasets",
   "dlnm","dplyr","faraway","forcats","GGally","ggthemes","GISTools","gsubfn",
   "httr","leaflet","lubridate","magrittr","microbenchmark","pander","pdftools",
-  "plotly",
+  "plotly","poppler-cpp",
   "profvis","pryr","purrr","rappdirs","raster","RColorBrewer","readr","rebus",
-  "rmarkdown","rvest","scales","sp","stats","stringr","testthat","tidyr",
+  "rmarkdown","rvest","scales","sp","stats","stringr","testthat","tidyr","tidymodels",
   "tigris","titanic","viridis") 
 
 new_pkgs <- needed_CRAN_pkgs[!(needed_CRAN_pkgs %in% installed.packages())]
@@ -151,8 +147,8 @@ system("cp -r previous_versions/* docs/previous_versions/")
 file.copy("images/logos/hranalytics.jpg", "docs/hranalytics.jpg", overwrite = TRUE)
 
 # Copy pdf file if needed
-if(file.exists("ismaykim.pdf"))
-  file.copy("ismaykim.pdf", "docs/ismaykim.pdf", overwrite = TRUE)
+if(file.exists("hendrikfeddersen.pdf"))
+  file.copy("hendrikfeddersen.pdf", "docs/hendrikfeddersen.pdf", overwrite = TRUE)
 
 ```
 
@@ -231,7 +227,7 @@ If you're asking yourself this question, then you have come to the right place! 
 * *Are you looking to contribute to "HR Analytics in R"? Then click [here](#sec:connect-contribute) for information on how.*
 * *Are you curious about the publishing of this book? Then click [here](#sec:about-book) for more information on the open-source technology, in particular R Markdown and the bookdown package.*
 
-This is version `r version` of "HR Analytics in R" published on `r date`. While a PDF version of this book can be found [here](hrnalyticsinr.pdf){target="_blank"}, this is very much a work in progress with many things that still need to be fixed. I appreciate your patience. 
+This is version `r version` of "HR Analytics in R" published on `r date`. While a PDF version of this book can be found [here](hendrikfeddersen.pdf){target="_blank"}, this is very much a work in progress with many things that still need to be fixed. I appreciate your patience. 
 
 
 

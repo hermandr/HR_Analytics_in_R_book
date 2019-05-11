@@ -2,7 +2,7 @@
 
 # Thinking with Data {#thinking-with-data}
 
-```{r thinking-with-data, include=FALSE, purl=FALSE}
+```{r thinking-with-data, include=FALSE}
 chap <- 12
 lc <- 0
 rq <- 0

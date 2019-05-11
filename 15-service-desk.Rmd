@@ -1,6 +1,6 @@
-# HR Service Desk {#service_desk}
+# HR Service Desk {#service-desk}
 
-```{r service-desk, include=FALSE, purl=FALSE}
+```{r service-desk, include=FALSE}
 chap <- 15
 lc <- 0
 rq <- 0
