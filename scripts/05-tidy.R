@@ -26,12 +26,12 @@ dem_score
 
 
 ## ------------------------------------------------------------------------
-drinks
+fivethirtyeight::drinks
 
 
 ## ------------------------------------------------------------------------
-drinks_smaller <- drinks %>% 
-  filter(country %in% c("USA", "China", "Italy", "Saudi Arabia")) %>% 
+drinks_smaller <- fivethirtyeight::drinks %>% 
+  dplyr::filter(country %in% c("USA", "China", "Italy", "Saudi Arabia")) %>% 
   select(-total_litres_of_pure_alcohol) %>% 
   rename(beer = beer_servings, spirit = spirit_servings, wine = wine_servings)
 drinks_smaller
