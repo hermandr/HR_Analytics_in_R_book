@@ -1,6 +1,6 @@
 # Ranking Medical Schools {#ranking-medical-school}
 
-```{r ranking-medical, include=FALSE}
+```{r ranking-medical1, include=FALSE}
 chap <- 26
 lc <- 0
 rq <- 0
@@ -11,8 +11,7 @@ knitr::opts_chunk$set(
   tidy = FALSE, 
   out.width = '\\textwidth', 
   fig.height = 4,
-  warning = TRUE,
-  error=TRUE
+  warning = TRUE
   )
 
 options(scipen = 99, digits = 3)
@@ -35,7 +34,8 @@ library(pdftools)
 library(data.table)
 library(bigstatsr)
 library(plotly)
-library(gsubfn)
+library(stringr)
+#library(gsubfn)
 ```
 
 First, let's get some data from our service desk by exporting a CSV. We can then read this CSV (or excel spreadsheet) into R for us to perform analysis.
@@ -58,13 +58,13 @@ pdfdocument <- "data/liste_classement_ecn_20170628.pdf"
 ```
 
 
-
+gsub
 ```{r}
 
-head(txt <- pdftools::pdf_text(pdfdocument), n = 1) #Inspection of first page
+txt <- pdftools::pdf_text(pdfdocument)
+head(txt, n = 1) #Inspection of first page
 
-pat <- "([0-9]{4} [M\\.|Mme|Mlle]{1}.*?, [né|née]{1}.*?)\\."
-data <- unlist(gsubfn::strapply(txt, pattern = pat))
+data <- strsplit(txt, "\n")
 
 head(data)
 
@@ -90,7 +90,7 @@ data_parsed2
 
 Note: there is a problem with people who have a family name composed of multiple words.
 
-```{r}
+```{r eval=FALSE}
 # Proportion male/female
 mean(data_parsed2$is_male)
 # 43% of males.
@@ -105,7 +105,7 @@ myggplot(data_parsed2) +
 
 If a recent A-level graduate attempts the exam for the first time, they would be born in 1993. Due to the very competitive nature of the exam, a second and more attempts are also possible. Those who attempts the exam for the second time were born in 1992. Nonetheless, one can attempt the exam at any age, so a lot of older people are also appearing in the dataset.
 
-```{r}
+```{r eval=FALSE}
 myggplot(mutate(data_parsed2, prop_male = cummean(data_parsed2$is_male))) + 
   geom_hline(yintercept = mean(data_parsed2$is_male), col = "red") +
   geom_line(aes(x = ranking, y = prop_male))
@@ -118,7 +118,7 @@ myggplot(mutate(data_parsed2, prop_male = cummean(data_parsed2$is_male))) +
 
 We can see a female 19 year old (with a really high ranking!) and a 54-year old man (with a poor ranking).
 
-```{r}
+```{r eval=FALSE}
 myggplot(data_parsed2, aes(ranking, birth_date)) +
   geom_point() +
   geom_smooth(aes(color = is_male), lwd = 2)

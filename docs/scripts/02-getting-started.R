@@ -19,7 +19,7 @@ library(knitr)
 
 
 ## ----load_flights--------------------------------------------------------
-flights
+nycflights13::flights
 
 
 ## **_Learning check_**

@@ -5,34 +5,34 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>References | Statistical Inference via Data Science</title>
-  <meta name="description" content="An open-source and fully-reproducible electronic textbook for teaching statistical inference using tidyverse data science tools.">
+  <title>References | HR Analytics in R</title>
+  <meta name="description" content="An open-source self-training book to assist you in your journey to sustainable HR Analytics">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="References | Statistical Inference via Data Science" />
+  <meta property="og:title" content="References | HR Analytics in R" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://moderndive.com/" />
-  <meta property="og:image" content="https://moderndive.com/images/logos/book_cover.png" />
-  <meta property="og:description" content="An open-source and fully-reproducible electronic textbook for teaching statistical inference using tidyverse data science tools." />
-  <meta name="github-repo" content="moderndive/moderndive_book" />
+  <meta property="og:url" content="https://hranalytics.netlify.com/" />
+  <meta property="og:image" content="https://hranalytics.netlify.com/images/logos/book_cover.png" />
+  <meta property="og:description" content="An open-source self-training book to assist you in your journey to sustainable HR Analytics" />
+  <meta name="github-repo" content="Hendrik147/HR_Analytics_in_R_book" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Statistical Inference via Data Science" />
+  <meta name="twitter:title" content="References | HR Analytics in R" />
   
-  <meta name="twitter:description" content="An open-source and fully-reproducible electronic textbook for teaching statistical inference using tidyverse data science tools." />
-  <meta name="twitter:image" content="https://moderndive.com/images/logos/book_cover.png" />
+  <meta name="twitter:description" content="An open-source self-training book to assist you in your journey to sustainable HR Analytics" />
+  <meta name="twitter:image" content="https://hranalytics.netlify.com/images/logos/book_cover.png" />
 
-<meta name="author" content="Chester Ismay and Albert Y. Kim">
+<meta name="author" content="Chester Ismay, Albert Y. Kim and Hendrik Feddersen">
 
 
-<meta name="date" content="2019-03-31">
+<meta name="date" content="2019-05-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/logos/favicons/apple-touch-icon.png">
   <link rel="shortcut icon" href="images/logos/favicons/favicon.ico" type="image/x-icon">
-<link rel="prev" href="D-appendixD.html">
+<link rel="prev" href="E-appendixE.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -48,7 +48,11 @@
 
 
 
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="libs/vis-4.20.1/vis.css" rel="stylesheet" />
+<script src="libs/vis-4.20.1/vis.min.js"></script>
+<script src="libs/visNetwork-binding-2.0.5/visNetwork.js"></script>
 <link href="libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
 <script src="libs/dygraphs-1.1.1/dygraph-combined.js"></script>
 <script src="libs/dygraphs-1.1.1/shapes.js"></script>
@@ -62,7 +66,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-89938436-1', 'auto');
+  ga('create', 'UA-90691356-1', 'auto');
   ga('send', 'pageview');
 
 </script>
@@ -86,7 +90,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -145,8 +149,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./"></a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#sec:intro-for-students"><i class="fa fa-check"></i><b>1.1</b> Introduction for students</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#workingwithmaterials"><i class="fa fa-check"></i>Working with the material</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#conventions"><i class="fa fa-check"></i>Conventions</a></li>
 <li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#subsec:learning-goals"><i class="fa fa-check"></i><b>1.1.1</b> What you will learn from this book</a></li>
 <li class="chapter" data-level="1.1.2" data-path="index.html"><a href="index.html#subsec:pipeline"><i class="fa fa-check"></i><b>1.1.2</b> Data/science pipeline</a></li>
 <li class="chapter" data-level="1.1.3" data-path="index.html"><a href="index.html#subsec:reproducible"><i class="fa fa-check"></i><b>1.1.3</b> Reproducible research</a></li>
@@ -155,10 +164,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#sec:intro-instructors"><i class="fa fa-check"></i><b>1.2</b> Introduction for instructors</a><ul>
 <li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#who-is-this-book-for"><i class="fa fa-check"></i><b>1.2.1</b> Who is this book for?</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#datacamp"><i class="fa fa-check"></i><b>1.3</b> DataCamp</a></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sec:connect-contribute"><i class="fa fa-check"></i><b>1.4</b> Connect and contribute</a></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#sec:about-book"><i class="fa fa-check"></i><b>1.5</b> About this book</a></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#sec:about-authors"><i class="fa fa-check"></i><b>1.6</b> About the authors</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#sec:connect-contribute"><i class="fa fa-check"></i><b>1.3</b> Connect and contribute</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#sec:about-authors"><i class="fa fa-check"></i><b>1.5</b> About the author</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="2-getting-started.html"><a href="2-getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started with Data in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="2-getting-started.html"><a href="2-getting-started.html#r-rstudio"><i class="fa fa-check"></i><b>2.1</b> What are R and RStudio?</a><ul>
@@ -461,7 +469,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11.4.4" data-path="11-inference-for-regression.html"><a href="11-inference-for-regression.html#model4residuals"><i class="fa fa-check"></i><b>11.4.4</b> Residual analysis</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>IV Conclusion</b></span></li>
+<li class="part"><span><b>IV Learnings so far</b></span></li>
 <li class="chapter" data-level="12" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html"><i class="fa fa-check"></i><b>12</b> Thinking with Data</a><ul>
 <li class="chapter" data-level="" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#needed-packages-9"><i class="fa fa-check"></i>Needed packages</a></li>
 <li class="chapter" data-level="12.1" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#seattle-house-prices"><i class="fa fa-check"></i><b>12.1</b> Case study: Seattle house prices</a><ul>
@@ -479,6 +487,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#concluding-remarks"><i class="fa fa-check"></i>Concluding remarks</a></li>
 </ul></li>
+<li class="part"><span><b>V HR Analytics practical examples</b></span></li>
+<li class="chapter" data-level="13" data-path="13-pay-gap.html"><a href="13-pay-gap.html"><i class="fa fa-check"></i><b>13</b> Gender Pay Gap</a><ul>
+<li class="chapter" data-level="13.1" data-path="13-pay-gap.html"><a href="13-pay-gap.html#data-cleaning-and-prep."><i class="fa fa-check"></i><b>13.1</b> Data Cleaning and Prep.</a></li>
+<li class="chapter" data-level="13.2" data-path="13-pay-gap.html"><a href="13-pay-gap.html#summary-statistics-by-gender"><i class="fa fa-check"></i><b>13.2</b> Summary Statistics by gender</a></li>
+<li class="chapter" data-level="13.3" data-path="13-pay-gap.html"><a href="13-pay-gap.html#avoiding-simpsons-paradox"><i class="fa fa-check"></i><b>13.3</b> Avoiding Simpson’s Paradox</a></li>
+<li class="chapter" data-level="13.4" data-path="13-pay-gap.html"><a href="13-pay-gap.html#model-estimation-ols-with-controls."><i class="fa fa-check"></i><b>13.4</b> Model Estimation: OLS with controls.</a><ul>
+<li class="chapter" data-level="13.4.1" data-path="13-pay-gap.html"><a href="13-pay-gap.html#logarithm-of-base-pay"><i class="fa fa-check"></i><b>13.4.1</b> Logarithm of Base Pay</a></li>
+<li class="chapter" data-level="13.4.2" data-path="13-pay-gap.html"><a href="13-pay-gap.html#results-by-department"><i class="fa fa-check"></i><b>13.4.2</b> Results by Department</a></li>
+<li class="chapter" data-level="13.4.3" data-path="13-pay-gap.html"><a href="13-pay-gap.html#results-by-job-title"><i class="fa fa-check"></i><b>13.4.3</b> Results by Job Title</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="14-stop-appraisals.html"><a href="14-stop-appraisals.html"><i class="fa fa-check"></i><b>14</b> Stop appraisals</a></li>
+<li class="chapter" data-level="15" data-path="15-y-3-741-x-30-099.html"><a href="15-y-3-741-x-30-099.html"><i class="fa fa-check"></i><b>15</b> [1] “y = 3.741 * x + 30.099”</a></li>
+<li class="chapter" data-level="16" data-path="16-service-desk.html"><a href="16-service-desk.html"><i class="fa fa-check"></i><b>16</b> HR Service Desk</a></li>
+<li class="chapter" data-level="17" data-path="17-personality.html"><a href="17-personality.html"><i class="fa fa-check"></i><b>17</b> Personality insights</a></li>
+<li class="chapter" data-level="18" data-path="18-commuting-time.html"><a href="18-commuting-time.html"><i class="fa fa-check"></i><b>18</b> Commuting time</a></li>
+<li class="chapter" data-level="19" data-path="19-orgnisational-network.html"><a href="19-orgnisational-network.html"><i class="fa fa-check"></i><b>19</b> Organisational network analysis</a></li>
+<li class="chapter" data-level="20" data-path="20-job-classification.html"><a href="20-job-classification.html"><i class="fa fa-check"></i><b>20</b> Job classification analysis</a><ul>
+<li class="chapter" data-level="20.0.1" data-path="20-job-classification.html"><a href="20-job-classification.html#final-evaluation-of-the-various-models"><i class="fa fa-check"></i><b>20.0.1</b> Final evaluation of the various models</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="21-masking-data.html"><a href="21-masking-data.html"><i class="fa fa-check"></i><b>21</b> Masking HR data</a><ul>
+<li class="chapter" data-level="21.0.1" data-path="21-masking-data.html"><a href="21-masking-data.html#whitehouse-dataset"><i class="fa fa-check"></i><b>21.0.1</b> Whitehouse dataset</a></li>
+<li class="chapter" data-level="21.0.2" data-path="21-masking-data.html"><a href="21-masking-data.html#fertility-dataset"><i class="fa fa-check"></i><b>21.0.2</b> Fertility dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="22-absenteeism-MFG.html"><a href="22-absenteeism-MFG.html"><i class="fa fa-check"></i><b>22</b> Absenteeism MFG</a><ul>
+<li class="chapter" data-level="22.0.1" data-path="22-absenteeism-MFG.html"><a href="22-absenteeism-MFG.html#for-expediency-we-will-delete-the-problem-records-in-the-dataset."><i class="fa fa-check"></i><b>22.0.1</b> For expediency we will delete the problem records in the dataset.</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html"><i class="fa fa-check"></i><b>23</b> Absenteeism at work</a><ul>
+<li class="chapter" data-level="23.1" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#data-reading"><i class="fa fa-check"></i><b>23.1</b> Data reading</a></li>
+<li class="chapter" data-level="23.2" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#basic-statistics-and-data-preparation"><i class="fa fa-check"></i><b>23.2</b> Basic statistics and data preparation</a></li>
+<li class="chapter" data-level="23.3" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#data-exploration"><i class="fa fa-check"></i><b>23.3</b> Data exploration</a></li>
+<li class="chapter" data-level="23.4" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#some-more-digging-into-the-data"><i class="fa fa-check"></i><b>23.4</b> Some more digging into the data</a></li>
+<li class="chapter" data-level="23.5" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#here-the-various-types-of-reasons-for-absence-attribute-is-analysed"><i class="fa fa-check"></i><b>23.5</b> Here the various types of reasons for absence attribute is analysed</a></li>
+<li class="chapter" data-level="23.6" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#principal-component-analysis-pca"><i class="fa fa-check"></i><b>23.6</b> Principal component analysis (PCA)</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="24-accidents-work.html"><a href="24-accidents-work.html"><i class="fa fa-check"></i><b>24</b> Accidents at work</a></li>
+<li class="chapter" data-level="25" data-path="25-attrition.html"><a href="25-attrition.html"><i class="fa fa-check"></i><b>25</b> Attrition</a></li>
+<li class="chapter" data-level="26" data-path="26-interview-attendance.html"><a href="26-interview-attendance.html"><i class="fa fa-check"></i><b>26</b> Interview attendance problem</a><ul>
+<li class="chapter" data-level="26.1" data-path="26-interview-attendance.html"><a href="26-interview-attendance.html#data-reading-1"><i class="fa fa-check"></i><b>26.1</b> Data reading</a></li>
+<li class="chapter" data-level="26.2" data-path="26-interview-attendance.html"><a href="26-interview-attendance.html#data-cleaning"><i class="fa fa-check"></i><b>26.2</b> Data cleaning</a></li>
+<li class="chapter" data-level="26.3" data-path="26-interview-attendance.html"><a href="26-interview-attendance.html#choosing-a-model"><i class="fa fa-check"></i><b>26.3</b> Choosing a model</a></li>
+<li class="chapter" data-level="26.4" data-path="26-interview-attendance.html"><a href="26-interview-attendance.html#training"><i class="fa fa-check"></i><b>26.4</b> Training</a></li>
+</ul></li>
+<li class="chapter" data-level="27" data-path="27-ranking-medical-school.html"><a href="27-ranking-medical-school.html"><i class="fa fa-check"></i><b>27</b> Ranking Medical Schools</a></li>
+<li class="chapter" data-level="28" data-path="28-webscraping-linkedin.html"><a href="28-webscraping-linkedin.html"><i class="fa fa-check"></i><b>28</b> Webscraping LinkedIn</a></li>
+<li class="chapter" data-level="29" data-path="29-flexdashboards.html"><a href="29-flexdashboards.html"><i class="fa fa-check"></i><b>29</b> HR dashboards</a></li>
+<li class="chapter" data-level="30" data-path="30-data-science-product.html"><a href="30-data-science-product.html"><i class="fa fa-check"></i><b>30</b> HR Analytics product with Shiny</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-appendixA.html"><a href="A-appendixA.html"><i class="fa fa-check"></i><b>A</b> Statistical Background</a><ul>
 <li class="chapter" data-level="A.1" data-path="A-appendixA.html"><a href="A-appendixA.html#basic-statistical-terms"><i class="fa fa-check"></i><b>A.1</b> Basic statistical terms</a><ul>
@@ -554,7 +609,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="D.4" data-path="D-appendixD.html"><a href="D-appendixD.html#chapter-5-solutions"><i class="fa fa-check"></i><b>D.4</b> Chapter 5 Solutions</a></li>
 <li class="chapter" data-level="D.5" data-path="D-appendixD.html"><a href="D-appendixD.html#chapter-6-solutions"><i class="fa fa-check"></i><b>D.5</b> Chapter 6 Solutions</a></li>
 </ul></li>
+<li class="chapter" data-level="E" data-path="E-appendixE.html"><a href="E-appendixE.html"><i class="fa fa-check"></i><b>E</b> Archive HR datasets</a><ul>
+<li class="chapter" data-level="E.1" data-path="E-appendixE.html"><a href="E-appendixE.html#gender_pay_gap"><i class="fa fa-check"></i><b>E.1</b> Gender Pay Gap</a></li>
+<li class="chapter" data-level="E.2" data-path="E-appendixE.html"><a href="E-appendixE.html#overhead"><i class="fa fa-check"></i><b>E.2</b> Overhead value analysis</a></li>
+<li class="chapter" data-level="E.3" data-path="E-appendixE.html"><a href="E-appendixE.html#service_desk_data"><i class="fa fa-check"></i><b>E.3</b> HR Service Desk</a></li>
+<li class="chapter" data-level="E.4" data-path="E-appendixE.html"><a href="E-appendixE.html#HRrecruitment"><i class="fa fa-check"></i><b>E.4</b> HR recruitment, selection and performance data</a></li>
+<li class="chapter" data-level="E.5" data-path="E-appendixE.html"><a href="E-appendixE.html#job-classification-1"><i class="fa fa-check"></i><b>E.5</b> Job classification</a></li>
+<li class="chapter" data-level="E.6" data-path="E-appendixE.html"><a href="E-appendixE.html#job-classification-2"><i class="fa fa-check"></i><b>E.6</b> Job classification</a></li>
+<li class="chapter" data-level="E.7" data-path="E-appendixE.html"><a href="E-appendixE.html#absenteeism-at-work"><i class="fa fa-check"></i><b>E.7</b> Absenteeism at work</a></li>
+<li class="chapter" data-level="E.8" data-path="E-appendixE.html"><a href="E-appendixE.html#job-classification-3"><i class="fa fa-check"></i><b>E.8</b> Job classification</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -564,7 +632,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistical Inference via Data Science</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">HR Analytics in R</a>
           </h1>
         </div>
 
@@ -573,7 +641,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
             <section class="normal" id="section-">
 <html>
-<img src='https://moderndive.com/wide_format.png' alt="ModernDive">
+<img src='https://hranalyticslive.netlify.com/images/hranalytics.jpg' alt="HRAnalytics">
 </html>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
@@ -592,6 +660,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Ismay, Chester. 2016. <em>Getting Used to R, RStudio, and R Markdown</em>. <a href="http://ismayc.github.io/rbasics-book">http://ismayc.github.io/rbasics-book</a>.</p>
 </div>
 <div>
+<p>Paul Pietersma, Gerben Van den Berg. 2015. <em>Key Management Models</em>. FT Publishing International. <a href="https://www.safaribooksonline.com/library/view/key-management-models/9781292016276/">https://www.safaribooksonline.com/library/view/key-management-models/9781292016276/</a>.</p>
+</div>
+<div>
 <p>Robbins, Naomi. 2013. <em>Creating More Effective Graphs</em>. Chart House.</p>
 </div>
 <div>
@@ -604,7 +675,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>———. 2018. <em>Nycflights13: Flights That Departed Nyc in 2013</em>. <a href="https://CRAN.R-project.org/package=nycflights13">https://CRAN.R-project.org/package=nycflights13</a>.</p>
 </div>
 <div>
-<p>Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, and Kara Woo. 2018. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.</p>
+<p>Wickham, Hadley, Winston Chang, Lionel Henry, Thomas Lin Pedersen, Kohske Takahashi, Claus Wilke, and Kara Woo. 2019. <em>Ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</em>. <a href="https://CRAN.R-project.org/package=ggplot2">https://CRAN.R-project.org/package=ggplot2</a>.</p>
 </div>
 <div>
 <p>Wickham, Hadley, and Lionel Henry. 2019. <em>Tidyr: Easily Tidy Data with ’Spread()’ and ’Gather()’ Functions</em>. <a href="https://CRAN.R-project.org/package=tidyr">https://CRAN.R-project.org/package=tidyr</a>.</p>
@@ -628,7 +699,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="D-appendixD.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="E-appendixE.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -659,14 +730,14 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/moderndive/moderndive_book/edit/master/99-references.Rmd",
+"link": "https://github.com/Hendrik147/HR_Analytics_in_R_book/edit/master/99-references.Rmd",
 "text": "Edit"
 },
 "history": {
 "link": null,
 "text": null
 },
-"download": ["ismaykim.pdf"],
+"download": ["hendrikfeddersen.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

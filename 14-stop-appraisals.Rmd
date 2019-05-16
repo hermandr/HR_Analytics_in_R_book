@@ -1,4 +1,4 @@
-# Stop the formal performance management process {#stop-appraisals}
+# Stop appraisals {#stop-appraisals}
 
 ```{r stop-appraisals, include=FALSE}
 chap <- 14
@@ -77,7 +77,7 @@ Is is now an interpolation or a linear regression?
 
 Interpolation is a method of constructing new data points within the range of a discrete set of known data points. Regression analysis is a statistical process for estimating the relationships among variables. 
 
-#[1] "y = 3.362 * x + 49.134"  What does it mean?
+y = 3.362 * x + 49.134"  What does it mean?
 
 From these numbers it would appear, that every manager spends on average 49 hours independently from the number of staff to appraise (for their own self-assessment and for the appraisal process in general, i.e. reading material, management meetings, refreshing how to appraise staff and re-training with the IT tools). In addition every manager spends on average 3 hours and 20 minutes to appraise each indivual subordinate, initial meeting with staff member and then writing up the appraisal itself.
 
@@ -128,7 +128,7 @@ paste('y =', round(coef(model_without_mahaoutliers)[[2]], digits = 3), '* x', '+
 
 
 ```
-# [1] "y = 3.741 * x + 30.099"
+y = 3.741 * x + 30.099
 
 Now it would appear, that every manager spends on average 26 hours independently from the number of staff to appraise and an additional 3 hours and 47 minutes to appraise each indivual subordinate.
 

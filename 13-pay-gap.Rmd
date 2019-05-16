@@ -1,4 +1,4 @@
-# (PART) Practical examples about HR Analytics {-}
+# (PART) HR Analytics practical examples{-}
 
 # Gender Pay Gap {#pay-gap}
 

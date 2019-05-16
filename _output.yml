@@ -1,4 +1,24 @@
 # Modified from https://github.com/rstudio/bookdown/blob/master/inst/examples/_output.yml
+bookdown::gitbook:
+  df_print: default
+  css: style.css
+  split_by: "chapter+number"
+  config:
+    toc:
+      collapse: section
+      scroll_highlight: true
+      before: |
+        <li><a href="./"></a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit:
+      link: https://github.com/Hendrik147/HR_Analytics_in_R_book/edit/master/%s
+  includes:
+    in_header: _includes/analytics.html
+    before_body: _includes/logo.html
+#bookdown::epub_book: default
+#bookdown::word_document2: default
+
 bookdown::pdf_book:
   includes:
     in_header: latex/preamble.tex
@@ -15,24 +35,4 @@ bookdown::pdf_book:
   toc_appendix: true
   quote_footer: ["\\VA{", "}{}"]
   highlight_bw: true
-
-bookdown::gitbook:
-  df_print: default
-  css: style.css
-  split_by: "chapter+number"
-  config:
-    toc:
-      collapse: section
-      scroll_highlight: true
-#      before: |
-#        <li><a href="./"></a></li>
-#      after: |
-#        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit:
-      link: https://github.com/Hendrik147/HR_Analytics_in_R_book/edit/master/%s
-  includes:
-    in_header: _includes/analytics.html
-    before_body: _includes/logo.html
-#bookdown::epub_book: default
-#bookdown::word_document2: default
 

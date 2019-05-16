@@ -240,25 +240,25 @@ Mean: (b - a) / n
 small global sensitivity results in less noise
 large global sensitivity results in more noise
 
-# Number of observations
+Number of observations
 n <- nrow(fertility)
 
-# Global sensitivity of counts
+Global sensitivity of counts
 gs.count <- 1
 
-# Global sensitivity of proportions
+Global sensitivity of proportions
 gs.prop <- 1/n
 
-# Lower bound
+Lower bound
 a <- 0
 
-# Upper bound
+Upper bound
 b <- 1
 
-# Global sensitivity of mean
+Global sensitivity of mean
 gs.mean <- (b - a) / n
 
-# Global sensitivity of proportions
+Global sensitivity of proportions
 gs.var <- (b - a)^2 / n
 
 ```{r}

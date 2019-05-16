@@ -12,7 +12,7 @@
   <meta property="og:title" content="HR Analytics in R" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://hranalytics.netlify.com/" />
-  <meta property="og:image" content="https://hranalytics.netlify.com/images/hranalytics.jpg" />
+  <meta property="og:image" content="https://hranalytics.netlify.com/images/logos/book_cover.png" />
   <meta property="og:description" content="An open-source self-training book to assist you in your journey to sustainable HR Analytics" />
   <meta name="github-repo" content="Hendrik147/HR_Analytics_in_R_book" />
 
@@ -20,12 +20,12 @@
   <meta name="twitter:title" content="HR Analytics in R" />
   
   <meta name="twitter:description" content="An open-source self-training book to assist you in your journey to sustainable HR Analytics" />
-  <meta name="twitter:image" content="https://hranalytics.netlify.com/images/hranalytics.jpg" />
+  <meta name="twitter:image" content="https://hranalytics.netlify.com/images/logos/book_cover.png" />
 
-<meta name="author" content="Hendrik Feddersen">
+<meta name="author" content="Chester Ismay, Albert Y. Kim and Hendrik Feddersen">
 
 
-<meta name="date" content="2019-05-02">
+<meta name="date" content="2019-05-16">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,6 +48,18 @@
 
 
 
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<script src="libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="libs/vis-4.20.1/vis.css" rel="stylesheet" />
+<script src="libs/vis-4.20.1/vis.min.js"></script>
+<script src="libs/visNetwork-binding-2.0.5/visNetwork.js"></script>
+<link href="libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet" />
+<script src="libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+<script src="libs/dygraphs-1.1.1/shapes.js"></script>
+<script src="libs/moment-2.8.4/moment.js"></script>
+<script src="libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+<script src="libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+<script src="libs/dygraphs-binding-1.1.1.6/dygraphs.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -78,7 +90,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -137,6 +149,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
+<li><a href="./"></a></li>
+
+<li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#sec:intro-for-students"><i class="fa fa-check"></i><b>1.1</b> Introduction for students</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#workingwithmaterials"><i class="fa fa-check"></i>Working with the material</a></li>
@@ -335,11 +350,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="8-sampling.html"><a href="8-sampling.html#sampling-case-study"><i class="fa fa-check"></i><b>8.4</b> Case study: Polls</a></li>
 <li class="chapter" data-level="8.5" data-path="8-sampling.html"><a href="8-sampling.html#sampling-conclusion"><i class="fa fa-check"></i><b>8.5</b> Conclusion</a><ul>
-<li class="chapter" data-level="8.5.1" data-path="8-sampling.html"><a href="8-sampling.html#sampling-conclusion-sampling-vs-assignment"><i class="fa fa-check"></i><b>8.5.1</b> Random sampling vs random assignment</a></li>
-<li class="chapter" data-level="8.5.2" data-path="8-sampling.html"><a href="8-sampling.html#sampling-conclusion-central-limit-theorem"><i class="fa fa-check"></i><b>8.5.2</b> Central Limit Theorem</a></li>
-<li class="chapter" data-level="8.5.3" data-path="8-sampling.html"><a href="8-sampling.html#sampling-conclusion-table"><i class="fa fa-check"></i><b>8.5.3</b> Summary table</a></li>
-<li class="chapter" data-level="8.5.4" data-path="8-sampling.html"><a href="8-sampling.html#additional-resources-5"><i class="fa fa-check"></i><b>8.5.4</b> Additional resources</a></li>
-<li class="chapter" data-level="8.5.5" data-path="8-sampling.html"><a href="8-sampling.html#whats-to-come-6"><i class="fa fa-check"></i><b>8.5.5</b> What’s to come?</a></li>
+<li class="chapter" data-level="8.5.1" data-path="8-sampling.html"><a href="8-sampling.html#sampling-conclusion-central-limit-theorem"><i class="fa fa-check"></i><b>8.5.1</b> Central Limit Theorem</a></li>
+<li class="chapter" data-level="8.5.2" data-path="8-sampling.html"><a href="8-sampling.html#sampling-conclusion-table"><i class="fa fa-check"></i><b>8.5.2</b> Summary table</a></li>
+<li class="chapter" data-level="8.5.3" data-path="8-sampling.html"><a href="8-sampling.html#additional-resources-5"><i class="fa fa-check"></i><b>8.5.3</b> Additional resources</a></li>
+<li class="chapter" data-level="8.5.4" data-path="8-sampling.html"><a href="8-sampling.html#whats-to-come-6"><i class="fa fa-check"></i><b>8.5.4</b> What’s to come?</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="9-confidence-intervals.html"><a href="9-confidence-intervals.html"><i class="fa fa-check"></i><b>9</b> Confidence Intervals</a><ul>
@@ -463,8 +477,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.1.2" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#log10-transformations"><i class="fa fa-check"></i><b>12.1.2</b> log10 transformations</a></li>
 <li class="chapter" data-level="12.1.3" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#eda-part-ii"><i class="fa fa-check"></i><b>12.1.3</b> EDA Part II</a></li>
 <li class="chapter" data-level="12.1.4" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#house-prices-regression"><i class="fa fa-check"></i><b>12.1.4</b> Regression modeling</a></li>
-<li class="chapter" data-level="12.1.5" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#house-prices-inference-for-regression"><i class="fa fa-check"></i><b>12.1.5</b> Inference for regression</a></li>
-<li class="chapter" data-level="12.1.6" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#house-prices-making-predictions"><i class="fa fa-check"></i><b>12.1.6</b> Making predictions</a></li>
+<li class="chapter" data-level="12.1.5" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#house-prices-making-predictions"><i class="fa fa-check"></i><b>12.1.5</b> Making predictions</a></li>
 </ul></li>
 <li class="chapter" data-level="12.2" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#data-journalism"><i class="fa fa-check"></i><b>12.2</b> Case study: Effective data storytelling</a><ul>
 <li class="chapter" data-level="12.2.1" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#bechdel-test-for-hollywood-gender-representation"><i class="fa fa-check"></i><b>12.2.1</b> Bechdel test for Hollywood gender representation</a></li>
@@ -474,7 +487,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="12-thinking-with-data.html"><a href="12-thinking-with-data.html#concluding-remarks"><i class="fa fa-check"></i>Concluding remarks</a></li>
 </ul></li>
-<li class="part"><span><b>V Practical examples on HR Analytics</b></span></li>
+<li class="part"><span><b>V HR Analytics practical examples</b></span></li>
 <li class="chapter" data-level="13" data-path="13-pay-gap.html"><a href="13-pay-gap.html"><i class="fa fa-check"></i><b>13</b> Gender Pay Gap</a><ul>
 <li class="chapter" data-level="13.1" data-path="13-pay-gap.html"><a href="13-pay-gap.html#data-cleaning-and-prep."><i class="fa fa-check"></i><b>13.1</b> Data Cleaning and Prep.</a></li>
 <li class="chapter" data-level="13.2" data-path="13-pay-gap.html"><a href="13-pay-gap.html#summary-statistics-by-gender"><i class="fa fa-check"></i><b>13.2</b> Summary Statistics by gender</a></li>
@@ -485,34 +498,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="13.4.3" data-path="13-pay-gap.html"><a href="13-pay-gap.html#results-by-job-title"><i class="fa fa-check"></i><b>13.4.3</b> Results by Job Title</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="14-stop-appraisals.html"><a href="14-stop-appraisals.html"><i class="fa fa-check"></i><b>14</b> Stop the formal performance management process</a></li>
-<li class="chapter" data-level="15" data-path="15-service-desk.html"><a href="15-service-desk.html"><i class="fa fa-check"></i><b>15</b> HR Service Desk</a></li>
-<li class="chapter" data-level="16" data-path="16-personality.html"><a href="16-personality.html"><i class="fa fa-check"></i><b>16</b> Personality insights</a></li>
-<li class="chapter" data-level="17" data-path="17-commuting-time.html"><a href="17-commuting-time.html"><i class="fa fa-check"></i><b>17</b> Commuting time</a></li>
-<li class="chapter" data-level="18" data-path="18-orgnisational-network.html"><a href="18-orgnisational-network.html"><i class="fa fa-check"></i><b>18</b> Module - Organisational network analysis</a></li>
-<li class="chapter" data-level="19" data-path="19-job-classification.html"><a href="19-job-classification.html"><i class="fa fa-check"></i><b>19</b> Job classification analysis</a><ul>
-<li class="chapter" data-level="19.0.1" data-path="19-job-classification.html"><a href="19-job-classification.html#final-evaluation-of-the-various-models"><i class="fa fa-check"></i><b>19.0.1</b> Final evaluation of the various models</a></li>
+<li class="chapter" data-level="14" data-path="14-stop-appraisals.html"><a href="14-stop-appraisals.html"><i class="fa fa-check"></i><b>14</b> Stop appraisals</a></li>
+<li class="chapter" data-level="15" data-path="15-y-3-741-x-30-099.html"><a href="15-y-3-741-x-30-099.html"><i class="fa fa-check"></i><b>15</b> [1] “y = 3.741 * x + 30.099”</a></li>
+<li class="chapter" data-level="16" data-path="16-service-desk.html"><a href="16-service-desk.html"><i class="fa fa-check"></i><b>16</b> HR Service Desk</a></li>
+<li class="chapter" data-level="17" data-path="17-personality.html"><a href="17-personality.html"><i class="fa fa-check"></i><b>17</b> Personality insights</a></li>
+<li class="chapter" data-level="18" data-path="18-commuting-time.html"><a href="18-commuting-time.html"><i class="fa fa-check"></i><b>18</b> Commuting time</a></li>
+<li class="chapter" data-level="19" data-path="19-orgnisational-network.html"><a href="19-orgnisational-network.html"><i class="fa fa-check"></i><b>19</b> Organisational network analysis</a></li>
+<li class="chapter" data-level="20" data-path="20-job-classification.html"><a href="20-job-classification.html"><i class="fa fa-check"></i><b>20</b> Job classification analysis</a><ul>
+<li class="chapter" data-level="20.0.1" data-path="20-job-classification.html"><a href="20-job-classification.html#final-evaluation-of-the-various-models"><i class="fa fa-check"></i><b>20.0.1</b> Final evaluation of the various models</a></li>
 </ul></li>
-<li class="chapter" data-level="20" data-path="20-masking-data.html"><a href="20-masking-data.html"><i class="fa fa-check"></i><b>20</b> Masking HR data</a><ul>
-<li class="chapter" data-level="20.0.1" data-path="20-masking-data.html"><a href="20-masking-data.html#whitehouse-dataset"><i class="fa fa-check"></i><b>20.0.1</b> Whitehouse dataset</a></li>
-<li class="chapter" data-level="20.0.2" data-path="20-masking-data.html"><a href="20-masking-data.html#fertility-dataset"><i class="fa fa-check"></i><b>20.0.2</b> Fertility dataset</a></li>
+<li class="chapter" data-level="21" data-path="21-masking-data.html"><a href="21-masking-data.html"><i class="fa fa-check"></i><b>21</b> Masking HR data</a><ul>
+<li class="chapter" data-level="21.0.1" data-path="21-masking-data.html"><a href="21-masking-data.html#whitehouse-dataset"><i class="fa fa-check"></i><b>21.0.1</b> Whitehouse dataset</a></li>
+<li class="chapter" data-level="21.0.2" data-path="21-masking-data.html"><a href="21-masking-data.html#fertility-dataset"><i class="fa fa-check"></i><b>21.0.2</b> Fertility dataset</a></li>
 </ul></li>
-<li class="chapter" data-level="21" data-path="21-absenteeism-data-absenteeism-datamfg.html"><a href="21-absenteeism-data-absenteeism-datamfg.html"><i class="fa fa-check"></i><b>21</b> Absenteeism data {#<span>absenteeism_data@MFG</span>}</a><ul>
-<li class="chapter" data-level="21.0.1" data-path="21-absenteeism-data-absenteeism-datamfg.html"><a href="21-absenteeism-data-absenteeism-datamfg.html#for-expediency-we-will-delete-the-problem-records-in-the-dataset."><i class="fa fa-check"></i><b>21.0.1</b> For expediency we will delete the problem records in the dataset.</a></li>
+<li class="chapter" data-level="22" data-path="22-absenteeism-MFG.html"><a href="22-absenteeism-MFG.html"><i class="fa fa-check"></i><b>22</b> Absenteeism MFG</a><ul>
+<li class="chapter" data-level="22.0.1" data-path="22-absenteeism-MFG.html"><a href="22-absenteeism-MFG.html#for-expediency-we-will-delete-the-problem-records-in-the-dataset."><i class="fa fa-check"></i><b>22.0.1</b> For expediency we will delete the problem records in the dataset.</a></li>
 </ul></li>
-<li class="chapter" data-level="22" data-path="22-absenteeism-data-absenteeism-datawork.html"><a href="22-absenteeism-data-absenteeism-datawork.html"><i class="fa fa-check"></i><b>22</b> Absenteeism data {#<span>absenteeism_data@work</span>}</a><ul>
-<li class="chapter" data-level="22.1" data-path="22-absenteeism-data-absenteeism-datawork.html"><a href="22-absenteeism-data-absenteeism-datawork.html#data-reading"><i class="fa fa-check"></i><b>22.1</b> Data reading</a></li>
+<li class="chapter" data-level="23" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html"><i class="fa fa-check"></i><b>23</b> Absenteeism at work</a><ul>
+<li class="chapter" data-level="23.1" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#data-reading"><i class="fa fa-check"></i><b>23.1</b> Data reading</a></li>
+<li class="chapter" data-level="23.2" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#basic-statistics-and-data-preparation"><i class="fa fa-check"></i><b>23.2</b> Basic statistics and data preparation</a></li>
+<li class="chapter" data-level="23.3" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#data-exploration"><i class="fa fa-check"></i><b>23.3</b> Data exploration</a></li>
+<li class="chapter" data-level="23.4" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#some-more-digging-into-the-data"><i class="fa fa-check"></i><b>23.4</b> Some more digging into the data</a></li>
+<li class="chapter" data-level="23.5" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#here-the-various-types-of-reasons-for-absence-attribute-is-analysed"><i class="fa fa-check"></i><b>23.5</b> Here the various types of reasons for absence attribute is analysed</a></li>
+<li class="chapter" data-level="23.6" data-path="23-absenteeism-work.html"><a href="23-absenteeism-work.html#principal-component-analysis-pca"><i class="fa fa-check"></i><b>23.6</b> Principal component analysis (PCA)</a></li>
 </ul></li>
-<li class="chapter" data-level="23" data-path="23-accidents-at-work.html"><a href="23-accidents-at-work.html"><i class="fa fa-check"></i><b>23</b> Accidents at work</a></li>
-<li class="chapter" data-level="24" data-path="24-attrition.html"><a href="24-attrition.html"><i class="fa fa-check"></i><b>24</b> Attrition</a></li>
-<li class="chapter" data-level="25" data-path="25-interview-attendance.html"><a href="25-interview-attendance.html"><i class="fa fa-check"></i><b>25</b> Interview attendance problem</a><ul>
-<li class="chapter" data-level="25.1" data-path="25-interview-attendance.html"><a href="25-interview-attendance.html#data-reading-1"><i class="fa fa-check"></i><b>25.1</b> Data reading</a></li>
-<li class="chapter" data-level="25.2" data-path="25-interview-attendance.html"><a href="25-interview-attendance.html#choosing-a-model"><i class="fa fa-check"></i><b>25.2</b> Choosing a model</a></li>
+<li class="chapter" data-level="24" data-path="24-accidents-work.html"><a href="24-accidents-work.html"><i class="fa fa-check"></i><b>24</b> Accidents at work</a></li>
+<li class="chapter" data-level="25" data-path="25-attrition.html"><a href="25-attrition.html"><i class="fa fa-check"></i><b>25</b> Attrition</a></li>
+<li class="chapter" data-level="26" data-path="26-interview-attendance.html"><a href="26-interview-attendance.html"><i class="fa fa-check"></i><b>26</b> Interview attendance problem</a><ul>
+<li class="chapter" data-level="26.1" data-path="26-interview-attendance.html"><a href="26-interview-attendance.html#data-reading-1"><i class="fa fa-check"></i><b>26.1</b> Data reading</a></li>
+<li class="chapter" data-level="26.2" data-path="26-interview-attendance.html"><a href="26-interview-attendance.html#data-cleaning"><i class="fa fa-check"></i><b>26.2</b> Data cleaning</a></li>
+<li class="chapter" data-level="26.3" data-path="26-interview-attendance.html"><a href="26-interview-attendance.html#choosing-a-model"><i class="fa fa-check"></i><b>26.3</b> Choosing a model</a></li>
+<li class="chapter" data-level="26.4" data-path="26-interview-attendance.html"><a href="26-interview-attendance.html#training"><i class="fa fa-check"></i><b>26.4</b> Training</a></li>
 </ul></li>
-<li class="chapter" data-level="26" data-path="26-ranking-medical-school.html"><a href="26-ranking-medical-school.html"><i class="fa fa-check"></i><b>26</b> Ranking Medical Schools</a></li>
-<li class="chapter" data-level="27" data-path="27-webscraping-linkedin.html"><a href="27-webscraping-linkedin.html"><i class="fa fa-check"></i><b>27</b> Webscraping LinkedIn</a></li>
-<li class="chapter" data-level="28" data-path="28-flexdashboards.html"><a href="28-flexdashboards.html"><i class="fa fa-check"></i><b>28</b> HR dashboards</a></li>
-<li class="chapter" data-level="29" data-path="29-shiny.html"><a href="29-shiny.html"><i class="fa fa-check"></i><b>29</b> HR Analytics product with Shiny</a></li>
+<li class="chapter" data-level="27" data-path="27-ranking-medical-school.html"><a href="27-ranking-medical-school.html"><i class="fa fa-check"></i><b>27</b> Ranking Medical Schools</a></li>
+<li class="chapter" data-level="28" data-path="28-webscraping-linkedin.html"><a href="28-webscraping-linkedin.html"><i class="fa fa-check"></i><b>28</b> Webscraping LinkedIn</a></li>
+<li class="chapter" data-level="29" data-path="29-flexdashboards.html"><a href="29-flexdashboards.html"><i class="fa fa-check"></i><b>29</b> HR dashboards</a></li>
+<li class="chapter" data-level="30" data-path="30-data-science-product.html"><a href="30-data-science-product.html"><i class="fa fa-check"></i><b>30</b> HR Analytics product with Shiny</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-appendixA.html"><a href="A-appendixA.html"><i class="fa fa-check"></i><b>A</b> Statistical Background</a><ul>
 <li class="chapter" data-level="A.1" data-path="A-appendixA.html"><a href="A-appendixA.html#basic-statistical-terms"><i class="fa fa-check"></i><b>A.1</b> Basic statistical terms</a><ul>
@@ -593,12 +614,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="E.2" data-path="E-appendixE.html"><a href="E-appendixE.html#overhead"><i class="fa fa-check"></i><b>E.2</b> Overhead value analysis</a></li>
 <li class="chapter" data-level="E.3" data-path="E-appendixE.html"><a href="E-appendixE.html#service_desk_data"><i class="fa fa-check"></i><b>E.3</b> HR Service Desk</a></li>
 <li class="chapter" data-level="E.4" data-path="E-appendixE.html"><a href="E-appendixE.html#HRrecruitment"><i class="fa fa-check"></i><b>E.4</b> HR recruitment, selection and performance data</a></li>
-<li class="chapter" data-level="E.5" data-path="E-appendixE.html"><a href="E-appendixE.html#job-classification"><i class="fa fa-check"></i><b>E.5</b> Job classification</a></li>
-<li class="chapter" data-level="E.6" data-path="E-appendixE.html"><a href="E-appendixE.html#job-classification-1"><i class="fa fa-check"></i><b>E.6</b> Job classification</a></li>
+<li class="chapter" data-level="E.5" data-path="E-appendixE.html"><a href="E-appendixE.html#job-classification-1"><i class="fa fa-check"></i><b>E.5</b> Job classification</a></li>
+<li class="chapter" data-level="E.6" data-path="E-appendixE.html"><a href="E-appendixE.html#job-classification-2"><i class="fa fa-check"></i><b>E.6</b> Job classification</a></li>
 <li class="chapter" data-level="E.7" data-path="E-appendixE.html"><a href="E-appendixE.html#absenteeism-at-work"><i class="fa fa-check"></i><b>E.7</b> Absenteeism at work</a></li>
-<li class="chapter" data-level="E.8" data-path="E-appendixE.html"><a href="E-appendixE.html#job-classification-2"><i class="fa fa-check"></i><b>E.8</b> Job classification</a></li>
+<li class="chapter" data-level="E.8" data-path="E-appendixE.html"><a href="E-appendixE.html#job-classification-3"><i class="fa fa-check"></i><b>E.8</b> Job classification</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -622,8 +646,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">HR Analytics in R</h1>
 <h2 class="subtitle"><em>Common tasks achieved with the power of R</em></h2>
-<p class="author"><em>Hendrik Feddersen</em></p>
-<p class="date"><em>May 02, 2019</em></p>
+<p class="author"><em>Chester Ismay, Albert Y. Kim and Hendrik Feddersen</em></p>
+<p class="date"><em>May 16, 2019</em></p>
 </div>
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
@@ -648,11 +672,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 -->
 <p>If you’re asking yourself this question, then you have come to the right place! There is no better moment to ride the wave of disruptions taking place now in HR.</p>
 <ul>
-<li><em>Are you looking to learn about HR Analytics utilising the power of R&quot;? Then start with our <a href="index.html#sec:intro-for-students">Introduction for Students</a>.</em></li>
+<li><em>Are you looking to learn about HR Analytics utilising the power of R"? Then start with our <a href="index.html#sec:intro-for-students">Introduction for Students</a>.</em></li>
 <li><em>Are you looking to contribute to “HR Analytics in R”? Then click <a href="index.html#sec:connect-contribute">here</a> for information on how.</em></li>
 <li><em>Are you curious about the publishing of this book? Then click <a href="index.html#sec:about-book">here</a> for more information on the open-source technology, in particular R Markdown and the bookdown package.</em></li>
 </ul>
-<p>This is version 0.5.0 of “HR Analytics in R” published on May 02, 2019. While a PDF version of this book can be found <a href="hrnalyticsinr.pdf" target="_blank">here</a>, this is very much a work in progress with many things that still need to be fixed. I appreciate your patience.</p>
+<p>This is version 0.5.0 of “HR Analytics in R” published on May 16, 2019. While a PDF version of this book can be found <a href="hendrikfeddersen.pdf" target="_blank">here</a>, this is very much a work in progress with many things that still need to be fixed. I appreciate your patience.</p>
 <hr />
 <div id="sec:intro-for-students" class="section level2">
 <h2><span class="header-section-number">1.1</span> Introduction for students</h2>
@@ -790,9 +814,9 @@ Additionally, this book will focus on computational thinking, data thinking, and
 <h2><span class="header-section-number">1.2</span> Introduction for instructors</h2>
 <p>This book is inspired by the following books:</p>
 <ul>
-<li>“Mathematical Statistics with Resampling and R” <span class="citation">(Chihara and Hesterberg <a href="#ref-hester2011">2011</a>)</span>,</li>
-<li>“OpenIntro: Intro Stat with Randomization and Simulation” <span class="citation">(Diez, Barr, and Çetinkaya-Rundel <a href="#ref-isrs2014">2014</a>)</span>, and</li>
-<li>“R for Data Science” <span class="citation">(Grolemund and Wickham <a href="#ref-rds2016">2016</a>)</span>.</li>
+<li>“Mathematical Statistics with Resampling and R” <span class="citation">(Chihara and Hesterberg <a href="#ref-hester2011" role="doc-biblioref">2011</a>)</span>,</li>
+<li>“OpenIntro: Intro Stat with Randomization and Simulation” <span class="citation">(Diez, Barr, and Çetinkaya-Rundel <a href="#ref-isrs2014" role="doc-biblioref">2014</a>)</span>, and</li>
+<li>“R for Data Science” <span class="citation">(Grolemund and Wickham <a href="#ref-rds2016" role="doc-biblioref">2016</a>)</span>.</li>
 </ul>
 <p>The first book, while designed for upper-level undergraduates and graduate students, provides an excellent resource on how to use resampling to impart statistical concepts like sampling distributions using computation instead of large-sample approximations and other mathematical formulas. The last two books are free options to learning introductory statistics and data science, providing an alternative to the many traditionally expensive introductory statistics textbooks.</p>
 <p>When looking over the large number of introductory statistics textbooks that currently exist, I found that there wasn’t one that incorporated many newly developed R packages directly into the text, in particular the many packages included in the <a href="http://tidyverse.org/"><code>tidyverse</code></a> collection of packages, such as <code>ggplot2</code>, <code>dplyr</code>, <code>tidyr</code>, and <code>broom</code>. Additionally, there wasn’t an open-source and easily reproducible textbook available that exposed new learners all of three of the learning goals listed at the outset of Subsection <a href="index.html#subsec:learning-goals">1.1.1</a>.</p>
@@ -854,11 +878,11 @@ Additionally, this book will focus on computational thinking, data thinking, and
 </div>
 <div id="sec:about-book" class="section level2">
 <h2><span class="header-section-number">1.4</span> About this book</h2>
-<p>This book was written using RStudio’s <a href="https://bookdown.org/">bookdown</a> package by Yihui Xie <span class="citation">(Xie <a href="#ref-R-bookdown">2018</a>)</span>. This package simplifies the publishing of books by having all content written in <a href="http://rmarkdown.rstudio.com/html_document_format.html">R Markdown</a>.</p>
+<p>This book was written using RStudio’s <a href="https://bookdown.org/">bookdown</a> package by Yihui Xie <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2018</a>)</span>. This package simplifies the publishing of books by having all content written in <a href="http://rmarkdown.rstudio.com/html_document_format.html">R Markdown</a>.</p>
 <ul>
-<li><strong>Latest published version, still in development</strong> The most up-to-date version, which is still in development is available at <a href="https://hranalyticslive.netlify.com/">https://hranalyticslive.netlify.com/</a></li>
-<li><strong>Source code</strong> The bookdown/R Markdown source code for the latest version of “HR Analytics in R” is available on Hendrik Feddersen’s <a href="https://github.com/Hendrik147/HR_Analytics_in_R_book">GitHub repository page</a></li>
-<li><strong>Usage</strong> You can share this material with colleagues or for non-commercial purposes but you can’t resell or incorporate them into stuff you make money from.
+<li><p><strong>Latest published version, still in development</strong> The most up-to-date version, which is still in development is available at <a href="https://hranalyticslive.netlify.com/">https://hranalyticslive.netlify.com/</a></p></li>
+<li><p><strong>Source code</strong> The bookdown/R Markdown source code for the latest version of “HR Analytics in R” is available on Hendrik Feddersen’s <a href="https://github.com/Hendrik147/HR_Analytics_in_R_book">GitHub repository page</a></p></li>
+<li><p><strong>Usage</strong> You can share this material with colleagues or for non-commercial purposes but you can’t resell or incorporate them into stuff you make money from.</p>
 <ul>
 <li>As a symbol of gratitude, I would expect you at least to sign up for my <a href="https://hranalytics.live/signup/">mailing list</a>.</li>
 <li>If you think my material is awesome and want to use it for commercial purposes, please contact me at <a href="mailto:info@hranalytics.live">info@hranalytics.live</a></li>
@@ -946,14 +970,14 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/Hendrik147/HR_Analytics_in_R_book/blob/master/index.Rmd",
+"link": "https://github.com/Hendrik147/HR_Analytics_in_R_book/edit/master/index.Rmd",
 "text": "Edit"
 },
 "history": {
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["hendrikfeddersen.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

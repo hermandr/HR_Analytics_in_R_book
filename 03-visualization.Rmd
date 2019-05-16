@@ -81,7 +81,7 @@ You might be wondering why we wrote the terms `data`, `geom`, and `aes` in a com
 ```{r, echo=FALSE}
 gapminder_2007 <- gapminder %>% 
   filter(year == 2007) %>% 
-  select(-year) %>% 
+  dplyr::select(-year) %>% 
   rename(
     Country = country,
     Continent = continent,

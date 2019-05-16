@@ -1,4 +1,4 @@
-## ----thinking-with-data, include=FALSE-----------------------------------
+## ----setup_thinking_with_data, include=FALSE-----------------------------
 chap <- 12
 lc <- 0
 rq <- 0
@@ -17,8 +17,6 @@ options(scipen = 99, digits = 3)
 # Set random number generator see value for replicable pseudorandomness. Why 76?
 # https://www.youtube.com/watch?v=xjJ7FheCkCU
 set.seed(76)
-
-
 
 
 ## ----moderndive-figure-conclusion, echo=FALSE, fig.align='center', fig.cap="ModernDive Flowchart"----

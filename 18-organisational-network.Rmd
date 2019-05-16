@@ -1,4 +1,4 @@
-# Module - Organisational network analysis {#orgnisational-network}
+# Organisational network analysis {#orgnisational-network}
 
 ```{r organisational-network, include=FALSE}
 chap <- 18
@@ -108,7 +108,7 @@ as_tbl_graph(cooc_all_f, directed = FALSE) %>%
   filter(!edge_is_multiple())
 ```
 
-# Node ranking
+Node ranking
 
 There are many options for node ranking (go to ?node_rank for a full list); let’s try out Minimize hamiltonian path length using a travelling salesperson solver.
 
@@ -119,7 +119,7 @@ as_tbl_graph(cooc_all_f, directed = FALSE) %>%
   arrange(n_rank_trv)
 ```
 
-# Centrality
+Centrality
 
 Centrality describes the number of edges that are in- or outgoing to/from nodes. High centrality networks have few nodes with many connections, low centrality networks have many nodes with similar numbers of edges. The centrality of a node measures the importance of it in the network.
 
@@ -132,7 +132,7 @@ as_tbl_graph(cooc_all_f, directed = FALSE) %>%
   arrange(-neighbors)
 ```
 
-# Grouping and clustering
+Grouping and clustering
 
 Another common operation is to group nodes based on the graph topology, sometimes referred to as community detection based on its commonality in social network analysis. All clustering algorithms from igraph is available in tidygraph using the group_* prefix. All of these functions return an integer vector with nodes (or edges) sharing the same integer being grouped together. https://www.data-imaginist.com/2017/introducing-tidygraph/
 
@@ -147,7 +147,7 @@ as_tbl_graph(cooc_all_f, directed = FALSE) %>%
   arrange(-group)
 ```
 
-# Querying node types
+Querying node types
 
 We can also query different node types (?node_types gives us a list of options):
 
@@ -164,7 +164,7 @@ as_tbl_graph(cooc_all_f, directed = FALSE) %>%
          keyplayer = node_is_keyplayer(k = 10))
 ```
 
-# Node pairs
+Node pairs
 
 Some statistics are a measure between two nodes, such as distance or similarity between nodes. In a tidy context one of the ends must always be the node defined by the row, while the other can be any other node. All of the node pair functions are prefixed with node_* and ends with _from/_to if the measure is not symmetric and _with if it is; e.g. there’s both a node_max_flow_to() and node_max_flow_from() function while only a single node_cocitation_with() function. The other part of the node pair can be specified as an integer vector that will get recycled if needed, or a logical vector which will get recycled and converted to indexes with which(). This means that output from node type functions can be used directly in the calls. https://www.data-imaginist.com/2017/introducing-tidygraph/
 
@@ -176,7 +176,7 @@ as_tbl_graph(cooc_all_f, directed = FALSE) %>%
   mutate(dist_to_center = node_distance_to(node_is_center()))
 ```
 
-# Edge betweenness
+Edge betweenness
 
 Similarly to node metrics, we can calculate all kinds of edge metrics. Betweenness, for example, describes the shortest paths between nodes. 
 
@@ -209,7 +209,7 @@ cooc_all_f_graph %>%
   as_tibble()
 ```
 
-# Plotting with the package "ggraph" 
+Plotting with the package "ggraph" 
 
 First, I am going to define a layout. There are lots of options for layouts, here I am using a Fruchterman-Reingold algorithm.
 
@@ -251,7 +251,7 @@ ggraph(layout) +
 ggsave("plotshirin.pdf", width = 21, height = 29.7, units = "cm")
 ```
 
-# Another visualisation, this time with the package "visNetwork"
+Another visualisation, this time with the package "visNetwork"
 
 Graph-based analyses are many and diverse: whenever you can describe your data in terms of "outgoing" and "receiving" entities, a graph-based analysis and/or visualisation is possible. Let us try visualising previous results with another package called "visNetwork".
 

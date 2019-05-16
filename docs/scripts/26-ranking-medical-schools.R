@@ -1,4 +1,4 @@
-## ----ranking-medical, include=FALSE--------------------------------------
+## ----ranking-medical1, include=FALSE-------------------------------------
 chap <- 26
 lc <- 0
 rq <- 0
@@ -9,8 +9,7 @@ knitr::opts_chunk$set(
   tidy = FALSE, 
   out.width = '\\textwidth', 
   fig.height = 4,
-  warning = TRUE,
-  error=TRUE
+  warning = TRUE
   )
 
 options(scipen = 99, digits = 3)
@@ -26,7 +25,8 @@ library(pdftools)
 library(data.table)
 library(bigstatsr)
 library(plotly)
-library(gsubfn)
+library(stringr)
+#library(gsubfn)
 
 
 ## ------------------------------------------------------------------------
@@ -45,10 +45,10 @@ pdfdocument <- "data/liste_classement_ecn_20170628.pdf"
 
 ## ------------------------------------------------------------------------
 
-head(txt <- pdftools::pdf_text(pdfdocument), n = 1) #Inspection of first page
+txt <- pdftools::pdf_text(pdfdocument)
+head(txt, n = 1) #Inspection of first page
 
-pat <- "([0-9]{4} [M\\.|Mme|Mlle]{1}.*?, [né|née]{1}.*?)\\."
-data <- unlist(gsubfn::strapply(txt, pattern = pat))
+data <- strsplit(txt, "\n")
 
 head(data)
 
@@ -72,33 +72,33 @@ data_parsed2 <- as_tibble(data_parsed) %>%
 data_parsed2
 
 
-## ------------------------------------------------------------------------
-# Proportion male/female
-mean(data_parsed2$is_male)
-# 43% of males.
+## ----eval=FALSE----------------------------------------------------------
+## # Proportion male/female
+## mean(data_parsed2$is_male)
+## # 43% of males.
+## 
+## 
+## myggplot <- function(...) bigstatsr:::MY_THEME(ggplot(...))
+## 
+## myggplot(data_parsed2) +
+##   geom_histogram(aes(x = birth_date), bins = 100)
+## 
 
 
-myggplot <- function(...) bigstatsr:::MY_THEME(ggplot(...))
-
-myggplot(data_parsed2) +
-  geom_histogram(aes(x = birth_date), bins = 100)
-
-
-
-## ------------------------------------------------------------------------
-myggplot(mutate(data_parsed2, prop_male = cummean(data_parsed2$is_male))) + 
-  geom_hline(yintercept = mean(data_parsed2$is_male), col = "red") +
-  geom_line(aes(x = ranking, y = prop_male))
-
-(myggplot(data_parsed2) +
-   geom_point(aes(ranking, birth_date, color = is_male)) +
-   aes(text = bigstatsr::asPlotlyText(data_parsed2))) %>%
-  plotly::ggplotly(tooltip = "text")
+## ----eval=FALSE----------------------------------------------------------
+## myggplot(mutate(data_parsed2, prop_male = cummean(data_parsed2$is_male))) +
+##   geom_hline(yintercept = mean(data_parsed2$is_male), col = "red") +
+##   geom_line(aes(x = ranking, y = prop_male))
+## 
+## (myggplot(data_parsed2) +
+##    geom_point(aes(ranking, birth_date, color = is_male)) +
+##    aes(text = bigstatsr::asPlotlyText(data_parsed2))) %>%
+##   plotly::ggplotly(tooltip = "text")
 
 
-## ------------------------------------------------------------------------
-myggplot(data_parsed2, aes(ranking, birth_date)) +
-  geom_point() +
-  geom_smooth(aes(color = is_male), lwd = 2)
-
+## ----eval=FALSE----------------------------------------------------------
+## myggplot(data_parsed2, aes(ranking, birth_date)) +
+##   geom_point() +
+##   geom_smooth(aes(color = is_male), lwd = 2)
+## 
 

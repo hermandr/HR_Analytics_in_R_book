@@ -193,7 +193,7 @@ regression_points %>%
 
 ## ---- warning=FALSE, message=FALSE---------------------------------------
 library(ISLR)
-credit_ch7 <- Credit %>%
+credit_ch7 <- ISLR::Credit %>%
   as_tibble() %>% 
   select(ID, debt = Balance, credit_limit = Limit, 
          income = Income, credit_rating = Rating, age = Age)

@@ -56,7 +56,7 @@ absenteeism_at_work <- read_delim(na = "NA", delim = ";", col_types = cols(col =
 absenteeism_at_work <- read_delim(na = "NA", delim = ";", col_types = cols(col = col_character()), "data/Absenteeism_at_work.csv")
 ```
 
-# Basic statistics and data preparation
+## Basic statistics and data preparation
 
   **Factors are in interger format , so for the sake of analysis we have changed them to factor format.**  
 ```{r}
@@ -98,7 +98,7 @@ absenteeism_at_work_factored <- absenteeism_at_work_factored %>%
 ```
 
 
-# Data exploration
+## Data exploration
  
 ```{r}
 
@@ -132,7 +132,7 @@ grid.arrange(SS,S, nrow = 1)
 grid.arrange(Day, nrow = 1)
 ```
 
-# Some more digging into the data
+## Some more digging into the data
 
  **I have taken those data that consists of Absenteesim in hours that are relavent to the analysis.**  
  **The  649 obs were found to have absent with respect to total of 740 obs.**  
@@ -169,7 +169,7 @@ disciplinary %>%
   xlab('Disciplinary failure')
 ```
 
-# Here the various types of reasons for absence attribute is analysed
+## Here the various types of reasons for absence attribute is analysed
 
  **NOTE: The top four of them cover 50% of the resons for absence**   
      * **medical consultation**     
@@ -247,7 +247,7 @@ ggplot() +
        y='Service time')
 ```
 
-# Principal component analysis (PCA)
+## Principal component analysis (PCA)
 
 A principal component analysis is used to extract the most important information from a multivariate data table and to express this information as a set of new variables called principal components. Principal component analysis (PCA) reduces the dimensionality of multivariate data, to two or three that can be visualized graphically with minimal loss of information. 
 

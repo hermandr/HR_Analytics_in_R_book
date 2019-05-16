@@ -195,8 +195,7 @@ service_requests %>%
 ```
 
 
-
-# 5 Valuable Service Desk Metrics
+5 Valuable Service Desk Metrics
 
 Source: https://www.ibm.com/communities/analytics/watson-analytics-blog/it-help-desk/
 

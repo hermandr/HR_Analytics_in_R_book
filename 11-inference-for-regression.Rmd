@@ -661,4 +661,3 @@ ggplot(regression_points, aes(x = age, y = residual)) +
   facet_wrap(~ gender)
 ```
 
-

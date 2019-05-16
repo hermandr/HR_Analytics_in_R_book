@@ -73,7 +73,7 @@ interview_attendance <- read_csv("data/interview.csv")
 head(interview_attendance, 5)
 ```
 
-# Data cleaning
+## Data cleaning
 
 ```{r}
 
@@ -190,7 +190,7 @@ rm(index,interview_attendanceml)
 
 We didn't want to tune anything and just let the code figure it out. Since the output is 1 for a no show and 2 for a show, we decided to use the gbm method (generalized boosting machine) from caret for creating the algorithm.
 
-# Training
+## Training
 
 We use the train function of the caret library to train the training data set determined in the previous step.
 

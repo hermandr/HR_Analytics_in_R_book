@@ -1,5 +1,5 @@
 book_filename: "hendrikfeddersen"
-output_dir: "docs"
+output_dir: docs
 # clean: [bib/packages.bib]
 delete_merged_file: true
 language:

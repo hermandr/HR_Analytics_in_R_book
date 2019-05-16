@@ -115,10 +115,10 @@ After clicking on the "Import" button on the bottom right RStudio, RStudio will 
 
 ## Tidy data {#tidy-data-ex}
 
-Let's now switch gears and learn about the concept of "tidy" data format by starting with a motivating example. Let's consider the `drinks` data frame included in the `fivethirtyeight` data. Run the following:
+Let's now switch gears and learn about the concept of "tidy" data format by starting with a motivating example. Let's consider the `` data frame included in the `fivethirtyeight` data. Run the following:
 
 ```{r}
-drinks
+fivethirtyeight::drinks
 ```
 
 After reading the help file by running `?drinks`, we see that `drinks` is a data frame containing results from a survey of the average number of servings of beer, spirits, and wine consumed for 193 countries. This data was originally reported on the data journalism website FiveThirtyEight.com in Mona Chalabi's article ["Dear Mona Followup: Where Do People Drink The Most Beer, Wine And Spirits?"](https://fivethirtyeight.com/features/dear-mona-followup-where-do-people-drink-the-most-beer-wine-and-spirits/)
@@ -132,8 +132,8 @@ Let's apply some of the data wrangling verbs we learned in Chapter \@ref(wrangli
 and save the resulting data frame in `drinks_smaller`.
 
 ```{r}
-drinks_smaller <- drinks %>% 
-  filter(country %in% c("USA", "China", "Italy", "Saudi Arabia")) %>% 
+drinks_smaller <- fivethirtyeight::drinks %>% 
+  dplyr::filter(country %in% c("USA", "China", "Italy", "Saudi Arabia")) %>% 
   select(-total_litres_of_pure_alcohol) %>% 
   rename(beer = beer_servings, spirit = spirit_servings, wine = wine_servings)
 drinks_smaller

@@ -64,7 +64,7 @@ needed_CRAN_pkgs <- c(
   "bigstatsr",
   "bookdown","choroplethr","choroplethrMaps","data.table","datasets",
   "dlnm","dplyr","faraway","forcats","GGally","ggthemes","GISTools","gsubfn",
-  "httr","leaflet","lubridate","magrittr","microbenchmark","pander","pdftools",
+  "httr","ibmsunburst","leaflet","lubridate","magrittr","microbenchmark","pander","pdftools",
   "plotly","poppler-cpp",
   "profvis","pryr","purrr","rappdirs","raster","RColorBrewer","readr","rebus",
   "rmarkdown","rvest","scales","sp","stats","stringr","testthat","tidyr","tidymodels",
@@ -100,7 +100,7 @@ knitr::write_bib(
     "janitor", "infer", "skimr", "kableExtra",
       "bookdown","choroplethr","choroplethrMaps","data.table","datasets",
   "dlnm","dplyr","faraway","forcats","GGally","ggthemes","GISTools",
-  "httr","leaflet","lubridate","magrittr","microbenchmark","pander",
+  "httr","ibmsunburst","leaflet","lubridate","magrittr","microbenchmark","pander",
   "profvis","plyr","purrr","rappdirs","raster","RColorBrewer","readr",
   "rmarkdown","scales","sp","stats","stringr","testthat","tidyr","tigris",
   "titanic","viridis"),
@@ -188,8 +188,9 @@ image_link <- function(path,
       glue::glue('\\href{{{link}}}{{\\includegraphics[{latex_opts}]{{{path}}}}}')
   }
 }
-```
 
+select <- dplyr::select 
+```
 
 
 
