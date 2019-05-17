@@ -18,7 +18,7 @@ always_allow_html: yes
 github-repo: Hendrik147/HR_Analytics_in_R_book
 graphics: yes
 description: "An open-source self-training book to assist you in your journey to sustainable HR Analytics"
-cover-image: images/logos/book_cover.png
+cover-image: images/logos/hranalytics.png
 url: 'https\://hranalytics.netlify.com/'
 apple-touch-icon: images/logos/favicons/apple-touch-icon.png
 favicon: images/logos/favicons/favicon.ico
