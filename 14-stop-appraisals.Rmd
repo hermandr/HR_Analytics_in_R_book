@@ -188,7 +188,7 @@ model_screen <- lm(Hours ~ Count.of.Appraisee, data=Time.spent.on.appraisals_scr
 paste('y =', round(coef(model_screen)[[2]], digits = 3), '* x', '+', round(coef(model_screen)[[1]], digits = 3)) 
 
 ```
-# [1] "y = 3.741 * x + 30.099"
+y = 3.741 * x + 30.099
 
 Now it would appear, that every manager spends on average 30 hours independently from the number of staff to appraise and an additional 3 hours and 45 minutes to appraise each indivual subordinate.
 

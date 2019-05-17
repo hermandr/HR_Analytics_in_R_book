@@ -1,4 +1,4 @@
-# Absenteeism MFG {#absenteeism-MFG}
+# Absenteeism in manufacturing {#absenteeism-MFG}
 
 ```{r absenteism-MFG, include=FALSE}
 chap <- 21
@@ -23,6 +23,7 @@ set.seed(76)
 
 
 Employee absenteeism is a significant problem for most organizations. Absenteeism excludes paid leave and occasions where an employer has granted an employee time off. 
+
 If you’re a manager, supervisor, or team leader, you’ll have likely experienced cases of absenteeism. You should know that staff will be absent from time to time, such as for illness, jury duty, or bereavement. However, when absenteeism is frequent and excessive it begins to become a problem.
 
 Absenteeism at the workplace affects both employers and employees alike.

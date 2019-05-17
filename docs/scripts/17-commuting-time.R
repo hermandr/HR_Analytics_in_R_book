@@ -110,6 +110,16 @@ monday_9am = as.POSIXct("2018-12-03 09:00")
 the_200 <- read_csv("data/200_staff_members.csv")
 
 
+## ----eval=do_eval--------------------------------------------------------
+## 
+## results = google_distance_all(
+##   the_200$Postcode,
+##   office,
+##   arrival_time = monday_9am,
+##   key = key
+## )
+## 
+## write_csv(results, file.path("data"), "commute_times.csv")
 
 
 ## ----echo=FALSE, message=FALSE, warning=FALSE----------------------------
